@@ -50,7 +50,7 @@ Contact
 >> - Craftsman Photography  
 (Human Resources Development Service of Korea)
 >> - Linux Master Level 2 1st pass  
-(Korea Association for ICT promotion)  
+(Korea Association for ICT promotion)
 Language  
 >> - TOEIC Score 825  
 (ETS)
