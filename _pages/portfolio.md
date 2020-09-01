@@ -12,7 +12,7 @@ Educational History
 
 + Bachelor: 
  > **Kwangwoon University**
- > (Dept of Computer information engineering)
+ >> (Dept of Computer information engineering)
 
 Career
 - InTheForest(cyber security) company 
