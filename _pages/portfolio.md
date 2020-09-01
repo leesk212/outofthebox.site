@@ -11,7 +11,7 @@ toc: true
 Educational History
 
  > Bachelor 
- >> **Kwangwoon University**(Seoul)
+ >> **Kwangwoon University**(Nowon-gu, Seoul)
  >>> - Major: Computer information engineering  
  >>> - Linked Major: BigData
 
