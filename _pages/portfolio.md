@@ -27,7 +27,7 @@ Career
 > Term: 2020/07/03~2020/08/25
  
 Contact
-- email : leesk212@gmail.com or leesk212@naver.com
+- Email : leesk212@gmail.com or leesk212@naver.com
 
 ## **INTERESTS**
 
