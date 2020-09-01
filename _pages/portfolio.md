@@ -10,16 +10,17 @@ toc: true
 
 #### Educational History
 - Bachelor: **Kwangwoon University**
+
 Dept of Computer information engineering
 
 <hr/>
 
 #### Languages
 - C/C++  &nbsp;⭐⭐⭐⭐
-- Python &nbsp;⭐⭐⭐
-- SQL    &nbsp;⭐⭐⭐
-- JAVA   &nbsp;⭐⭐
-- MIPS   &nbsp;⭐⭐
+- Python &nbsp&nbsp;⭐⭐⭐
+- SQL    &nbsp&nbsp;⭐⭐⭐
+- JAVA   &nbsp&nbsp;⭐⭐
+- MIPS   &nbsp&nbsp;⭐⭐
 
 <hr/>
 
