@@ -43,4 +43,4 @@ Contact
 - TOEIC Score 825 (ETS)
 - TOEIC Speaking Score 120(Level 5) (ETS)
 
-## **Education**
+## **EDUCATION**
