@@ -21,30 +21,31 @@ Career
 >> - Term: 2020/07/03~2020/08/25
 
 Languages
-> C/C++&nbsp;&nbsp;&nbsp;⭐⭐⭐⭐  
-> Python &nbsp;⭐⭐⭐  
-> SQL    &nbsp; &nbsp; &nbsp;⭐⭐⭐  
-> JAVA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐  
-> MIPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐  
+> - C/C++&nbsp;&nbsp;&nbsp;⭐⭐⭐⭐  
+> - Python &nbsp;⭐⭐⭐  
+> - SQL    &nbsp; &nbsp; &nbsp;⭐⭐⭐  
+> - JAVA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐  
+> - MIPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐  
 
 Contact
-> Email : leesk212@gmail.com or leesk212@naver.com
+> - Email : leesk212@gmail.com or leesk212@naver.com
+> - Cell Phone Number: 010-8397-5075
 
 ## **INTERESTS**
-> Security  
-> Data Processing  
-> Data Visualize  
+> - Security  
+> - Data Processing  
+> - Data Visualize  
 
 ## **PROJECTS**
-> Sysmon - EL - Python_PyQt (Public)  
-> DeepSleepNet (Private)
+> - Sysmon - EL - Python_PyQt (Public)  
+> - DeepSleepNet (Private)
 
 ## **CERTIFICATE**
 
 > Nationally recognized certification  
->> Industrial Engineer Information Processing (Human Resources Development Service of Korea)
->> Craftsman Photography (Human Resources Development Service of Korea)
->> Linux Master Level 2 1st pass (Korea Association for ICT promotion)
+>> - Industrial Engineer Information Processing (Human Resources Development Service of Korea)
+>> - Craftsman Photography (Human Resources Development Service of Korea)
+>> - Linux Master Level 2 1st pass (Korea Association for ICT promotion)
 > Language  
 >> TOEIC Score 825 (ETS)
 >> TOEIC Speaking Score 120(Level 5) (ETS)
