@@ -18,7 +18,7 @@ Languages
 - C/C++&nbsp;&nbsp;⭐⭐⭐⭐
 - Python &nbsp;⭐⭐⭐
 - SQL    &nbsp; &nbsp; &nbsp;⭐⭐⭐
-- JAVA&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐
+- JAVA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐
 - MIPS   &nbsp; &nbsp;⭐⭐
 
 Career
