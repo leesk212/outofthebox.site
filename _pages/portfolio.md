@@ -11,8 +11,8 @@ toc: true
 Educational History
 
 + Bachelor: 
- - **Kwangwoon University**
- - (Dept of Computer information engineering)
+ > **Kwangwoon University**
+ > (Dept of Computer information engineering)
 
 Languages
 - C/C++  &nbsp;⭐⭐⭐⭐
@@ -24,7 +24,7 @@ Languages
 Career
 - InTheForest(cyber security) company 
 > Kwangwoon University Summer Short-Term Internship
-Term: 2020/07/03~2020/08/25
+> Term: 2020/07/03~2020/08/25
  
 Contact
 - email : leesk212@gmail.com or leesk212@naver.com
