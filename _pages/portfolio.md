@@ -17,10 +17,10 @@ Dept of Computer information engineering
 
 #### Languages
 - C/C++  &nbsp;⭐⭐⭐⭐
-- Python &nbsp&nbsp;⭐⭐⭐
-- SQL    &nbsp&nbsp;⭐⭐⭐
-- JAVA   &nbsp&nbsp;⭐⭐
-- MIPS   &nbsp&nbsp;⭐⭐
+- Python &nbsp,&nbsp;⭐⭐⭐
+- SQL    &nbsp,&nbsp;⭐⭐⭐
+- JAVA   &nbsp,&nbsp;⭐⭐
+- MIPS   &nbsp,&nbsp;⭐⭐
 
 <hr/>
 
