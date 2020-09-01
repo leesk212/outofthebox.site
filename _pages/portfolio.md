@@ -8,25 +8,25 @@ toc: true
 
 ## **ABOUT ME**
 
-### 🌟SeokMin, LEE -- @leesk212
+#### Educational History
+- **Kwangwoon University**
+Dept of Computer Science and Engineering
 
 <hr/>
 
-### 🦜Languages
-- Python &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐⭐
-- C/C++ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         ⭐⭐⭐⭐
-- JAVA  &nbsp;   ⭐⭐
+### Languages
+- C/C++  &nbsp;⭐⭐⭐⭐
+- Python &nbsp;⭐⭐⭐
+- JAVA   &nbsp;⭐⭐
 
 <hr/>
 
-
-### 🎒Side Jobs
-
-
-<hr/>
-
-
-### 🏁Communications & Patents
+### Career
+- InTheForest(cyber security) company 
+```
+How to: Kwangwoon University Summer Short-Term Internship Results
+Term: 2020/07/03~2020/08/25
+```
 
 <hr/>
 
@@ -37,6 +37,8 @@ toc: true
 
 ## **PROJECTS**
 
+### 🏁Communications & Patents
+
 ## **AWARD & SCOLARSHIP**
 
 ## **CERTIFICATE**
@@ -46,3 +48,5 @@ toc: true
 - Linux Master Level 2 1st pass (Korea Association for ICT promotion)
 - TOEIC Score 825 (ETS)
 - TOEIC Speaking Score 120(Level 5) (ETS)
+
+## **Education**
