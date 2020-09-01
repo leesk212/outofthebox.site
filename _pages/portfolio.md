@@ -8,6 +8,34 @@ toc: true
 
 ## **ABOUT ME**
 
+### 🌟SeokMin, LEE -- @leesk212
+
+<hr/>
+
+### 🦜Languages
+- Python &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐⭐⭐
+- C/C++ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         ⭐⭐⭐⭐
+- JAVA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           ⭐⭐⭐
+- R           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   ⭐⭐⭐
+- JAVA Script &nbsp;   ⭐⭐
+- DART   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ⭐⭐
+
+<hr/>
+
+
+### 🎒Side Jobs
+
+
+<hr/>
+
+
+### 🏁Communications & Patents
+
+<hr/>
+
+### 📡Contact
+- email : leesk212@gmail.com or leesk212@naver.com
+
 ## **INTERESTS**
 
 ## **PROJECTS**
