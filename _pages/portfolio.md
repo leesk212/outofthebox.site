@@ -23,10 +23,11 @@ Career
 Languages
 > - C/C++&nbsp;&nbsp;&nbsp;⭐⭐⭐⭐  
 > - Python &nbsp;⭐⭐⭐  
-> - SQL    &nbsp; &nbsp; &nbsp;⭐⭐⭐  
 > - JAVA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐  
-> - MIPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐  
-
+> - MIPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐
+> - SQL    
+>> - Elastic &nbsp; &nbsp; &nbsp;⭐⭐⭐  
+>> - MySQL &nbsp; &nbsp; &nbsp;⭐⭐⭐
 Contact
 > - Email : leesk212@gmail.com or leesk212@naver.com
 > - Cell Phone Number: 010-8397-5075
