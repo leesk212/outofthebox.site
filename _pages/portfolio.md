@@ -14,7 +14,7 @@ Dept of Computer information engineering
 
 <hr/>
 
-### Languages
+#### Languages
 - C/C++  &nbsp;⭐⭐⭐⭐
 - Python &nbsp;⭐⭐⭐
 - SQL    &nbsp;⭐⭐⭐
@@ -23,7 +23,7 @@ Dept of Computer information engineering
 
 <hr/>
 
-### Career
+#### Career
 - InTheForest(cyber security) company 
 ```
 How to: Kwangwoon University Summer Short-Term Internship
