@@ -32,7 +32,8 @@ Contact
 ## **INTERESTS**
 
 ## **PROJECTS**
-- Sysmon - EL - Python_PyQt
+- Sysmon - EL - Python_PyQt (Public)
+- DeepSleepNet (Private)
 
 ## **AWARD & SCOLARSHIP**
 
