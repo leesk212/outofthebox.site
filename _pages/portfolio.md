@@ -38,8 +38,6 @@ Contact
 - Sysmon - EL - Python_PyQt (Public)
 - DeepSleepNet (Private)
 
-## **AWARD & SCOLARSHIP**
-
 ## **CERTIFICATE**
 
 - Industrial Engineer Information Processing (Human Resources Development Service of Korea)
@@ -48,4 +46,3 @@ Contact
 - TOEIC Score 825 (ETS)
 - TOEIC Speaking Score 120(Level 5) (ETS)
 
-## **EDUCATION**
