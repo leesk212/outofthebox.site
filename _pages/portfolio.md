@@ -33,8 +33,6 @@ Contact
 
 ## **PROJECTS**
 
-### 🏁Communications & Patents
-
 ## **AWARD & SCOLARSHIP**
 
 ## **CERTIFICATE**
