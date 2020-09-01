@@ -21,10 +21,10 @@ Career
 
 Languages
 - C/C++&nbsp;&nbsp;&nbsp;⭐⭐⭐⭐
-- PYTHON &nbsp;⭐⭐⭐
+- Python &nbsp;⭐⭐⭐
 - SQL    &nbsp; &nbsp; &nbsp;⭐⭐⭐
 - JAVA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐
-- MIPS   &nbsp;&nbsp;&nbsp;⭐⭐
+- MIPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐
 
 Contact
 - Email : leesk212@gmail.com or leesk212@naver.com
