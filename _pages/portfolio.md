@@ -15,7 +15,7 @@ Educational History
  > (Dept of Computer information engineering)
 
 Languages
-- C/C++&nbsp;&nbsp;⭐⭐⭐⭐
+- C/C++&nbsp;&nbsp;&nbsp;⭐⭐⭐⭐
 - Python &nbsp;⭐⭐⭐
 - SQL    &nbsp; &nbsp; &nbsp;⭐⭐⭐
 - JAVA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐
