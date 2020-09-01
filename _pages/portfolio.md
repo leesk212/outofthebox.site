@@ -12,7 +12,8 @@ Educational History
 
 + Bachelor: 
  > **Kwangwoon University**
- >> (Dept of Computer information engineering)
+ >> Major: Dept of Computer information engineering
+ >> Linked Major: BigData
 
 Career
 - InTheForest(cyber security) company 
