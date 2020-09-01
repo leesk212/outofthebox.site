@@ -104,7 +104,7 @@ author:
       url: "mailto:leesk212@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://leesk212.github.io/"
+      #url: "https://leesk212.github.io/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
