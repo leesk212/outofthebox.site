@@ -24,7 +24,7 @@ Dept of Computer Science and Engineering
 ### Career
 - InTheForest(cyber security) company 
 ```
-How to: Kwangwoon University Summer Short-Term Internship Results
+How to: Kwangwoon University Summer Short-Term Internship
 Term: 2020/07/03~2020/08/25
 ```
 
