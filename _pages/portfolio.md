@@ -14,18 +14,18 @@ Educational History
  > **Kwangwoon University**
  > (Dept of Computer information engineering)
 
+Career
+- InTheForest(cyber security) company 
+> Kwangwoon University Summer Short-Term Internship    
+> Term: 2020/07/03~2020/08/25
+
 Languages
 - C/C++&nbsp;&nbsp;&nbsp;⭐⭐⭐⭐
 - Python &nbsp;⭐⭐⭐
 - SQL    &nbsp; &nbsp; &nbsp;⭐⭐⭐
 - JAVA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐
-- MIPS   &nbsp; &nbsp;⭐⭐
+- MIPS   &nbsp;&nbsp; &nbsp;⭐⭐
 
-Career
-- InTheForest(cyber security) company 
-> Kwangwoon University Summer Short-Term Internship    
-> Term: 2020/07/03~2020/08/25
- 
 Contact
 - Email : leesk212@gmail.com or leesk212@naver.com
 
