@@ -30,6 +30,9 @@ Contact
 - Email : leesk212@gmail.com or leesk212@naver.com
 
 ## **INTERESTS**
+- Security
+- Data Processing
+- Data Visualize
 
 ## **PROJECTS**
 - Sysmon - EL - Python_PyQt (Public)
