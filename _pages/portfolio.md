@@ -11,8 +11,8 @@ toc: true
 Educational History
 
 + Bachelor: 
-- **Kwangwoon University**
-- (Dept of Computer information engineering)
+ - **Kwangwoon University**
+ - (Dept of Computer information engineering)
 
 Languages
 - C/C++  &nbsp;⭐⭐⭐⭐
