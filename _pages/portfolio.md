@@ -27,7 +27,7 @@ Languages
 > - MIPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐
 > - SQL    
 >> - Elastic &nbsp; &nbsp; &nbsp;⭐⭐⭐  
->> - MySQL &nbsp; &nbsp; &nbsp;⭐⭐⭐
+>> - MySQL &nbsp; &nbsp;&nbsp;⭐⭐⭐
 
 Contact
 > - Email : leesk212@gmail.com or leesk212@naver.com
@@ -50,8 +50,7 @@ Contact
 >> - Craftsman Photography  
 (Human Resources Development Service of Korea)
 >> - Linux Master Level 2 1st pass  
-(Korea Association for ICT promotion)  
-
+(Korea Association for ICT promotion)
 > Language  
 >> - TOEIC Score 825  
 (ETS)
