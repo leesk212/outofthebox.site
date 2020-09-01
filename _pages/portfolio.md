@@ -45,7 +45,7 @@ Contact
 > Nationally recognized certification  
 >> - Industrial Engineer Information Processing (Human Resources Development Service of Korea)
 >> - Craftsman Photography (Human Resources Development Service of Korea)
->> - Linux Master Level 2 1st pass (Korea Association for ICT promotion)
+>> - Linux Master Level 2 1st pass (Korea Association for ICT promotion)  
 > Language  
 >> - TOEIC Score 825 (ETS)
 >> - TOEIC Speaking Score 120(Level 5) (ETS)
