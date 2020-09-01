@@ -7,3 +7,6 @@ toc: true
 
 ## 2020.09.01 
 > page open
+
+## 2020.09.02 
+> Write Portfolio _ver1
