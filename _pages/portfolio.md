@@ -10,15 +10,15 @@ toc: true
 
 Educational History
 
-+ Bachelor: 
- > **Kwangwoon University**
- >> Major: Computer information engineering  
- >> Linked Major: BigData
+ > Bachelor: 
+ >> **Kwangwoon University**
+ >>> Major: Computer information engineering  
+ >>> Linked Major: BigData
 
 Career
-- InTheForest(cyber security) company 
-> Kwangwoon University Summer Short-Term Internship      
-> Term: 2020/07/03~2020/08/25
+> InTheForest(cyber security) company: 
+>> Program: Kwangwoon University Summer Short-Term Internship      
+>> Term: 2020/07/03~2020/08/25
 
 Languages
 - C/C++&nbsp;&nbsp;&nbsp;⭐⭐⭐⭐
