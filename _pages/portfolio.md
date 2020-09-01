@@ -11,7 +11,7 @@ toc: true
 Educational History
 
  > Bachelor: 
- >> **Kwangwoon University**
+ >> **Kwangwoon University**(Seoul)
  >>> - Major: Computer information engineering  
  >>> - Linked Major: BigData
 
@@ -49,5 +49,6 @@ Contact
 
 > Language  
 >> - TOEIC Score 825 (ETS)
+>> - TEPS Score 283(Level 3+) (Seoul National University Language Education Center)
 >> - TOEIC Speaking Score 120(Level 5) (ETS)
 
