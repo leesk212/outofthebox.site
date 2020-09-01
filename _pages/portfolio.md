@@ -10,8 +10,7 @@ toc: true
 
 #### Educational History
 - Bachelor: **Kwangwoon University**
-
-Dept of Computer information engineering
+(Dept of Computer information engineering)
 
 <hr/>
 
