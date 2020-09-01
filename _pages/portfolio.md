@@ -12,7 +12,7 @@ Educational History
 
 + Bachelor: 
  > **Kwangwoon University**
- >> Major: Dept of Computer information engineering  
+ >> Major: Computer information engineering  
  >> Linked Major: BigData
 
 Career
