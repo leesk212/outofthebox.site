@@ -17,7 +17,7 @@ Educational History
 
 Career
 > InTheForest(cyber security) company 
->> - Program: Kwangwoon University Summer Short-Term Internship      
+>> - Progress: Kwangwoon University Summer Short-Term Internship      
 >> - Term: 2020/07/03~2020/08/25
 
 Languages
