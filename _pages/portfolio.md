@@ -36,8 +36,8 @@ Contact
 
 ## **INTERESTS**
 > - Security  
-> - Data Processing  
-> - Data Visualize  
+> - Big Data Processing  
+> - AI   
 
 ## **PROJECTS**
 > - Sysmon - EL - Python_PyQt (Public)  
