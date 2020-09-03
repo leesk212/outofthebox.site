@@ -26,12 +26,12 @@ Educational History
 
 Work Experience
 
-> InTheForest(Cyber security company) 
+> InTheForest(Cyber Security Company) 
 >> - Program: Kwangwoon University Summer Short-Term Internship      
 >> - Project experience: Sysmon-EL-Python_PyQt
 >> - Term: 2020/07/03 ~ 2020/08/25
 >  
-> ICSLab(Information and Cyber Security Lab)
+> ICS Lab(Information and Cyber Security Lab)
 >> - Program: Korea University Undergaduate reasearch student      
 >> - Project experience: Ongoing
 >> - Term: 2020/09/07 ~ 
