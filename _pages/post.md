@@ -1,6 +1,6 @@
 ---
 permalink: /post/
-title: "Post"
+title: "Test post"
 excerpt: "Minimal Mistakes is a flexible two-column Jekyll theme."
 toc: true
 ---
