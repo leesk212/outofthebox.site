@@ -12,3 +12,6 @@ toc: true
 > Write Portfolio _ver1  
 > Remove AWARD & SCOLARSHIP List, EDUCATION List in Portfolio  
 > Add Post List 
+
+## 2020.09.03
+> Add Basic imformation  
