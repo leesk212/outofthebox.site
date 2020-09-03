@@ -17,7 +17,7 @@ Educational History
 
 Work Experience
 
-> InTheForest(cyber security) company 
+> InTheForest(cyber security company) 
 >> - Program: Kwangwoon University Summer Short-Term Internship      
 >> - Results: Sysmon-EL-Python_PyQt
 >> - Term: 2020/07/03 ~ 2020/08/25
