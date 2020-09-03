@@ -11,7 +11,7 @@ toc: true
 
 > - Age: 23  
 > - Name: 이석민 (Lee SeokMin)  
-> - Address:  Dongdaemun-gu, Seoul, Republic of Korea  
+> - Address:  Dongdaemun-gu, Seoul, 🇰🇷
 > - Email : leesk212@gmail.com or leesk212@naver.com
 
 Educational History
