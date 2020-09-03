@@ -6,11 +6,13 @@ last_modified_at: 2020-09-03T10:15:22-04:00
 toc: true
 ---
 
+![ex_screenshot](./assets/images/teaser.png)
+
 ## **ABOUT ME**
 
 > - Age: 23  
 > - Name: 이석민 (Lee Seok Min)  
-> - address:  Dongdaemun-gu, Seoul, Republic of Korea  
+> - Address:  Dongdaemun-gu, Seoul, Republic of Korea  
 > - Email : leesk212@gmail.com or leesk212@naver.com
 
 Educational History
