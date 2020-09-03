@@ -24,7 +24,7 @@ Work Experience
 
 > ICSLab(Information and Cyber Security Lab)
 >> - Program: Korea University Undergaduate reasearch student      
->> - Project experience:: Ongoing
+>> - Project experience: Ongoing
 >> - Term: 2020/09/07 ~ 
 
 Languages
