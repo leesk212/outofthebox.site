@@ -63,8 +63,6 @@ Military service status
 >> - status: Private
 >> - detail: Improved accuracy
 
-## **EXTRACURRICULAR EXPERIENCE**
-
 ## **CERTIFICATE**
 
 > Nationally recognized certification  
@@ -83,3 +81,4 @@ Military service status
 >> - TOEIC Speaking Score 120(Level 5)  
 (ETS)
 
+## **EXTRACURRICULAR EXPERIENCE**
