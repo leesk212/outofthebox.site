@@ -46,7 +46,7 @@ Languages
 >> - MySQL &nbsp; &nbsp;&nbsp;⭐⭐⭐
 
 Military service status  
-> - ETS(Expiration Term of Service)
+> - Airforce ETS(Expiration Term of Service)
 
 ## **INTERESTS**
 > - Security  
