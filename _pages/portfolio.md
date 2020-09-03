@@ -20,12 +20,12 @@ Work Experience
 > InTheForest(cyber security) company 
 >> - Program: Kwangwoon University Summer Short-Term Internship      
 >> - Results: Sysmon-EL-Python_PyQt
->> - Term: 2020/07/03~2020/08/25
+>> - Term: 2020/07/03 ~ 2020/08/25
 
 > ICSLab
->> - Program: Korea University Undergaduate students      
->> - Results: Ongoing~
->> - Term: 2020/09/07~
+>> - Program: Korea University Undergaduate reasearch student      
+>> - Results: Ongoing
+>> - Term: 2020/09/07 ~ 
 
 Languages
 > - C/C++&nbsp;&nbsp;&nbsp;⭐⭐⭐⭐  
