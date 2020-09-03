@@ -1,6 +1,5 @@
 ---
 permalink: /portfolio/
-title: "Portfolio"
 excerpt: "Minimal Mistakes is a flexible two-column Jekyll theme."
 last_modified_at: 2020-09-03T10:15:22-04:00
 toc: true
@@ -43,6 +42,9 @@ Languages
 > - SQL    
 >> - Elastic &nbsp; &nbsp; &nbsp;⭐⭐⭐  
 >> - MySQL &nbsp; &nbsp;&nbsp;⭐⭐⭐
+
+Military service status  
+> ETS(Expiration Term of Service)
 
 ## **INTERESTS**
 > - Security  
