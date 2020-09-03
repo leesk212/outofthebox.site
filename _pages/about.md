@@ -14,7 +14,7 @@ toc: true
 > Add Post List 
 
 ## 2020.09.03
-> Add Basic imformation into Portfolio  
+> Add basic imformation to Portfolio  
 > Add Extracurricular experience list
 
 ## 2020.09.04
