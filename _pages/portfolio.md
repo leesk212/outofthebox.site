@@ -15,11 +15,16 @@ Educational History
  >>> - Major: Computer information engineering  
  >>> - Linked Major: BigData
 
-Career
+Work Experience
+
 > InTheForest(cyber security) company 
 >> - Program: Kwangwoon University Summer Short-Term Internship      
 >> - Results: Sysmon-EL-Python_PyQt
 >> - Term: 2020/07/03~2020/08/25
+> ICSLab
+>> - Program: Korea University Undergaduate students      
+>> - Results: Ongoing~
+>> - Term: 2020/09/07~
 
 Languages
 > - C/C++&nbsp;&nbsp;&nbsp;⭐⭐⭐⭐  
@@ -32,7 +37,6 @@ Languages
 
 Contact
 > - Email : leesk212@gmail.com or leesk212@naver.com
-> - Cell Phone Number: 010-8397-5075
 
 ## **INTERESTS**
 > - Security  
