@@ -1,6 +1,6 @@
 # main links
 main:
-  - title: &nbsp
+  - title: "&nbsp"
     url: /portfolio/
   - title: "Category"
     url: /post/  
