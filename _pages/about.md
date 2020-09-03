@@ -14,5 +14,8 @@ toc: true
 > Add Post List 
 
 ## 2020.09.03
-> Add Basic imformation in Portfolio  
+> Add Basic imformation into Portfolio  
 > Add Extracurricular experience list
+
+## 2020.09.04
+> Blind Portfolio from navigation box
