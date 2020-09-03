@@ -54,8 +54,13 @@ Military service status
 > - AI   
 
 ## **PROJECTS**
-> - Sysmon - EL - Python_PyQt (Public)  
-> - DeepSleepNet (Private)
+> - Sysmon - EL - Python_PyQt  
+>> - status: Public  
+>> - detail: Sysmon logs in the window environment are received from a computer in another environment through winlogbeat through Logstash, and then repositioned in Elasticsearch and displayed in PyQt.  
+>> - github link: https://github.com/leesk212/Sysmon-EL-Python_PyQt  
+> - DeepSleepNet  
+>> - status: Private
+>> - detail: Improved accuracy
 
 ## **CERTIFICATE**
 
