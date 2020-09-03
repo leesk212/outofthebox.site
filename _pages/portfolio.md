@@ -20,7 +20,8 @@ Educational History
  >> **Kwangwoon University**(Nowon-gu, Seoul)  
  >> College of Software and Convergence  
  >>> - Major: Computer information engineering  
- >>> - Linked Major: BigData
+ >>> - Linked Major: BigData  
+ >>> - Status: Junior  
  >>> - Term: 2016/03 ~ 
 
 Work Experience
@@ -45,7 +46,7 @@ Languages
 >> - MySQL &nbsp; &nbsp;&nbsp;⭐⭐⭐
 
 Military service status  
-> ETS(Expiration Term of Service)
+> - ETS(Expiration Term of Service)
 
 ## **INTERESTS**
 > - Security  
