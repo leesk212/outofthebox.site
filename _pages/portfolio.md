@@ -63,6 +63,8 @@ Military service status
 >> - status: Private
 >> - detail: Improved accuracy
 
+## **Extracurricular Experience**
+
 ## **CERTIFICATE**
 
 > Nationally recognized certification  
