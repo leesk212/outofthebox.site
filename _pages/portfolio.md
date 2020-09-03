@@ -5,7 +5,7 @@ last_modified_at: 2020-09-03T10:15:22-04:00
 toc: true
 ---
 
-#![ex_screenshot](../assets/images/teaser.png)
+<!--![ex_screenshot](../assets/images/teaser.png) -->
 
 ## **ABOUT ME**
 
