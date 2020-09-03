@@ -4,7 +4,7 @@ main:
     url: /portfolio/
   - title: "Category"
     url: /post/  
-  - title: "About"
+  - title: "Timeline"
     url: /about/
   # - title: "Sample Posts"
   #   url: /year-archive/
