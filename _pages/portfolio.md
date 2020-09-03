@@ -61,7 +61,7 @@ Military service status
 >  
 > DeepSleepNet  
 >> - status: Private
->> - detail: Improved accuracy
+>> - detail: Improved Accuracy of Sleep Stage
 
 ## **CERTIFICATE**
 
