@@ -2,10 +2,10 @@
 main:
   - title: ![ex_screenshot](../assets/images/blind.png)
     url: /portfolio/
+  - title: "Category"
+    url: /post/  
   - title: "About"
     url: /about/
-  - title: "Post"
-    url: /post/  
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
