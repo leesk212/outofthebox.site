@@ -18,6 +18,7 @@ Educational History
 
  > Bachelor 
  >> **Kwangwoon University**(Nowon-gu, Seoul)
+ >> College of Software and Convergence  
  >>> - Major: Computer information engineering  
  >>> - Linked Major: BigData
  >>> - Term: 2016/03 ~ 
