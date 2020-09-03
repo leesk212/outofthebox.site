@@ -22,7 +22,7 @@ Work Experience
 >> - Results: Sysmon-EL-Python_PyQt
 >> - Term: 2020/07/03 ~ 2020/08/25
 
-> ICSLab
+> ICSLab(Information and Cyber Security Lab)
 >> - Program: Korea University Undergaduate reasearch student      
 >> - Results: Ongoing
 >> - Term: 2020/09/07 ~ 
