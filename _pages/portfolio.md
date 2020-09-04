@@ -42,6 +42,7 @@ Languages
 > - Python &nbsp;⭐⭐⭐  
 > - JAVA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐  
 > - MIPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐
+> - Matlab &nbsp;⭐
 > - SQL    
 >> - Elastic &nbsp; &nbsp; &nbsp;⭐⭐⭐  
 >> - MySQL &nbsp; &nbsp;&nbsp;⭐⭐⭐
