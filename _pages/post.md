@@ -18,9 +18,11 @@ toc: true
 ## Git
 ## HTML
 ### Markdown document
-#### Language
-> 1. [Basic markdown_language](https://leesk212.github.io/MD-Basic-Markdown-language/)
 
+<details><summary>#### Language</summary>
+<div markdown="1">
+> 1. [Basic markdown_language](https://leesk212.github.io/MD-Basic-Markdown-language/)
+</div></details>
 ## Linux
 
 
