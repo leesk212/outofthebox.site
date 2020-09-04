@@ -17,9 +17,9 @@ toc: true
 ## FIFA
 ## Git
 ## HTML
-### Markdown document
+### Markdown
 
-<details><summary >#### Language</summary>
+<details><summary>Document Language</summary>
 <div markdown="1">
 > 1. [Basic markdown_language](https://leesk212.github.io/MD-Basic-Markdown-language/)
 </div></details>
