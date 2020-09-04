@@ -6,7 +6,9 @@ last_modified_at: 2020-09-05T10:15:22-04:00
 toc: true
 ---
 ## AI
-### DeepLearning
+### Deep Learning
+### Machine Learning
+#### Increment Learning
 ## Algorithm
 
 ## BigData
