@@ -9,7 +9,7 @@ toc: true
 <!--![ex_screenshot](../assets/images/teaser.png) -->
 
 ## **ABOUT ME**
-> ![ex_screenshot](../assets/images/b-removebg-preview.png =100x20)
+> ![ex_screenshot](../assets/images/b-removebg-preview.png)
 > - Age: 23  
 > - Name: 이석민 (Lee SeokMin)  
 > - Address:  Dongdaemun-gu, Seoul, Republic of Korea
