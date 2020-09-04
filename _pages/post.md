@@ -24,7 +24,6 @@ toc: true
 > 1. [Basic markdown_language](https://leesk212.github.io/MD-Basic-Markdown-language/)
 </div></details>
 
-## Linux
 
 
 
@@ -42,6 +41,7 @@ toc: true
 ## MySQL
 ## Network
 ## Operating Sysmtem
+### Linux
 ## Python
 ## Sysmon
 ## Security
