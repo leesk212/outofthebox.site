@@ -40,8 +40,8 @@ Work Experience
 Languages
 > - C/C++&nbsp;&nbsp;&nbsp;⭐⭐⭐⭐  
 > - Python &nbsp;⭐⭐⭐  
-> - JAVA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐  
-> - MIPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐
+> - JAVA&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐  
+> - MIPS&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐
 > - Matlab &nbsp;⭐
 > - SQL    
 >> - Elastic &nbsp; &nbsp; &nbsp;⭐⭐⭐  
@@ -84,3 +84,4 @@ Military service status
 (ETS)
 
 ## **EXTRACURRICULAR EXPERIENCE**
+
