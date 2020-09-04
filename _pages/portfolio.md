@@ -9,6 +9,7 @@ toc: true
 <!--![ex_screenshot](../assets/images/teaser.png) -->
 
 ## **ABOUT ME**
+<img src="../assets/images/b-removebg-preview.png" alt="drawing" width="200"/>
 > ![ex_screenshot](../assets/images/b-removebg-preview.png)
 > - Age: 23  
 > - Name: 이석민 (Lee SeokMin)  
