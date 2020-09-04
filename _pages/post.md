@@ -13,8 +13,6 @@ toc: true
 ## C/C++
 
 ## Elastic-Stack
-## English
-## FIFA
 ## Git
 ## HTML
 ### Markdown
@@ -45,4 +43,7 @@ toc: true
 ## Python
 ## Sysmon
 ## Security
-## Travel
+## "Etc"
+### English
+### FIFA
+### Travel
