@@ -14,7 +14,7 @@ toc: true
 
 ## Elastic-Stack
 ## English
-## GitHub
+## Git
 ## HTML
 ## Linux
 
