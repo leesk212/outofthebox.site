@@ -30,8 +30,10 @@ toc: true
 
 ## Matlab
 ### Fix Error
-### Fuction
+<details><summary>Function</summary>
+<div markdown="1">
 > 1. [mat2png](https://leesk212.github.io/Matlab-Mat2Png/)
+</div></details>
 
 ## MIPS
 ## MySQL
