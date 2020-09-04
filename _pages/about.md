@@ -30,3 +30,5 @@ toc: true
 **2020.09.05** 
 
 > Posting md, markdown
+> Fill a category
+> Change Profile picture
