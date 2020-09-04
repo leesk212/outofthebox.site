@@ -38,7 +38,7 @@ Work Experience
 >> - Term: 2020/09/07 ~ 
 
 Languages
-> - C/C++: ⭐⭐⭐⭐  
+> - C/C++:'\t'⭐⭐⭐⭐  
 > - Python: ⭐⭐⭐  
 > - JAVA: ⭐⭐  
 > - MIPS: ⭐⭐
