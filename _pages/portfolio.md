@@ -38,14 +38,14 @@ Work Experience
 >> - Term: 2020/09/07 ~ 
 
 Languages
-> - C/C++:'\t'⭐⭐⭐⭐  
+> - C/C++:  ⭐⭐⭐⭐  
 > - Python: ⭐⭐⭐  
-> - JAVA: ⭐⭐  
-> - MIPS: ⭐⭐
+> - JAVA:   ⭐⭐  
+> - MIPS:   ⭐⭐
 > - Matlab: ⭐
 > - SQL    
 >> - Elastic: ⭐⭐⭐  
->> - MySQL: ⭐⭐⭐
+>> - MySQL:   ⭐⭐⭐
 
 Military service status  
 > - Airforce ETS(Expiration Term of Service)
