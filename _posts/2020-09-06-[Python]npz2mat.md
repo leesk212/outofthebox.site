@@ -1,4 +1,4 @@
-'''
+```
 import numpy as np
 from scipy.io import savemat
 
@@ -9,4 +9,4 @@ def npz2mat(name_of_npz):
         savemat(name_of_npz[:name_of_npz.find(".")+1],mdic)
 
 
-'''
+```
