@@ -44,7 +44,7 @@ Languages
 > - JAVA:   ⭐⭐  
 > - MIPS:   ⭐⭐
 > - Matlab: ⭐
-> - Elastic: ⭐⭐⭐   
+> - Elasticsearch: ⭐⭐⭐   
 > - SQL    
 >> - MySQL:   ⭐⭐⭐
 
