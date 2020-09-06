@@ -37,11 +37,12 @@ toc: true
 ### Matlab
 <details><summary>Fix_Error</summary>
 <div markdown="1">
-> 1. [mat2png](https://leesk212.github.io/Matlab-Mat2Png/)
+> 1. [Error -9](https://leesk212.github.io/Matlab-Mat2Png/)
 </div></details>
 <details><summary>Transpose</summary>
 <div markdown="1">
 > 1. [mat2png](https://leesk212.github.io/Matlab-Mat2Png/)
+> 2. [mat2png_whilemovingdirectory](https://leesk212.github.io/Matlab-mat2png_while_moving_directory/)
 </div></details>
 
 ### MIPS
