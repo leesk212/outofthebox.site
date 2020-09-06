@@ -67,7 +67,7 @@ toc: true
 >> 1. [.remove](https://webisfree.com/2018-03-16/python-%ED%8C%8C%EC%9D%BC-%EB%B0%8F-%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC-%EC%82%AD%EC%A0%9C%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95)
 >> 2. [.walk]
 </div></details>
-<details><summary>transpose</summary>
+<details><summary>Transpose</summary>
 <div markdown="1">
 > 1. [npz2mat](https://leesk212.github.io/Python-npz2mat/)
 > 2. [npz2mat_whilemovingdir](https://leesk212.github.io/Python-npz2mat_while_moving_dir/)
