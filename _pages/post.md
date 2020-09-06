@@ -46,16 +46,19 @@ toc: true
 
 ### MIPS
 ### MySQL
-### Python
+### Python  
+
 <details><summary>PyQt5</summary>
 <div markdown="1">
 > 1. [Basic](https://leesk212.github.io/Pyqt-Study_PyQt5/)
 </div></details>
 <details><summary>transpose</summary>
+
 <div markdown="1">
 > 1. [npz2mat](https://leesk212.github.io/Python-npz2mat/)
 > 2. [npz2mat_whilemovingdir](https://leesk212.github.io/Python-npz2mat_while_moving_dir/)
 </div></details>
+
 <details><summary>Study</summary>
 <div markdown="1">
 > 1. [1차원list 초기화 선언](https://github.com/leesk212/Practice-Coding-Test/blob/master/code_note/1%EC%B0%A8%EC%9B%90%20list%20%EC%B4%88%EA%B8%B0%ED%99%94%20%EC%84%A0%EC%96%B8.py)  
