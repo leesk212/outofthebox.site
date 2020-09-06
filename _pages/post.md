@@ -35,6 +35,18 @@ toc: true
 </div></details>
 
 ### Matlab
+<details><summary>Language</summary>
+<div markdown="1">
+> 1. [type]
+> 1. [dir](https://kr.mathworks.com/help/matlab/ref/dir.html)
+> 2. [pwd](https://kr.mathworks.com/help/matlab/ref/pwd.html)
+> 3. [for](https://m.blog.naver.com/PostView.nhn?blogId=seo0511&logNo=221175867019&proxyReferer=https:%2F%2Fwww.google.com%2F)
+> 4. [sprintf](https://kiljh.tistory.com/entry/%EB%A7%A4%ED%8A%B8%EB%9E%A9Matlab-%ED%95%A8%EC%88%98-%EB%AC%B8%EC%9E%A5%EA%B2%B0%ED%95%A9-sprintf)
+> 5. [strsplit](https://kr.mathworks.com/help/matlab/ref/strsplit.html)
+> 6. [All_of_fig]()
+</div></details>
+
+
 <details><summary>Fix_Error</summary>
 <div markdown="1">
 > 1. [Error -9](https://leesk212.github.io/Matlab-Mat2Png/)
@@ -48,19 +60,21 @@ toc: true
 ### MIPS
 ### MySQL
 ### Python  
-
-<details><summary>PyQt5</summary>
+<details><summary>Module</summary>
 <div markdown="1">
-> 1. [Basic](https://leesk212.github.io/Pyqt-Study_PyQt5/)
+> 1. [os]
+>> 1. [.remove](https://webisfree.com/2018-03-16/python-%ED%8C%8C%EC%9D%BC-%EB%B0%8F-%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC-%EC%82%AD%EC%A0%9C%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95)
+>> 2. [
 </div></details>
 <details><summary>transpose</summary>
+
 
 <div markdown="1">
 > 1. [npz2mat](https://leesk212.github.io/Python-npz2mat/)
 > 2. [npz2mat_whilemovingdir](https://leesk212.github.io/Python-npz2mat_while_moving_dir/)
 </div></details>
 
-<details><summary>Study</summary>
+<details><summary>Basic Function</summary>
 <div markdown="1">
 > 1. [1차원list 초기화 선언](https://github.com/leesk212/Practice-Coding-Test/blob/master/code_note/1%EC%B0%A8%EC%9B%90%20list%20%EC%B4%88%EA%B8%B0%ED%99%94%20%EC%84%A0%EC%96%B8.py)  
 > 2. [2차원list 빠른행 선언](https://github.com/leesk212/Practice-Coding-Test/blob/master/code_note/2%EC%B0%A8%EC%9B%90%20list%20%EB%B9%A0%EB%A5%B8%20%ED%96%89%20%EC%84%A0%EC%96%B8.py)  
@@ -69,6 +83,13 @@ toc: true
 > 2. [문자열 안에서 일정문자 검색하기](https://github.com/leesk212/Practice-Coding-Test/blob/master/code_note/%EB%AC%B8%EC%9E%90%EC%97%B4%20%EC%95%88%EC%97%90%EC%84%9C%20%EC%9D%BC%EC%A0%95%20%EB%AC%B8%EC%9E%90%20%EA%B2%80%EC%83%89%ED%95%98%EA%B8%B0.py)  
 > 2. [시간비교](https://github.com/leesk212/Practice-Coding-Test/blob/master/code_note/%EC%8B%9C%EA%B0%84%20%EB%B9%84%EA%B5%90.py)  
 </div></details>
+
+<details><summary>PyQt5</summary>
+<div markdown="1">
+> 1. [Basic](https://leesk212.github.io/Pyqt-Study_PyQt5/)
+</div></details>
+<details><summary>transpose</summary>
+
 
 ## Network
 ## Operating Sysmtem
