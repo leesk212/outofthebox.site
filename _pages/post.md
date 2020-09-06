@@ -85,7 +85,7 @@ toc: true
 <div markdown="1">
 > 1. [Basic](https://leesk212.github.io/Pyqt-Study_PyQt5/)
 </div></details>
-<details><summary>transpose</summary>
+
 
 
 ## Network
