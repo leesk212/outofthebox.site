@@ -62,8 +62,10 @@ toc: true
 ### Python  
 <details><summary>Module</summary>
 <div markdown="1">
-> 1. [os]
+> 1. [os]]
+>> 3. [basic]
 >> 1. [.remove](https://webisfree.com/2018-03-16/python-%ED%8C%8C%EC%9D%BC-%EB%B0%8F-%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC-%EC%82%AD%EC%A0%9C%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95)
+>> 2. [.walk]
 </div></details>
 <details><summary>transpose</summary>
 <div markdown="1">
@@ -78,7 +80,8 @@ toc: true
 > 2. [2차원list 중 중복 제거](https://github.com/leesk212/Practice-Coding-Test/blob/master/code_note/2%EC%B0%A8%EC%9B%90%20list%EC%A4%91%20%EC%A4%91%EB%B3%B5%EC%A0%9C%EA%B1%B0.py)  
 > 2. [if안에서의 in](https://github.com/leesk212/Practice-Coding-Test/blob/master/code_note/if%20%EC%95%88%EC%97%90%EC%84%9C%EC%9D%98%20in.py)  
 > 2. [문자열 안에서 일정문자 검색하기](https://github.com/leesk212/Practice-Coding-Test/blob/master/code_note/%EB%AC%B8%EC%9E%90%EC%97%B4%20%EC%95%88%EC%97%90%EC%84%9C%20%EC%9D%BC%EC%A0%95%20%EB%AC%B8%EC%9E%90%20%EA%B2%80%EC%83%89%ED%95%98%EA%B8%B0.py)  
-> 2. [시간비교](https://github.com/leesk212/Practice-Coding-Test/blob/master/code_note/%EC%8B%9C%EA%B0%84%20%EB%B9%84%EA%B5%90.py)  
+> 2. [시간비교](https://github.com/leesk212/Practice-Coding-Test/blob/master/code_note/%EC%8B%9C%EA%B0%84%20%EB%B9%84%EA%B5%90.py) 
+> 3. [OnlyPngFile_whilemovingdirectory](https://leesk212.github.io/python-Onlypngfile_whilemovingDirectory/)
 </div></details>
 
 <details><summary>PyQt5</summary>
