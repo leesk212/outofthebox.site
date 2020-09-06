@@ -44,8 +44,8 @@ Languages
 > - JAVA:   ⭐⭐  
 > - MIPS:   ⭐⭐
 > - Matlab: ⭐
+> - Elastic: ⭐⭐⭐   
 > - SQL    
->> - Elastic: ⭐⭐⭐  
 >> - MySQL:   ⭐⭐⭐
 
 Military service status  
