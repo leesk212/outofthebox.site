@@ -59,6 +59,10 @@ toc: true
 
 ### MIPS
 ### MySQL
+
+### Paper Review
+> * FortuneTeller: Predicting Microarchitecture Attacks via Unsupervised Deep Learning
+
 ### Python  
 <details><summary>Module</summary>
 <div markdown="1">
