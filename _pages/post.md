@@ -59,10 +59,6 @@ toc: true
 
 ### MIPS
 ### MySQL
-
-### Paper Review
-> * FortuneTeller: Predicting Microarchitecture Attacks via Unsupervised Deep Learning
-
 ### Python  
 <details><summary>Module</summary>
 <div markdown="1">
@@ -101,6 +97,13 @@ toc: true
 ### Window
 #### Sysmon
 ## Security
+Paper Review
+### <details><summary>PyQt5</summary>
+<div markdown="1">
+> 1. FortuneTeller: Predicting Microarchitecture Attacks via Unsupervised Deep Learning
+</div></details>
+
+
 ## "Etc"
 ### Blog
 ### English
