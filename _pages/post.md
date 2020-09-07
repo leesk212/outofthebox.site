@@ -97,8 +97,7 @@ toc: true
 ### Window
 #### Sysmon
 ## Security
-Paper Review
-### <details><summary>PyQt5</summary>
+### <details><summary>Paper Review</summary>
 <div markdown="1">
 > 1. FortuneTeller: Predicting Microarchitecture Attacks via Unsupervised Deep Learning
 </div></details>
