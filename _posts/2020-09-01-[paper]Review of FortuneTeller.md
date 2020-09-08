@@ -52,3 +52,46 @@ and target implementations with the highest F-score of 0.9970.
 # Instruction
 ## Spectre and Meltdown attack 
 Allow a user with minimum access right to easily read arbitraty locations in the memory by exploiting the transient effect of illegal instruction sequences
+
+## How can we discover **dormant vulnerabilites** and protect against such **subtle attacks**?
+
+A fundamental approach is to eliminate the leakage altogether by using formal analysis.  
+However, given H/W 발전되면 근 미래에 찾는 것은 비현실적이다.   
+그렇기에 남은 방법은 운영 방법을 바꾸는 것이다.
+leaks are patched as they are discovered by researchers through inspection and statistical analysis.
+  
+**Microarchitectural side-channel attacks**는 그렇기에 os단에서 보안 강화(hardening),software synthesis, analysis, static or dynamic detection of attacks를 한다. 
+
+**Static analysis** is performed by evaluating the untrusted sw against known malicious code patterns **without running it on a target platform.**  
+
+**Dynamic analysis** aims to detect malicious behavior in the system by analyzing **the runtime footprint of the running process**  
+
+microarchitectural attacks의 동적 탐지에서 현재 존재하는 일들은 h/w performance counter로부터 collecting footprints에 기반 되어있고 악성행위의 모델링을 제한하는 것에 기반되어있다.  
+
+중요한 문제점들 목표는 탐지기술, 은 부족이다. 정보의 새로운 공격 백터들의 
+
+그래서 이상행위를 모델링하는 것은 목표는 발견되어지지 안흔ㄴ 공격그리고 정확하게 그들을 구분하는 것|출발지는 정상 행동|은 계속된 문제이다.
+
+그래서 microarchitectural attacks는 시작단계이고 지도된 learnong모델들이고 이것들은 사용되어진다. 공격 분류기로 그리고 의존하지않는다 |나아가서 탐지지는 것을| 알려진 공격들을| 불충분한 양때문에 그리고 중요하지않는 라벨링의 데이터들 떄문에 
+
+그림으로 비지도학습 방법은 더 약속되어진다. 적용하는 것을 | 탐지 모델들을 실제 세계의 시나리오들에게 |
+
+이상에 기반된 공격 탐지들은 또한 연구되어진다 다른 보안 기능들에게서 | 목표로한다. 나아가서 앞서 언급한 문제들을 표현하기 위해서 | 힘들받는 것은 온화한 행동과 outlier을 탐지하는 것에서 
+
+**Cache attacks**의 기반된 이상 탐지 노력이 있는 동안 현대 m,a는 **side-channel attakcs**로부터 공격을 겪고 있다. 
+
+그럼으로 detection techniques는 실용적이고 사용적이지 않다. 만약 그들이 전체 범위를 커버하지 아는다면 알거나 보이지않는 공격들의. 
+
+이것은 요구한다. 더 향상된 배우는 알고리즘들을 나아가서 모델들을 이해하기 위해서 전체 행위 본질은 m,a
+
+반면에 통계적인 모델 (목표는 이상 탐지)는 충분하지 않다. 나아가서 분석하는 것에, 수백만개의 이벤트들을 현대 ma에서 생성된 복잡한 시스템들의
+
+주요한 한계, **classical stastictical learning metho**의, 는 그들은 한손 설정된 특징을 사용한다. 그리고 이것은 낭비한다. 주요한 정보들을 나아가서 특정화하는데 온하한 프로그램을 패턴화하는데. 결국에 이 기술들은 실패했다. 실제 세계에서 generic model들을 사용하는 것에.
+
+**RNN** 과 **LSTM**과 **GRU** network를 사용하여 기존의 sequential flow들을 잘 파악하지 못했던 현대 modernachitecture들을 파악할 수 있게 모델링을 하였다. 
+
+## Contribution
+* Propose Fortuneteller
+** first generic detection model/technique for microarchitectual attacks
+** h/w,s/w의 정상적인 행동을 학습하고 (ma의 이벤트 관찰로 부터 얻어진) 이상 행동으로서 훈련된 데이터들을 형성하지 않는 outlier들을 분류한다.
+** 보이지않는 m,a attack을 탐지할 수 있다. 
