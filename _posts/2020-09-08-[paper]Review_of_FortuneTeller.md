@@ -78,6 +78,16 @@ microarchitectural attacks의 동적 탐지에서 현재 존재하는 일들은 
 >  이 3가지 모두다 m,a Attack의 공격 요소이며   
 >  Fortuneteller는 m,a를 공격하는 아래 3가지 기법들을 탐지할 수 있다.  
 
-* Flush+Reload:
+* Flush+Reload: 
+  LLC는 프로세서에서 모든 코어들 사이에서 공유되어진다.  
+  Flush+Reload attack은 clflush 명령어의 사용에 의해서 cache line들을 특정화하 위한 접근들을 추적하는 것을 목표로한다.  
+  1. 공격자는 피해입는 cache line을 flush한다. 
+  2. 그리고 피해는 몇몇 실행에서 수행된다. 
+  3. 마지막으로 공격자는 같은 cache line을 다시 load하고 접근 시간을 계산한다.
+  4. Flush-Reload 공격은 대부분 암호된 키로 복구된다.(사용된 메모리 복재와 함께된 시스템 공격에 사용할 수 있는) (cloud enviroment 같은)
+
+* Flush+Flush:
+
+* Prim+Probe:
   
   
