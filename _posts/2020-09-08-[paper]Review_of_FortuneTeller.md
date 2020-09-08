@@ -72,10 +72,10 @@ microarchitectural attacks의 동적 탐지에서 현재 존재하는 일들은 
 
 # Section2: provide background imformation about RNN and microarchitectual attacks
 ## A. Microarchitectural Attacks
-  컴퓨터의 기능 향상으로 엄청나게 복잡하고 최적화되게 computer archetecture가 구현되었다. 
-  성능을 향상시키기 위해서 몇몇의 low-level의 특징들이 소개되어진다.  
-  "1. speculative branch /2. out-of-order executions /3. shared LLC(Last level cache)"  
-  이 3가지 모두다 m,a Attack의 공격 요소이며 Fortuneteller는 m,a를 공격하는 아래 3가지 기법들을 탐지할 수 있다.
+>  컴퓨터의 기능 향상으로 엄청나게 복잡하고 최적화되게 computer archetecture가 구현되었다. 
+>  성능을 향상시키기 위해서 몇몇의 low-level의 특징들이 소개되어진다.  
+>  "1. speculative branch /2. out-of-order executions /3. shared LLC(Last level cache)"  
+>  이 3가지 모두다 m,a Attack의 공격 요소이며 Fortuneteller는 m,a를 공격하는 아래 3가지 기법들을 탐지할 수 있다.
  * Flush+Reload:
   
   
