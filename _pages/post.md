@@ -99,7 +99,7 @@ toc: true
 ## Security
 <details><summary>Paper Review</summary>
 <div markdown="1">
-> 1. FortuneTeller: Predicting Microarchitecture Attacks via Unsupervised Deep Learning
+> 1. [FortuneTeller: Predicting Microarchitecture Attacks via Unsupervised Deep Learning](https://leesk212.github.io/paper-Review_of_FortuneTeller/)
 </div></details>
 
 
