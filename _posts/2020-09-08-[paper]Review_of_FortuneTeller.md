@@ -47,9 +47,9 @@ microarchitectural attacks의 동적 탐지에서 현재 존재하는 일들은 
 
 그래서 microarchitectural attacks는 시작단계이고 지도된 learnong모델들이고 이것들은 사용되어진다. 공격 분류기로 그리고 의존하지않는다 |나아가서 탐지지는 것을| 알려진 공격들을| 불충분한 양때문에 그리고 중요하지않는 라벨링의 데이터들 떄문에 
 
-그림으로 비지도학습 방법은 더 약속되어진다. 적용하는 것을 | 탐지 모델들을 실제 세계의 시나리오들에게 |
+그림으로 비지도학습 방법은 더 약속되어진다. 적용하는 것을 탐지 모델들을 실제 세계의 시나리오들에게
 
-이상에 기반된 공격 탐지들은 또한 연구되어진다 다른 보안 기능들에게서 | 목표로한다. 나아가서 앞서 언급한 문제들을 표현하기 위해서 | 힘들받는 것은 온화한 행동과 outlier을 탐지하는 것에서 
+이상에 기반된 공격 탐지들은 또한 연구되어진다 다른 보안 기능들에게서 목표로한다. 나아가서 앞서 언급한 문제들을 표현하기 위해서 힘들받는 것은 온화한 행동과 outlier을 탐지하는 것에서 
 
 **Cache attacks**의 기반된 이상 탐지 노력이 있는 동안 현대 m,a는 **side-channel attakcs**로부터 공격을 겪고 있다. 
 
@@ -65,6 +65,16 @@ microarchitectural attacks의 동적 탐지에서 현재 존재하는 일들은 
 
 ## Contribution
 * Propose Fortuneteller  
-** first generic detection model/technique for microarchitectual attacks  
-** h/w,s/w의 정상적인 행동을 학습하고 (ma의 이벤트 관찰로 부터 얻어진) 이상 행동으로서 훈련된 데이터들을 형성하지 않는 outlier들을 분류한다.  
-** 보이지않는 m,a attack을 탐지할 수 있다.   
+ * first generic detection model/technique for microarchitectual attacks  
+ * h/w,s/w의 정상적인 행동을 학습하고 (ma의 이벤트 관찰로 부터 얻어진) 이상 행동으로서 훈련된 데이터들을 형성하지 않는 outlier들을 분류한다.  
+ * 보이지않는 m,a attack을 탐지할 수 있다.   
+
+# Section2: provide background imformation about RNN and microarchitectual attacks
+* A. Microarchitectural Attacks
+  컴퓨터의 기능 향상으로 엄청나게 복잡하고 최적화되게 computer archetecture가 구현되었다. 
+  성능을 향상시키기 위해서 몇몇의 low-level의 특징들이 소개되어진다.  
+  "1. speculative branch /2. out-of-order executions /3. shared LLC(Last level cache)"  
+  이 3가지 모두다 m,a Attack의 공격 요소이며 Fortuneteller는 m,a를 공격하는 아래 3가지 기법들을 탐지할 수 있다.
+ * Flush+Reload:
+  
+  
