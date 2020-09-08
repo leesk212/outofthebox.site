@@ -91,7 +91,7 @@ microarchitectural attacks의 동적 탐지에서 현재 존재하는 일들은 
 **RNN** 과 **LSTM**과 **GRU** network를 사용하여 기존의 sequential flow들을 잘 파악하지 못했던 현대 modernachitecture들을 파악할 수 있게 모델링을 하였다. 
 
 ## Contribution
-* Propose Fortuneteller
-** first generic detection model/technique for microarchitectual attacks
-** h/w,s/w의 정상적인 행동을 학습하고 (ma의 이벤트 관찰로 부터 얻어진) 이상 행동으로서 훈련된 데이터들을 형성하지 않는 outlier들을 분류한다.
-** 보이지않는 m,a attack을 탐지할 수 있다. 
+* Propose Fortuneteller  
+** first generic detection model/technique for microarchitectual attacks  
+** h/w,s/w의 정상적인 행동을 학습하고 (ma의 이벤트 관찰로 부터 얻어진) 이상 행동으로서 훈련된 데이터들을 형성하지 않는 outlier들을 분류한다.  
+** 보이지않는 m,a attack을 탐지할 수 있다.   
