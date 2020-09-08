@@ -1,37 +1,10 @@
 # Abstract
+
 ```
-Abstract—The growing security threat of microarchitectural
-attacks underlines the importance of robust security sensors and
-detection mechanisms at the hardware level. While there are
-studies on runtime detection of cache attacks, a generic model to
-consider the broad range of existing and future attacks is missing.
-Unfortunately, previous approaches only consider either a single
-attack variant, e.g. Prime+Probe, or specific victim applications
-such as cryptographic implementations. Furthermore, the state-
-of-the art anomaly detection methods are based on coarse-grained
-statistical models, which are not successful to detect anomalies
-in a large-scale real world systems.
-Thanks to the memory capability of advanced Recurrent
-Neural Networks (RNNs) algorithms, both short and long term
-dependencies can be learned more accurately. Therefore, we
-propose FortuneTeller, which for the first time leverages the
-superiority of RNNs to learn complex execution patterns and
-detects unseen microarchitectural attacks in real world systems.
-FortuneTeller models benign workload pattern from a microar-
-chitectural standpoint in an unsupervised fashion, and then,
-it predicts how upcoming benign executions are supposed to
-behave. Potential attacks and malicious behaviors will be detected
-automatically, when there is a discrepancy between the predicted
-execution pattern and the runtime observation.
-We implement FortuneTeller based on the available hardware
-performance counters on Intel processors and it is trained with 10
-million samples obtained from benign applications. For the first
-time, the latest attacks such as Meltdown, Spectre, Rowhammer
-and Zombieload are detected with one trained model and without
-observing these attacks during the training. We show that
-FortuneTeller achieves the best false positive and false negative
-trade off compared to existing works under realistic workloads
-and target implementations with the highest F-score of 0.9970.
+Abstract—
+The growing security threat of microarchitectural attacks underlines the importance of robust security sensors and detection mechanisms at the hardware level. While there are studies on runtime detection of cache attacks, a generic model to consider the broad range of existing and future attacks is missing.Unfortunately, previous approaches only consider either a singleattack variant, e.g. Prime+Probe, or specific victim applications such as cryptographic implementations. Furthermore, the state-of-the art anomaly detection methods are based on coarse-grained
+statistical models, which are not successful to detect anomalies in a large-scale real world systems. Thanks to the memory capability of advanced Recurrent Neural Networks (RNNs) algorithms, both short and long term dependencies can be learned more accurately. Therefore, we
+propose FortuneTeller, which for the first time leverages the superiority of RNNs to learn complex execution patterns and detects unseen microarchitectural attacks in real world systems. FortuneTeller models benign workload pattern from a microar-chitectural standpoint in an unsupervised fashion, and then, it predicts how upcoming benign executions are supposed to behave. Potential attacks and malicious behaviors will be detected automatically, when there is a discrepancy between the predicted execution pattern and the runtime observation. We implement FortuneTeller based on the available hardware performance counters on Intel processors and it is trained with 10 million samples obtained from benign applications. For the first time, the latest attacks such as Meltdown, Spectre, Rowhammer and Zombieload are detected with one trained model and without observing these attacks during the training. We show that FortuneTeller achieves the best false positive and false negative trade off compared to existing works under realistic workloads and target implementations with the highest F-score of 0.9970.
 ```
 
 > * 증가되는 mircoachitectural attacks 에 대한 보안 위험은 "세밀한 보안 센서"와 "탐지 메카니즘"의 중요성을 강조한다.  
