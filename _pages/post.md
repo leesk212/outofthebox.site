@@ -101,6 +101,10 @@ toc: true
 <div markdown="1">
 > 1. [FortuneTeller: Predicting Microarchitecture Attacks via Unsupervised Deep Learning](https://leesk212.github.io/paper-Review_of_FortuneTeller/)
 </div></details>
+<details><summary>Basic Hacking Practice</summary>
+<div markdown="1">
+> 1. [Secret-Key Encryption](https://leesk212.github.io/paper-Review_of_FortuneTeller/)
+</div></details>
 
 
 ## "Etc"
