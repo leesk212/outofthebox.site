@@ -103,7 +103,7 @@ toc: true
 </div></details>
 <details><summary>Basic Hacking Practice</summary>
 <div markdown="1">
-> 1. [Secret-Key Encryption](https://leesk212.github.io/paper-Review_of_FortuneTeller/)
+> 1. [Secret-Key Encryption](https://leesk212.github.io/Security-1.-Secret-Key-Encryption/)
 </div></details>
 
 
