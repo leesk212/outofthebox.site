@@ -103,9 +103,12 @@ toc: true
 </div></details>
 <details><summary>Basic Hacking Practice</summary>
 <div markdown="1">
-> 1. [Secret-Key Encryption](https://leesk212.github.io/Security-1.-Secret-Key-Encryption/)
+> 1. [Secret-Key Encryption](https://github.com/leesk212/private_post/blob/master/2020-09-09-%5BSecurity%5D1.%20Secret-Key%20Encryption.md)
 </div></details>
-
+<details><summary>FTZ</summary>
+<div markdown="1">
+> 1. [MemoryLayout & Backdoor](https://leesk212.github.io/Security-FTZ_1/)
+</div></details>
 
 ## "Etc"
 ### Blog
