@@ -104,7 +104,8 @@ toc: true
 </div></details>
 <details><summary>Basic Hacking Practice</summary>
 <div markdown="1">
-> 1. [Secret-Key Encryption](https://leesk212.github.io/Security-1.-Secret-Key-Encryption/)
+> 1. [Secret-Key Encryption](https://leesk212.github.io/Security-1.-Secret-Key-Encryption/)  
+> 2. [One-way-hash](https://leesk212.github.io/Security-One-way-hash-function/)
 </div></details>
 <details><summary>FTZ</summary>
 <div markdown="1">
