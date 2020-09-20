@@ -75,7 +75,7 @@
  * C = E(P,K)
  * P = D(C0,K)
 #### CBC (Ciper Block Chainging) mode
- * Chain처럼 계속 이어지면서 xor게이트와 Initial Vector를 넣어서 완전히 다른 값으로 만들어버린다. 
+ * Chain처럼 계속 이어지면서 xor게이트와 Initial Vector를 넣어서 완전히 다른 값으로 만들어버린다.  
  ```
  $ openssl enc -aes-128-ecb -e -in plain.txt -out cipher.txt -K 00112233445566778899AABBCCDDEEFF -iv 000102030405060708090a0b0c0d0e0f
  $ openssl enc -aes-128-ecb -d -in cipher.txt -out new_plain.txt -K 00112233445566778899AABBCCDDEEFF
@@ -105,6 +105,7 @@
 #### Cryptography APIs
 
 python에 암호화를 해주는 API가 있다.
+
 ```
 from Crypto.Cipher import AES
 from Crypro.Util import Padding
