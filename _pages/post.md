@@ -112,7 +112,10 @@ toc: true
 > 1. [MemoryLayout & Backdoor](https://leesk212.github.io/Security-FTZ_0&1/)
 > 2. [Vim & " " & ; ](https://leesk212.github.io/Security-FTZ_2&3/)
 </div></details>
-
+<details><summary>Serious Cryptography</summary>
+<div markdown="1">
+> 1. [Encryption]()
+</div></details>
 ## "Etc"
 ### Blog
 ### English
