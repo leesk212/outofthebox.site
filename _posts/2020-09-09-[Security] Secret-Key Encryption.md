@@ -76,12 +76,14 @@
  * P = D(C0,K)
 #### CBC (Ciper Block Chainging) mode
  * Chain처럼 계속 이어지면서 xor게이트와 Initial Vector를 넣어서 완전히 다른 값으로 만들어버린다.  
+ 
  ```
  $ openssl enc -aes-128-ecb -e -in plain.txt -out cipher.txt -K 00112233445566778899AABBCCDDEEFF -iv 000102030405060708090a0b0c0d0e0f
  $ openssl enc -aes-128-ecb -d -in cipher.txt -out new_plain.txt -K 00112233445566778899AABBCCDDEEFF
  
  (-K (비밀키 16진수), -e( Encrytion 암호화) -d( Decriptrion 복호화) -iv: inital vector)
  ```
+ 
  * C = P xor E (IV,K)
  * P = C xor E (IV,K)
  
