@@ -65,6 +65,7 @@
  * 데이터를 넣었던 그대로 복호화가 되는 것이다.
  * Pi = Pj 이면 Ci = Cj이다. 
  * 넣은대로 나오기 때문에 추축하기가 매우 쉬움 => 정보 노출에 용이함
+ 
  ```
  $ openssl enc -aes-128-ecb -e -in plain.txt -out cipher.txt -K 00112233445566778899AABBCCDDEEFF
  $ openssl enc -aes-128-ecb -d -in cipher.txt -out new_plain.txt -K 00112233445566778899AABBCCDDEEFF
