@@ -115,7 +115,8 @@ toc: true
 <details><summary>Serious Cryptography</summary>
 <div markdown="1">
 > 1. [Encryption]()
-</div></details>
+</div></details>  
+
 ## "Etc"
 ### Blog
 ### English
