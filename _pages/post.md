@@ -100,7 +100,8 @@ toc: true
 ## Security
 <details><summary>Paper Review</summary>
 <div markdown="1">
-> 1. [FortuneTeller: Predicting Microarchitecture Attacks via Unsupervised Deep Learning](https://leesk212.github.io/paper-Review_of_FortuneTeller/)
+> 1. [FortuneTeller: Predicting Microarchitecture Attacks via Unsupervised Deep Learning](https://leesk212.github.io/paper-Review_of_FortuneTeller/)  
+> 2. [FLUSH+RELOAD: a High Resolution,Low Noise,L3 Cache Side-Channel Attack]()
 </div></details>
 <details><summary>Basic Hacking Practice</summary>
 <div markdown="1">
@@ -116,9 +117,3 @@ toc: true
 <div markdown="1">
 > 1. [Encryption]()
 </div></details>  
-
-## "Etc"
-### Blog
-### English
-### FIFA
-### Travel
