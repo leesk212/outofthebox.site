@@ -61,6 +61,8 @@ toc: true
 <div markdown="1">
 > 1. [What Are Wavelets]()
 </div></details>
+
+
 ### MIPS
 ### MySQL
 ### Python  
