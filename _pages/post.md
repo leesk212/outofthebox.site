@@ -57,7 +57,10 @@ toc: true
 > 1. [mat2png](https://leesk212.github.io/Matlab-Mat2Png/)
 > 2. [mat2png_whilemovingdirectory](https://leesk212.github.io/Matlab-mat2png_while_moving_directory/)
 </div></details>
-
+<details><summary>Wavelets</summary>
+<div markdown="1">
+> 1. [What Are Wavelets]()
+</div></details>
 ### MIPS
 ### MySQL
 ### Python  
