@@ -110,8 +110,8 @@ toc: true
 [Sysmon_config]()
 </div></details>
 </div></details>
-### Window
-#### Sysmon
+
+
 ## Security
 <details><summary>Paper Review</summary>
 <div markdown="1">
