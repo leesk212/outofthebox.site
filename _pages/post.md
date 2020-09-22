@@ -105,7 +105,7 @@ toc: true
 </div></details>
 <details><summary>Window</summary>
 <div markdown="1">
-* <details><summary>Sysmon</summary>
+<details><summary>Sysmon</summary>
 <div markdown="1">
 [Sysmon_config]()
 </div></details>
