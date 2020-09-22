@@ -59,6 +59,7 @@ toc: true
 </div></details>
 <details><summary>Wavelets</summary>
 <div markdown="1">
+* [mat2wavelet](https://leesk212.github.io/matlab-mat2wavelet/)
 > 1. [What Are Wavelets]()
 </div></details>
 
