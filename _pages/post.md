@@ -103,7 +103,7 @@ toc: true
 <details><summary>Linux</summary>
 <div markdown="1">
 > * [linux 원격 접속 허용하기](https://leesk212.github.io/Linux-Setting-ssh/)
-> * [linux ssh로 scp통신하기]()
+> * [linux ssh로 scp통신하기](https://leesk212.github.io/Linux-SCP/)
 </div></details>
 <details><summary>Window</summary>
 <div markdown="1">
