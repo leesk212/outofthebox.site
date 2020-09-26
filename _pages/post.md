@@ -134,3 +134,12 @@ toc: true
 <div markdown="1">
 > 1. [Encryption]()
 </div></details>  
+
+## Development Idea
+<details><summary>잡다한 생각</summary>
+<div markdown="1">
+> 1. [[Program]축구시뮬레이터 for YouTuber]()
+> 2. [[Program]고도화된 네비게이션]()
+> 3. [[Book]삼성(三性)]()
+</div>
+</details>
