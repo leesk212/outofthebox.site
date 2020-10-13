@@ -25,6 +25,13 @@ yes 로 설정하세요.
 * ChallengeResponseAuthentication : ChallengeResponse 라는 특이한 인증 허용여부. (yes, no). 설정하지 않으면 yes 가 됩니다.
 no 로 설정하세요.
 
+# 5. Port 추가
+```
+#Port 22
+```
+* 되어 있는 부분을 주석 해제 시키고
+* 추가적으로 현재 포트포워딩한 컴퓨터의 외부 포트값을 같이 적어준다.
+
 ## Reference
 * [sshd_config](https://blog.lael.be/post/7678)  
 * [Linux ssh에 올리기](http://blog.naver.com/PostView.nhn?blogId=ssamba&logNo=129099379)
