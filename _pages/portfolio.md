@@ -33,7 +33,7 @@ Work Experience
 >> - Project experience: Sysmon-EL-Python_PyQt
 >> - Term: 2020/07/03 ~ 2020/08/25
 >  
-> ![CSS Lab(Compuer Systems Security Lab)](https://sites.google.com/view/icseclab/home)
+> [CSS Lab(Compuer Systems Security Lab)](https://sites.google.com/view/icseclab/home)
 >> - Program: Korea University Undergaduate reasearch student      
 >> - Project experience: Ongoing
 >> - Term: 2020/09/07 ~ 
