@@ -39,3 +39,32 @@ while month <= 12:
     month = month + 1
 ```
 [f-string](https://blockdmask.tistory.com/429)
+
+# rsplit
+* split 하는 위치를 reversing하여 뒤에서 부터 reversing을 하는 구조이다.
+```python
+str1 = "//SF"
+result = str1.split('/')
+print(result)
+
+# 실행 결과:
+['', '', 'SF']
+```
+```python
+str1 = "//SF"
+result = str1.rsplit('/')
+print(result)
+
+# 실행 결과:
+['', '', 'SF']
+```
+* rsplit을 해도 의도와는 다르게 나옴으로 이때는 파라미터 하나를 더 추가 시켜주면 된다.
+```python
+str1 = "//SF"
+result = str1.rsplit('/', 1)
+print(result)
+
+# 실행 결과:
+['/', 'SF']
+```
+* 이를 통해 의도대로 1번의 split만 이용되어서 분할을 진행할 수 있다.
