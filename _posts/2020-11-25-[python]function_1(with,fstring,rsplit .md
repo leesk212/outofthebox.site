@@ -68,3 +68,4 @@ print(result)
 ['/', 'SF']
 ```
 * 이를 통해 의도대로 1번의 split만 이용되어서 분할을 진행할 수 있다.
+[rsplit](https://lang-comp.tistory.com/5)
