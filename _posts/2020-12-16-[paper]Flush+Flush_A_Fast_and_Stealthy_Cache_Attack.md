@@ -63,6 +63,13 @@
   * 실행시간을 통해 이 메모리 라인이 cached 되었는지 아닌지를 파악한다.
   * attacker가 캐시로부터 메모리라인을 로드하지 못했다면 다른 프로세서가 이것을 로드했는지 안했는지를 드러낸다.
   * 동시에 clflush는 캐시에서 다음 공격 루프라운드를 위해서 메모리 라인을 추출한다. 
-  * 측정은 rdtsc 명령어로 하고, mfence 로 volitile을 수정한다.  
+  * 측정은 rdtsc 명령어로 cycle을 측정한다.
   ![aaa](https://media.springernature.com/original/springer-static/image/chp%3A10.1007%2F978-3-319-40667-1_14/MediaObjects/416839_1_En_14_Fig1_HTML.gif)
+  * 다음표와 같이 cached가 되어있을때와 아닐때 약 12cycle정도 차이가 남을 확인할 수 있다.
+  * Flush+Reload보다 cycle수가 차이나는 것이 적음으로 본질적으로 Flush+Flush 공격은 정확도가 적음을 확인할 수 있다. 
+  * 그러나 부채널 공격을 통해 같은 양의 정보를 추출한다고 했을 때 그 속도는 확연하게 빠른 것을 확인할 수 있다.
+  
+  # Detecting Cache Attacks with Hardware Performance Counters
+  * 
+  
   
