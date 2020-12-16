@@ -55,21 +55,21 @@
   * 취약점이 추출된 공격들은 이미 root권한을 얻는 것을 증명했고, sandbox를 파괴하는 것을 증명했다.
   * Rowhammer은 충분한 수의 cache hit와 cache missess를 증명했고, 이는 Cache Side attack과 닮았다.
   
-  # The Flush+Flush Attack
-  * cache miss를 만들지 않고, 매우 적은 양의  cache hits들을 만든다.
-  * Flush+Reload와 SW,HW의 같은 스펙에서 발생이 진행될 수있다.
-  * Attack은 무한의 루프에서 실행되면서 실행되고, 계속적으로 타겟된 공유 메모리 라인에게 clflush 명령어를 실행한다. 
-  * 공격자는 clflush 명령어의 실행시간을 측정한다.
-  * 실행시간을 통해 이 메모리 라인이 cached 되었는지 아닌지를 파악한다.
-  * attacker가 캐시로부터 메모리라인을 로드하지 못했다면 다른 프로세서가 이것을 로드했는지 안했는지를 드러낸다.
-  * 동시에 clflush는 캐시에서 다음 공격 루프라운드를 위해서 메모리 라인을 추출한다. 
-  * 측정은 rdtsc 명령어로 cycle을 측정한다.
-  ![aaa](https://media.springernature.com/original/springer-static/image/chp%3A10.1007%2F978-3-319-40667-1_14/MediaObjects/416839_1_En_14_Fig1_HTML.gif)
-  * 다음표와 같이 cached가 되어있을때와 아닐때 약 12cycle정도 차이가 남을 확인할 수 있다.
-  * Flush+Reload보다 cycle수가 차이나는 것이 적음으로 본질적으로 Flush+Flush 공격은 정확도가 적음을 확인할 수 있다. 
-  * 그러나 부채널 공격을 통해 같은 양의 정보를 추출한다고 했을 때 그 속도는 확연하게 빠른 것을 확인할 수 있다.
+# The Flush+Flush Attack
+* cache miss를 만들지 않고, 매우 적은 양의  cache hits들을 만든다.
+* Flush+Reload와 SW,HW의 같은 스펙에서 발생이 진행될 수있다.
+* Attack은 무한의 루프에서 실행되면서 실행되고, 계속적으로 타겟된 공유 메모리 라인에게 clflush 명령어를 실행한다. 
+* 공격자는 clflush 명령어의 실행시간을 측정한다.
+* 실행시간을 통해 이 메모리 라인이 cached 되었는지 아닌지를 파악한다.
+* attacker가 캐시로부터 메모리라인을 로드하지 못했다면 다른 프로세서가 이것을 로드했는지 안했는지를 드러낸다.
+* 동시에 clflush는 캐시에서 다음 공격 루프라운드를 위해서 메모리 라인을 추출한다. 
+* 측정은 rdtsc 명령어로 cycle을 측정한다.  
+![aaa](https://media.springernature.com/original/springer-static/image/chp%3A10.1007%2F978-3-319-40667-1_14/MediaObjects/416839_1_En_14_Fig1_HTML.gif)
+* 다음표와 같이 cached가 되어있을때와 아닐때 약 12cycle정도 차이가 남을 확인할 수 있다.
+* Flush+Reload보다 cycle수가 차이나는 것이 적음으로 본질적으로 Flush+Flush 공격은 정확도가 적음을 확인할 수 있다. 
+* 그러나 부채널 공격을 통해 같은 양의 정보를 추출한다고 했을 때 그 속도는 확연하게 빠른 것을 확인할 수 있다.
   
-  # Detecting Cache Attacks with Hardware Performance Counters
-  * 
+# Detecting Cache Attacks with Hardware Performance Counters
+* 
   
   
