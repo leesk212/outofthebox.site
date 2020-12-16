@@ -49,5 +49,6 @@
   3. 만약 피해자가 single cache에 접근을 했으면 공격자가 접근한 시간이 짧고 (cache hit) 피해자가 single cache에 접근을 하지 않았으면 (cache miss) 공격자가 접근한 시간이 길다.
 * Rowhammer
   * 전형적인 cache attack은 아니다.
-  * DRAM의 random bit flip이 일어나는 취약성을 사용한다. (DRAM row에 반복적으로 접근할때)
+  * 특정 DRAM row에 계속 반복적으로 접근하게 되면 인접한 메모리에서 random bit flip이 일어나는 취약성을 사용한다. 
+  * Rowhammer_attack(https://medium.com/@Anna_IT/rowhammer-%EA%B3%B5%EA%B2%A9-%EB%8C%80%EC%9D%91%EC%9D%84-%EC%9C%84%ED%95%9C-ecc-%EB%A9%94%EB%AA%A8%EB%A6%AC%EC%9D%98-%ED%9A%A8%EA%B3%BC%EB%8A%94-error-correcting-code%EC%9D%98-%EC%8B%A4%ED%9A%A8%EC%84%B1-%EA%B2%80%EC%A6%9D-36856febbb57)
   
