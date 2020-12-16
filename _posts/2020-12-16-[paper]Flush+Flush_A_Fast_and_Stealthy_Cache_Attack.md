@@ -70,6 +70,17 @@
 * 그러나 부채널 공격을 통해 같은 양의 정보를 추출한다고 했을 때 그 속도는 확연하게 빠른 것을 확인할 수 있다.
   
 # Detecting Cache Attacks with Hardware Performance Counters
-* 
+* Cache hit과 Cache miss가 급격하게 많아지는 것은 HPC(OS level)에서 탐지될 수 있다.
+* 하지만 공격을 **막기** 위해서는 공격중인 프로세스를 확인하는 작업이 필수적이다.
+* 그래서 Flush+Flush 공격은 이 확인되어지는 과정을 할 수 없게 stealthy하다.
+* HPC는 특별한 목적(특별한 H/W의 상태를 관측할 수 있는)의 register이다. 
+* **HPC는 LLC에서의 cache references와 cache miss를 관측할 수 있다.**
+* Performance tunning을 위해 만들어졌지만, 현재 Flush+Reload와 Rowhammer를 탐지하는데 적합한 register가 되었다.
+* 하지만 Flush+Flush 공격은 Performance counter들로는 탐지가 실현불가능하다.
+* Linux의 perf_event_open systemcall interface로 이용되는 것을 분석할 수 있다. (이 시스템 콜은 사용가능한 perfourmance counters들의 subset(일부분)을 userspace에서 접근 가능하게 제공해주고, kernel단에서 수행된다.)(그리고 이 레지스터들은 현재 공격중인 것을 탐지하는데 쓰인다)
+* 23개의 h/w와 cache performance events를 분석하였고, 추가적으로 C-box라고 불리는 **uncore performance monitoring unit**을 분석하였다. (c-box는 clflush 명령어와 직접적으로 연관되어, cache hits와 miss에 대한 것을 표시해준다.)
+  * UNC_CBO_CACHE_LOOKUP event는 LLC의 cache slice를 보는 것을 허락하는 register이며C-Box monitoring unit은 포괄적인 interface로는 사용할 수 있을 뿐만아니라 특별한 레지스터로써도 사용할 수 있다.
+  
+
   
   
