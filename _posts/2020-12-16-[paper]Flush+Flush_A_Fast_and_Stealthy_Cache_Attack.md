@@ -24,3 +24,7 @@
 * L1,L2,L3( inclusive ) ( L1, L2에 있는 모든 데이터들은 L3에 있음 )( 그렇기에 다른 프로세스의 L1 cache에 있는 중요한 data를 다른 프로세스에서 볼 수 있음 )( 추출되게 되면, 이를 cache attack이라 부름 )
 * **LLC는 ring bus의 형태로 코어들에 의해서 많이 나누어져있음** 
 ![Ringbus](https://www.researchgate.net/publication/339991541/figure/fig2/AS:870238061076481@1584492330268/Architecture-of-LLC-that-consist-of-LLC-slice-connected-via-mesh-inter-core-bus-among-CPU.png)
+* **Sandy Bridge에서는 각각의 물리적 주소값들을 ring-bus의 형태로 나뉘어진  LLC에 "Complex-address function"을 통해 mapping을 진행한다.
+* Cache replacement policy
+ * variants of LRU
+ * bimoal insertion policy(CPU can switch between the two strategies)
