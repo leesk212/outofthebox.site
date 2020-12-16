@@ -6,7 +6,7 @@
 * 또한 Flush+Flush는 다른 cache side channel attack과 비교하여 빠른 실행성을 갖고있는데, 그 이유는 메모리 접근이 없고 clflush 명령어만 사용해 공격을 진행하기 때문이다. (Fast의 이유)
 
 
-#Introduction
+# Introduction
 * Cache attacks include covert and crytographic side channels, **but** caches have also been exploited in other types of attacks such as bypassing kernel ASLR, detecting cryptographic libraries, or key stroke
 * HPC->OS-level-detection based on cached hit and misses
 * three scenarios
