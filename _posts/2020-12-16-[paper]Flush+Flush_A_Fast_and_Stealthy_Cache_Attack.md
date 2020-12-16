@@ -80,7 +80,45 @@
 * Linux의 perf_event_open systemcall interface로 이용되는 것을 분석할 수 있다. (이 시스템 콜은 사용가능한 perfourmance counters들의 subset(일부분)을 userspace에서 접근 가능하게 제공해주고, kernel단에서 수행된다.)(그리고 이 레지스터들은 현재 공격중인 것을 탐지하는데 쓰인다)
 * 23개의 h/w와 cache performance events를 분석하였고, 추가적으로 C-box라고 불리는 **uncore performance monitoring unit**을 분석하였다. (c-box는 clflush 명령어와 직접적으로 연관되어, cache hits와 miss에 대한 것을 표시해준다.)
   * UNC_CBO_CACHE_LOOKUP event는 LLC의 cache slice를 보는 것을 허락하는 register이며C-Box monitoring unit은 포괄적인 interface로는 사용할 수 있을 뿐만아니라 특별한 레지스터로써도 사용할 수 있다.
-  
+  * ITLB performance counters를 사용했다. 왜냐하면 Flush+Reload와 Rowhammer 공격들은 모두 많은 수의 LLC CACHE MISS를 일으키고 작은 부분의 코드에서만 실행되기 때문이다. 작은 코드를 실행하는 것은 ITLB에 적은 압박을 야기하기 때문이다.
+* 24개 중에서 4개정도만 오탐 없이 공격들을 찾아낼 수 있었다.
+  1. CACHE_MISSES
+  2. CACHE_REFERENCES
+  3. L1D_RM
+  4. LL_RA
+* CACHE_MISSES와 CACHE_REFENCE로만으로도 충분하며 performace counter와 관련된 C값이 km또는 kr보다 더 크다면 공격이 되었다고 정의하였다. 
+  * km , kr의 threshold는 malware의 maximum distance와 minimum value를 통해 만들었고,  기본 application의 maximum distance값을 확인해서 구하였다. 
+  * km(cache miss, cache reference)
+* Flush+Reload, Prime+Probe, Rowhammer은 정상적으로 탐지가 되었지만, Flush+Flush는 cache miss와 cache reference를 일으키지 않음으로 탐지되지 않는다.
+
+# Covert Channel Comparison
+
+
+# Side-Channel Attack on User Input
+
+
+# Side-Channel Attack on AES with T-Tables
+
+##### AES  공부
+
+
+# Discussion
+
+## Using clflush to Detect Cores and Cache Slices
+
+## Countermeasures
+
+# Related work
+
+## Detecting and Preventing Cache Attacks
+
+## Ussage of Hardware Performance Counters in Security
+
+## Cache Covert Channels
+
+## Side-Channel Attack on User Inputs
+
+# Conclusion
 
   
   
