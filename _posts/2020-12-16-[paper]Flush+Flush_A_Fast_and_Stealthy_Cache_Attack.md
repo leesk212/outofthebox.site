@@ -53,4 +53,9 @@
   * [Rowhammer_attack](https://medium.com/@Anna_IT/rowhammer-%EA%B3%B5%EA%B2%A9-%EB%8C%80%EC%9D%91%EC%9D%84-%EC%9C%84%ED%95%9C-ecc-%EB%A9%94%EB%AA%A8%EB%A6%AC%EC%9D%98-%ED%9A%A8%EA%B3%BC%EB%8A%94-error-correcting-code%EC%9D%98-%EC%8B%A4%ED%9A%A8%EC%84%B1-%EA%B2%80%EC%A6%9D-36856febbb57)
   * 이러한 접근들은 DRAM에 도달하기 위해서 모든 cache들의 level을 통과해야만하고 bitflip을 유발시킨다. 
   * 취약점이 추출된 공격들은 이미 root권한을 얻는 것을 증명했고, sandbox를 파괴하는 것을 증명했다.
-  * Rowhammer은 충분한 수의 cache hit와 cache missess를 
+  * Rowhammer은 충분한 수의 cache hit와 cache missess를 증명했고, 이는 Cache Side attack과 닮았다.
+  
+  # The Flush+Flush Attack
+  * cache miss를 만들지 않고, 매우 적은 양의  cache hits들을 만든다.
+  * Flush+Reload와 
+  
