@@ -57,5 +57,12 @@
   
   # The Flush+Flush Attack
   * cache miss를 만들지 않고, 매우 적은 양의  cache hits들을 만든다.
-  * Flush+Reload와 
+  * Flush+Reload와 SW,HW의 같은 스펙에서 발생이 진행될 수있다.
+  * Attack은 무한의 루프에서 실행되면서 실행되고, 계속적으로 타겟된 공유 메모리 라인에게 clflush 명령어를 실행한다. 
+  * 공격자는 clflush 명령어의 실행시간을 측정한다.
+  * 실행시간을 통해 이 메모리 라인이 cached 되었는지 아닌지를 파악한다.
+  * attacker가 캐시로부터 메모리라인을 로드하지 못했다면 다른 프로세서가 이것을 로드했는지 안했는지를 드러낸다.
+  * 동시에 clflush는 캐시에서 다음 공격 루프라운드를 위해서 메모리 라인을 추출한다. 
+  * 측정은 rdtsc 명령어로 하고, mfence 로 volitile을 수정한다.
+  ![aaa](https://media.springernature.com/original/springer-static/image/chp%3A10.1007%2F978-3-319-40667-1_14/MediaObjects/416839_1_En_14_Fig1_HTML.gif)
   
