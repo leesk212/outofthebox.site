@@ -37,9 +37,17 @@
 
 ## Cache Attacks and Rowhammer
 * Cache Attack은 CPU cache와 물리메모리 와의 다른 지연시간의 차이로 발생하는 시간차이에 대한 공격이고 전형적으로 두가지로 나눠진다.
-  1. Prime+Probe
-  2. Flush+Reload
+  1. Prime+Probe (메모리 공유가 되어있지 않는 것)
+  2. Flush+Reload (메모리 공유가 되어있는 것)
 * Prime+Probe
   1. 공격자가 cache set을 점령한다.
-  2. 피해자가 cache set을 교체 하는 것을 측정한다
-  3. 
+  2. 피해자가 cache set 된 line을 교체 하는 것을 측정한다
+  * **현대 프로세서들이 complex addressing과 undocumneted replacement 정책을 사용한 물리적으로 색인된 llc를 이용하기 때문에 Cross-VM side-channel attack과 covert-channel들이 나타나게 되었다. ** 
+* Flush+Reload
+  1. 공격자가 clflush로 일정 single cache를 flush 시킨다.
+  2. 공격자는 계속 접근한다.
+  3. 만약 피해자가 single cache에 접근을 했으면 공격자가 접근한 시간이 짧고 (cache hit) 피해자가 single cache에 접근을 하지 않았으면 (cache miss) 공격자가 접근한 시간이 길다.
+* Rowhammer
+  * 전형적인 cache attack은 아니다.
+  * DRAM의 random bit flip이 일어나는 취약성을 사용한다. (DRAM row에 반복적으로 접근할때)
+  
