@@ -26,8 +26,8 @@
 ![Ringbus](https://www.researchgate.net/publication/339991541/figure/fig2/AS:870238061076481@1584492330268/Architecture-of-LLC-that-consist-of-LLC-slice-connected-via-mesh-inter-core-bus-among-CPU.png)
 * **Sandy Bridge에서는 각각의 물리적 주소값들을 ring-bus의 형태로 나뉘어진  LLC에 "Complex-address function"을 통해 mapping을 진행한다.**
 * Cache replacement policy
- * variants of LRU
- * bimoal insertion policy(CPU can switch between the two strategies)
+  * variants of LRU
+  * bimoal insertion policy(CPU can switch between the two strategies)
 
 ## Shared memory
 * OS & hypervisors instrument shared memory to reduce the ovevall physical memory utilization and the TLB utilization
@@ -35,4 +35,11 @@
 * Content-based page deduplication ( OS & hypervisor는 물리 메모리에 byte단위로 동일한 페이지를 스켄하고 동일한 페이지들이 같은 물리 메모리에 mapping되어있다면 **동일한 실제 페이지에 다시 매핑되고 다른 페이지는 사용 가능한 페이지로 표시된다** **이 기술은 TLB와 물리메모리의 사용 성능을 저하시킨다**
 * 관련없는 정보들의 공유와 **sandboxed** process들 사이, 그리고 다른 가상머신에서의 진행중인 프로세스들 사이에서의 메모리 공유는 보안의 걱정을 불러일으킨다.
 
-* 
+## Cache Attacks and Rowhammer
+* Cache Attack은 CPU cache와 물리메모리 와의 다른 지연시간의 차이로 발생하는 시간차이에 대한 공격이고 전형적으로 두가지로 나눠진다.
+  1. Prime+Probe
+  2. Flush+Reload
+* Prime+Probe
+  1. 공격자가 cache set을 점령한다.
+  2. 피해자가 cache set을 교체 하는 것을 측정한다
+  3. 
