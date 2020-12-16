@@ -66,7 +66,7 @@
 * 측정은 rdtsc 명령어로 cycle을 측정한다.  
 ![aaa](https://media.springernature.com/original/springer-static/image/chp%3A10.1007%2F978-3-319-40667-1_14/MediaObjects/416839_1_En_14_Fig1_HTML.gif)
 * 다음표와 같이 cached가 되어있을때와 아닐때 약 12cycle정도 차이가 남을 확인할 수 있다.
-* Flush+Reload보다 cycle수가 차이나는 것이 적음으로 본질적으로 Flush+Flush 공격은 정확도가 적음을 확인할 수 있다. 
+* Flush+Reload보다 cycle수가 차이나는 것이 적음으로 본질적으로(inherently) Flush+Flush 공격은 정확도가 적음을 확인할 수 있다. 
 * 그러나 부채널 공격을 통해 같은 양의 정보를 추출한다고 했을 때 그 속도는 확연하게 빠른 것을 확인할 수 있다.
   
 # Detecting Cache Attacks with Hardware Performance Counters
