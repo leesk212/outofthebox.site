@@ -42,7 +42,7 @@
 * Prime+Probe
   1. 공격자가 cache set을 점령한다.
   2. 피해자가 cache set 된 line을 교체 하는 것을 측정한다
-  * **현대 프로세서들이 complex addressing과 undocumneted replacement 정책을 사용한 물리적으로 색인된 llc를 이용하기 때문에 Cross-VM side-channel attack과 covert-channel들이 나타나게 되었다. ** 
+  **현대 프로세서들이 complex addressing과 undocumneted replacement 정책을 사용한 물리적으로 색인된 llc를 이용하기 때문에 Cross-VM side-channel attack과 covert-channel들이 나타나게 되었다. ** 
 * Flush+Reload
   1. 공격자가 clflush로 일정 single cache를 flush 시킨다.
   2. 공격자는 계속 접근한다.
