@@ -15,3 +15,12 @@
   * a side-channel attack on AES with T-tables
 * Implement a detection machanism that monitors cache references and cache missess of LLC
 * The Flush+Flush attack does not trigger **prefetches** and thus allows to monitor **multiple addresses** within a 4KB memory range in contrast to Flush+Reload that fails in these scenarios.
+
+# Background
+## CPU Caches
+* CPU caches hide the memory access latency to the slow physical memory by buffering frequently used data in a small and fast memory
+* CPU achitectures: n-way-set-associative-caches(->cache sets->cache lines) 
+* A line is loaded in a set depending on its address, and each line can occupy any of the n ways.
+* L1,L2,L3( inclusive ) ( L1, L2에 있는 모든 데이터들은 L3에 있음 )( 그렇기에 다른 프로세스의 L1 cache에 있는 중요한 data를 다른 프로세스에서 볼 수 있음 )( 추출되게 되면, 이를 cache attack이라 부름 )
+* **LLC는 ring bus의 형태로 코어들에 의해서 많이 나누어져있음** 
+![Ringbus](https://www.researchgate.net/publication/339991541/figure/fig2/AS:870238061076481@1584492330268/Architecture-of-LLC-that-consist-of-LLC-slice-connected-via-mesh-inter-core-bus-among-CPU.png)
