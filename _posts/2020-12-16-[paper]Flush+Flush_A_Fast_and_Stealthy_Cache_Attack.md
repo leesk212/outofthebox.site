@@ -28,3 +28,11 @@
 * Cache replacement policy
  * variants of LRU
  * bimoal insertion policy(CPU can switch between the two strategies)
+
+## Shared memory
+* OS & hypervisors instrument shared memory to reduce the ovevall physical memory utilization and the TLB utilization
+* OS는 file을 mapping하는 것, 프로세스는 fork하는 것, 그리고 process를 두번 실행하는 것 모두 비슷하게 처리된다. (왜냐하면 메모리 지역에 대한 중복 제거 결과이기 떄문에)
+* Content-based page deduplication ( OS & hypervisor는 물리 메모리에 byte단위로 동일한 페이지를 스켄하고 동일한 페이지들이 같은 물리 메모리에 mapping되어있다면 **동일한 실제 페이지에 다시 매핑되고 다른 페이지는 사용 가능한 페이지로 표시된다** **이 기술은 TLB와 물리메모리의 사용 성능을 저하시킨다**
+* 관련없는 정보들의 공유와 **sandboxed** process들 사이, 그리고 다른 가상머신에서의 진행중인 프로세스들 사이에서의 메모리 공유는 보안의 걱정을 불러일으킨다.
+
+* 
