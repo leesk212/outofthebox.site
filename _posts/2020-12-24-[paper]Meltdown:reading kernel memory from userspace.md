@@ -36,3 +36,11 @@
 * 그렇게 되면 이미 접근한 메모리에 대한 페이지들이 캐시에 올라와있게 되고, 실행된 probe_array의 모든 페이지들을 Flush+Reload를 진행하게되면 data에 특정 페이지에 대한 접근만 빠르게 됨으로 어느 페이지가 물리 메모리에 접근 되었는지를 확인할 수 있게된다. 
 * 
 
+
+# Building Blocks of the Attack
+## Excuting Transient Instructions
+* 원래대로라면 exception이 발동되었을때 바로 꺼져야 하는데 바로 꺼지지 않게 어떻게 할까?
+1. Exception handling
+2. Exception suppression
+
+## Building a Covert Channel
