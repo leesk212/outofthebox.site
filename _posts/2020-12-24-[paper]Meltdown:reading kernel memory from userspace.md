@@ -20,7 +20,8 @@
 ### Speculative excution
 * 이는 out-of-order와 다른 excution이다. 
 > IF( CONDITION ){ } ELSE { }  
-에서, 추측실행이란 CONDITION이 맞다는 가정하에 CONDITION안의 BODY를 실행시키는 명령임이다.
+
+ 에서, 추측실행이란 CONDITION이 맞다는 가정하에 CONDITION안의 BODY를 실행시키는 명령임이다.
 * Out of order excution과 구분이 필요하다.
 
 ## Cache Attacks
