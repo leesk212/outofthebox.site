@@ -39,7 +39,7 @@
 
 
 # Building Blocks of the Attack
-![meltdown_block](../img/block)
+![meltdown_block](../asset/images/block.png)
 * Meltdown 구현의 첫번째 block에서는 transient instruction의 실행이 있고, CPU가 경험적 지속시간을 최적화 시키기위해서 계속적으로 현재 명령어 앞에서 실행되고 있기 떄문에 모든 순간에 일어난다.
 * Transient Instuction은 만약 그들의 operation이 secret value를 갖고 있다면 side channel attack을 실행시킬 수 있다.
 * userspace에서 kernel space를 접근하는 주소값이여야 하고, kernel space인 이유는 kernel address space에서는 모든 physical memory로의 접근이 가능하기 떄문이다.
