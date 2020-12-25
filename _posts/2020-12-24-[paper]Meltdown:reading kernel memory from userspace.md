@@ -71,12 +71,12 @@
 * receiver는 이것을 감시할 수 있다. 주소가 cache에 load되었는지 안되었는지를, 주소의 access time을 측정함으로써(FR의 개념)
 * 그럼으로 sender는 주소에 접근함으로써 1을 보낼 수 있고 주소에 접근하지 않음으로써 0을 보낼 수 있다.
 - in toy example
-* 다수의 다양한 종류의 cache line들을 사용함으로써 한번에 multibit을 전송할 수 있다.
-* 모든 256 different byte value를 위해 sender는 다른 cache line을 접근할 수 있다.
-* 256 가능한 모든 cache라인들에 Flush+Reload 공격을 진행함으로써 receiver는 한비트가 아닌 모든 비트를 복구할 수 있다.
-* 하지만 F+R 공격은 매우 길기 때문에, 한번에 한비트만 보내는 것이 더 효과적이다.
-* 공격자는 간단하게 secret value를 변조하고 변화 시킬 수 있다. 
+  * 다수의 다양한 종류의 cache line들을 사용함으로써 한번에 multibit을 전송할 수 있다.
+  * 모든 256 different byte value를 위해 sender는 다른 cache line을 접근할 수 있다.
+  * 256 가능한 모든 cache라인들에 Flush+Reload 공격을 진행함으로써 receiver는 한비트가 아닌 모든 비트를 복구할 수 있다.
+  * 하지만 F+R 공격은 매우 길기 때문에, 한번에 한비트만 보내는 것이 더 효과적이다.
+  * 공격자는 간단하게 secret value를 변조하고 변화 시킬 수 있다. 
 - 다른 instruction을 갖고 covert channel 만들기
-* covert channel은 단지 cache에 의존되어진 microachitectural에 제한되어 있지않다.
-* 모든 mircroarchitectual state는 instruction에의해 영향받아질 수 있고 side channel(covert channel을 만들 수 있는)을 통해 관측되어질 수 있다. 
-*
+  * covert channel은 단지 cache에 의존되어진 microachitectural에 제한되어 있지않다.
+  * 모든 mircroarchitectual state는 instruction에의해 영향받아질 수 있고 side channel(covert channel을 만들 수 있는)을 통해 관측되어질 수 있다. 
+  *
