@@ -34,13 +34,32 @@
 * 첫번째 라인에서 원래대로라면 EXCEPTION이 발동되어, 두번째 명령어가 실행이 되면 안된다. 
 * 하지만 슈퍼스칼라에 의해서 두가지의 명령어가 같이 페치되어, Reorder Buffer에서 두개의 명령어다 실행이 가능한 상태로 메모리 접근을 한다.
 * 그렇게 되면 이미 접근한 메모리에 대한 페이지들이 캐시에 올라와있게 되고, 실행된 probe_array의 모든 페이지들을 Flush+Reload를 진행하게되면 data에 특정 페이지에 대한 접근만 빠르게 됨으로 어느 페이지가 물리 메모리에 접근 되었는지를 확인할 수 있게된다. 
-* 
+* access와 같이 일시적으로 존재되는 명령어들을 transient instruction이라 부른다.
+* 비밀 값을 유출시키기 위해서는 transient instruction이 공격자가 유출시키기 원하는 비밀 값을 이용하고 있어야만한다.
 
 
 # Building Blocks of the Attack
+* Meltdown 구현의 첫번째 block에서는 transient instruction의 실행이 있고, CPU가 경험적 지속시간을 최적화 시키기위해서 계속적으로 현재 명령어 앞에서 실행되고 있기 떄문에 모든 순간에 일어난다.
+* Transient Instuction은 만약 그들의 operation이 secret value를 갖고 있다면 side channel attack을 실행시킬 수 있다.
+* userspace에서 kernel space를 접근하는 주소값이여야 하고, kernel space인 이유는 kernel address space에서는 모든 physical memory로의 접근이 가능하기 떄문이다.
+* 하지만 userspace에서 kernelspace를 접근하는 것은 예외처리를 발생시키고 바로 어플리케이션이 종료되도록 만들어버린다. 그렇기에 예외처리가 발생되더라도 그것을 다룰 수 있는 과정이 있어야만 공격자는 Secret value를 누출시킬 수 있다.
+
 ## Excuting Transient Instructions
 * 원래대로라면 exception이 발동되었을때 바로 꺼져야 하는데 바로 꺼지지 않게 어떻게 할까?
-1. Exception handling
-2. Exception suppression
+1. Exception handling: 예외처리가 일어난 후를 효과적으로 다루는 방법
+* 유효하지 않는 메모리 주소값을 접근하기 전에 공격하는 중인 application을 fork하는 방법이다. 그리고 child process에서만 유효하지 않는 메모리 위치로 접근하는 것이다. 
+  * CPU는 transient instuction sequence를 child process에서 충돌나기전에 실행한다.
+  * Parent Porcess는 Microarchitectural state(side-channel)를 관찰함으로써 secret value들을 복구할 수 있다. 
+* 특정한 예외처리가 일어났을 때 시행되는 Signal handler를 설치하는 것으로도 가능하다. 
+  * 공격자가 명령어들의 sequence를 발행하도록 하고, 그리고 crash로부터 어플리케이션을 막음으로써 새로운 프로세스를 생성하지 않기 때문에 overhead를 줄일 수 있다. 
+2. Exception suppression: 예외처리가 일어나는 것을 막고 그리고 control flow를 redirect하는 방법
+* 처음 문제가 제기되는 것에서부터 예외처리 후 꺼지는 것을 막아버리는 방법
+* Transaction memory는 메모리 Access를 하나의 원자 작동으로 사용할 수 있게 그룹화 해주어, 에러가 발생한다면 그 이전의 상태로 돌아갈 수 있도록 option을 제공해준다.
+* 만약 예외처리가 Transaction에서 발생된다면, architectural state는 초기화되고, 그리고 프로그램 실행은 방해없이 지속된다.
+* Speculative execution은 branch misprediction때문에 실행된 코드 path에서 실행되지 않을 것 같은 명령어를 발생시킨다.
+* 이전 조건 branch를 처리하는 것에 따르는 이러한 명령어들은 추측적으로 실행된다.
+* 그럼으로, 유효하지 않은 메모리의 접근은 (단지 이전의 branch condition이 true이기에 실행이 되었던) 추측명령어들에 의해서 실행되어진다.
+* condition들이 실행 코드에서 결코 true라고 평가하지 않을 것이라 확신이들도록 만듦으로써 우리는 일어나는 예외들(메모리 접근이 단지 추측적이게 실행되어지는)을 억압시킬 수 있다. 
 
 ## Building a Covert Channel
+* 두번째 Meltdown block을 
