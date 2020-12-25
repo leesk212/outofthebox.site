@@ -79,4 +79,10 @@
 - 다른 instruction을 갖고 covert channel 만들기
   * covert channel은 단지 cache에 의존되어진 microachitectural에 제한되어 있지않다.
   * 모든 mircroarchitectual state는 instruction에의해 영향받아질 수 있고 side channel(covert channel을 만들 수 있는)을 통해 관측되어질 수 있다. 
-  *
+  * 예를들어 1bit을 보내기 위해서 ALU와 같은 실행 port(?)를 점령함으로써 covert channel을 만들 수 있다. 
+  * receiver는 같은 명령어 port에서 instruction을 실행할 때 latency를 측정할 수 있다. 높은 latency는 1bit를 sender가 보냈음을 말해주고, 낮은 latency는 0을 보냈음을 알 수 있다.
+  * 그럼으로 F+R의 장점은 노이즈가 적고 높은 전달성을 갖고 있다.
+  * 모든 cpu코어로 부터 누수들을 관측할 수 있다.
+  
+# Meltdown
+*
