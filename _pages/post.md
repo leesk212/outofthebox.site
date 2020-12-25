@@ -10,6 +10,9 @@ toc: true
 ### Machine Learning
 #### Increment Learning
 ## Algorithm
+## Assembly
+> * [basic](https://duddnr0615k.tistory.com/263)
+
 
 ## BigData
 ### Elastic-Stack
