@@ -85,4 +85,9 @@
   * 모든 cpu코어로 부터 누수들을 관측할 수 있다.
   
 # Meltdown
-*
+* 이번 장에서는 권한이 없는 user program에서 임의의 물리 메모리를 읽는 강력한 공격인 meltdown을 소개한다.
+ 1. 첫번째로 이 공격의 넓은 적용 가능성을 강조하기 위한 **Attack Setting**에 대해서 설명한다.
+ 2. 두번째로 어떻게 윈도우,리눅스,등의 개인 컴퓨터 그리고 안드로이드 모바일폰, 클라우드에서 meltdown이 mount될 수 있는지 말한다.
+ 3. 마지막으로 meltdown 구현이 kernel memory를 빠른 속도로 dump하는 것에 대해서 말한다.
+* Attack setting
+ * 
