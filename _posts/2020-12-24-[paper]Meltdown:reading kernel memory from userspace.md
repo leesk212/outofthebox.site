@@ -62,4 +62,21 @@
 * condition들이 실행 코드에서 결코 true라고 평가하지 않을 것이라 확신이들도록 만듦으로써 우리는 일어나는 예외들(메모리 접근이 단지 추측적이게 실행되어지는)을 억압시킬 수 있다. 
 
 ## Building a Covert Channel
-* 두번째 Meltdown block을 
+* 두번째 Meltdown block을 보게되면 transient instruction이 마직막에는 microarchitectual covert channel을 통해 정보를 보내고 있는 것을 확인할 수 있다.
+* covert channel의 끝에서 받는 것은 microarchitectural의 변화를 받는 것이고 state로부터 secret을 추정할 수 있게 하는 것이다.
+* 받는 곳은 transient sequence의 부분이 아님을 주목하고 다른 쓰레드, 또는 프로세스가 될 수 있다. (예를들어 fork에서 parents process)
+* 우리들은 Cache attack으로부터 기술들을 영향력있게 한다. 왜냐하면 cache state는 다양한 기술들을 사용해서 architectual state를 믿을 수 있게 전송되어질 수 있는 microarchitectural state이기 때문이다.
+* 특히 우리는 F+R을 사용하고, secret value에 따라서 transient instruction sequence는 regular memory access를 시행한다. 
+* trasient instruction sequence가 접근할 수 있는 페이지에 접근한 후에(covert channel의 sender의 실행한 후에), 주소는 subsequent access를 위해 cached 되어져있다.
+* receiver는 이것을 감시할 수 있다. 주소가 cache에 load되었는지 안되었는지를, 주소의 access time을 측정함으로써(FR의 개념)
+* 그럼으로 sender는 주소에 접근함으로써 1을 보낼 수 있고 주소에 접근하지 않음으로써 0을 보낼 수 있다.
+- in toy example
+* 다수의 다양한 종류의 cache line들을 사용함으로써 한번에 multibit을 전송할 수 있다.
+* 모든 256 different byte value를 위해 sender는 다른 cache line을 접근할 수 있다.
+* 256 가능한 모든 cache라인들에 Flush+Reload 공격을 진행함으로써 receiver는 한비트가 아닌 모든 비트를 복구할 수 있다.
+* 하지만 F+R 공격은 매우 길기 때문에, 한번에 한비트만 보내는 것이 더 효과적이다.
+* 공격자는 간단하게 secret value를 변조하고 변화 시킬 수 있다. 
+- 다른 instruction을 갖고 covert channel 만들기
+* covert channel은 단지 cache에 의존되어진 microachitectural에 제한되어 있지않다.
+* 모든 mircroarchitectual state는 instruction에의해 영향받아질 수 있고 side channel(covert channel을 만들 수 있는)을 통해 관측되어질 수 있다. 
+*
