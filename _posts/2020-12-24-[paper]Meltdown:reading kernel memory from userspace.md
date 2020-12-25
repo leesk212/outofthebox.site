@@ -39,6 +39,7 @@
 
 
 # Building Blocks of the Attack
+![meltdown_block](../img/block)
 * Meltdown 구현의 첫번째 block에서는 transient instruction의 실행이 있고, CPU가 경험적 지속시간을 최적화 시키기위해서 계속적으로 현재 명령어 앞에서 실행되고 있기 떄문에 모든 순간에 일어난다.
 * Transient Instuction은 만약 그들의 operation이 secret value를 갖고 있다면 side channel attack을 실행시킬 수 있다.
 * userspace에서 kernel space를 접근하는 주소값이여야 하고, kernel space인 이유는 kernel address space에서는 모든 physical memory로의 접근이 가능하기 떄문이다.
@@ -90,4 +91,12 @@
  2. 두번째로 어떻게 윈도우,리눅스,등의 개인 컴퓨터 그리고 안드로이드 모바일폰, 클라우드에서 meltdown이 mount될 수 있는지 말한다.
  3. 마지막으로 meltdown 구현이 kernel memory를 빠른 속도로 dump하는 것에 대해서 말한다.
 * Attack setting
- * 
+  * 개인컴퓨터와 가상 머신은 클라우드에 있다는 가정
+  * 공격자는 임의의 권한이 없는 코드 실행을 갖고 있다는 가정(즉, 공격자는 일반 유저의 권한만큼 어떤 코드를 실행할 수 있다)
+  * 공격자는 물리 메모리 접근을 하지 못한다는 가정
+  * 시스템은 최신상태의 보안(ASLR,KASLR,SMAP..)의 상태
+  * 버그가 없는 os이고, kernel주소를 접근하는 것에 취약점이 없는 상태이어야함
+  * 공격자의 최종 목표는 유저의 데이터(password,private key)등을 추출하고자 함
+  
+## Attack Description
+* 
