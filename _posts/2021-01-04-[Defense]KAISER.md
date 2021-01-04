@@ -1,9 +1,6 @@
-KAISER: hiding the kernel from user space
-Please consider subscribing to LWN
-Subscriptions are the lifeblood of LWN.net. If you appreciate this content and would like to see more of it, your subscription will help to ensure that LWN continues to thrive. Please visit this page to join up and keep LWN on the net.
+# KAISER: hiding the kernel from user space
 
-By Jonathan Corbet
-November 15, 2017Since the beginning, Linux has mapped the kernel's memory into the address space of every running process. There are solid performance reasons for doing this, and the processor's memory-management unit can ordinarily be trusted to prevent user space from accessing that memory. More recently, though, some more subtle security issues related to this mapping have come to light, leading to the rapid development of a new patch set that ends this longstanding practice for the x86 architecture.
+Since the beginning, Linux has mapped the kernel's memory into the address space of every running process. There are solid performance reasons for doing this, and the processor's memory-management unit can ordinarily be trusted to prevent user space from accessing that memory. More recently, though, some more subtle security issues related to this mapping have come to light, leading to the rapid development of a new patch set that ends this longstanding practice for the x86 architecture.
 Some address-space history
 On 32-bit systems, the address-space layout for a running process dedicated the bottom 3GB (0x00000000 to 0xbfffffff) for user-space use and the top 1GB (0xc0000000 to 0xffffffff) for the kernel. Each process saw its own memory in the bottom 3GB, while the kernel-space mapping was the same for all. On an x86_64 system, the user-space virtual address space goes from zero to 0x7fffffffffff (the bottom 47 bits), while kernel-space mappings are scattered in the range above 0xffff880000000000. While user space can, in some sense, see the address space reserved for the kernel, it has no actual access to that memory.
 
