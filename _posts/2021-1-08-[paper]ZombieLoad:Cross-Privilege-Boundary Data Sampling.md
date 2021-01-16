@@ -91,4 +91,12 @@
 * Physical address와 함께 tag그리고 way-of the cahce가 결정되어진다.
 * 만약 요청된 data가 L1D에 있다면 cache hit가 발생하게 되고, load operation은 성공 되어진다.
 * <mark>하지만 L1D에 없다면 LFB(line fill buffer)를 통해서 더 높은 계층의 메모리로부터 값을 받게된다.</mark>
-* LFB는 다른 cache들과 main memory를 위한 interface로 사용되며, 현명한 
+* LFB는 다른 cache들과 main memory를 위한 interface로 사용되며, outstanding load를 track한다.
+* Uncachable memory region의 memory 접근, 그리고 non-temporal moves 모두 LFB를 겪게 된다. 
+* 만약 load 명령어가 load buffer 안에 있는 이전의 load operation의 entry를 위한 반응값과 같다면 load는 합쳐지게 된다.
+#### Fault
+* 만약 물리 메모리가 사용하지 못하는 것으로 fault가 일어나게 되어도, page table work는 즉시 abort되지 않을 것이다.
+* pipeline에 실행에서 fault의 일어남과 상관없이 각가의 stage에서 undergo 되었을 것이고, fault의 경우 re-issued되기 때문이다. (reissued의 정의)
+* 단지 마이크로 옵스의 faulting의 retirement에서 fault는 handled되어지고 pipeline은 flushed되어진다.
+* 만약 fault가 load operation과 함께 일어나진다면 이것은 MOB에 valid and completed로 marking이 될 것이다.
+
