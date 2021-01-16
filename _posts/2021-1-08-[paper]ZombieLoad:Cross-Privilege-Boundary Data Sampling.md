@@ -155,8 +155,10 @@
 ## Overview
 <mark>
 * ZombieLoad는 현재 물리 CPU에 메모리로드의 값을 관찰하는 transient-execution attack이다. 
+</mark><mark>
 * *Fill buffer*를 exploit하는 Zombieload는 모든 물리 CPU core의 논리 CPU에 의해서 접근될 수 있고 그리고 processes들 사이에서, privilege level들 사이에서 구분되지 않는다.
 </mark>
+
 * load buffer는 메모리 subsystem으로부터 모든 메모리 로드를 위해서 queue처럼 작동한다.
 * CPU가 실행동안 memory load를 만나게 될때 이것은 load buffer에서 entry를 예약한다.
 * 만약 load가 L1 hit가 아니라면 이것은 추가적으로 fill-buffer entry를 요청하게 된다.
