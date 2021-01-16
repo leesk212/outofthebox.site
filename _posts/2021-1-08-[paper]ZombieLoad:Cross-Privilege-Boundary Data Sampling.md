@@ -121,3 +121,17 @@
   * Conflicting되고 있는 메모리 operation이 발생하는데, 다른 logical proessor가 transatction에서 수정되어진 adress로부터 데이터를 읽고, 그리고 사용되고 있는 transaction에 그 데이터 값을 쓴다.
 * 게다가 transaction에서 쓰이고 읽힌 데이터들은 성공적인 transaction을 위해서 LLC와 L1 cache 각각의 size를 초과할 수 없다.
 * 몇몇의 instruction과 system event들은 transaction이 abort되는 원인이 될 것이다.
+
+### Intel SGX
+* Skylake microarchiture에서 Intel은 SGX를 발표하였다.
+* isolating trusted code를 위한 instruction set extension
+* SGX는 enclave안에서 trusted code를 실행시킨다.
+  * enclave는 평범한 host application process의 virtual address space에 mapped되어있다.
+  * 하지만 H/W 자체에 의해서 system의 rest(?)로부터 isolation되어있다.
+* SGX 모델의 위험은 OS와 다른 running application이 타협될 수 있고 그리고 그래서 신뢰성이 없다고 가정한다.
+* non-enclave mode에서 SGX enclave memory로의 접근하기 위한 모든 시도들은 abort page semantics를 결과를 보였다.
+  * current privilege level에 상관없이 읽으면 0xff의 dummy 값을 return하고 쓰기를 하면 무시되어진다.
+* 더 나아가서 memory bus를 탐지하는 강력한 물리적인 공격자들을 보호하기 위해서, SGX hardware들은 명백히 enclave로 사용되고 있는 메모리 region을 암호화한다.
+#### Instruction
+##### eenter
+* redirects 
