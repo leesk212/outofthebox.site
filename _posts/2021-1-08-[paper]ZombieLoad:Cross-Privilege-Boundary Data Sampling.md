@@ -132,6 +132,22 @@
 * non-enclave mode에서 SGX enclave memory로의 접근하기 위한 모든 시도들은 abort page semantics를 결과를 보였다.
   * current privilege level에 상관없이 읽으면 0xff의 dummy 값을 return하고 쓰기를 하면 무시되어진다.
 * 더 나아가서 memory bus를 탐지하는 강력한 물리적인 공격자들을 보호하기 위해서, SGX hardware들은 명백히 enclave로 사용되고 있는 메모리 region을 암호화한다.
+* 수 많은 시간동안 연구자들은 다양한 방법으로 SGX를 유출시키고자 하였고, 최근에 SGX는 또한 transient execution attack(필수적으로 microcode update되고 security version number를 증가시키는)에 의해 compromised 되었다.
+* 모든 SGX 유도되고 attestation된 SVN을 포함한다. 현재 microcode version을 반영하기 위해서 그리고 그러므로 securtiy level을 반영하기 위해서
 #### Instruction
+* 비허락된 OS가 vectoring하기전에 SGX는 enclave의 SSA(save state area)안에 CPU register를 안전하게 저장한다. 
 ##### eenter
-* redirects 
+* redirects control flow to an enclave entry point 
+##### eexit
+* transfers back to the untrusted host application
+##### ersume
+* restore processor state from the SSA frame and continue a previously interrupted enlcave
+#### egetkey
+* SGX-capable processsors feature cryptographic key derivation(유도) facilites (CPU level master secret에 기반되어서)
+* a secure measuremnet of the calling enclave's initial code and data
+* 이 키를 사용함으로써 enclave들은 안전하게 untrusted persistent storage에 secret들을 seal할수 있다. 
+* 그리고 같은 프로세스에 거주하고 있는 다른 enclaves들과 secure commication channel을 설치할 수 있다. 
+* 더 나아가서 원격 증명이 가능하기 위해서 intel은 trusted quoating enclave(unseal an Intel-private key)를 제공한다. 
+* 그리고 비대칭증명을 local enclave를 넘어서 사용한다.
+
+
