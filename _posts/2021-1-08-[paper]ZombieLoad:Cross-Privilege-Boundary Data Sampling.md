@@ -100,3 +100,15 @@
 * 단지 마이크로 옵스의 faulting의 retirement에서 fault는 handled되어지고 pipeline은 flushed되어진다.
 * 만약 fault가 load operation과 함께 일어나진다면 이것은 MOB에 valid and completed로 marking이 될 것이다.
 
+## Processor Extensions
+### Microcode
+* 처음에 모든 명령어들은 CPU core에서 hardwired되어있었다
+* 하지만 더 많은 복잡한 명령어들을 지원하기 위해서 microcode 는 더 높은 단계의 명령어들을 multiple hardwarelevel instruction들을 사용하면서 구현가능하게 했다.
+* 중요하게 이것들은 processor vendor 가 complex behavior를 지원하도록 허락해주었고, 심지어 CPU behavior를 확장하고 수정할 수 있도록 해주었다.
+* 새로운 architecture들은 이런 mircocode extension을 이용하게 해주었다. (intel SGX)
+* execution unit이 hardware에서 더 빠른 path로 수행되는 동안, 더 복잡하고 느린 path의 operation들은 전형적으로 microcode assit에 의해서 수행되었다. 
+  * microcode assit points the sequencer to a predefined microcode routine. (microcode assit는 sequencer가 미리 정의된 microcode routine을 가리키도록 한다.)
+* 그렇기 위해서, execution unit은 event code를 faulting micro-op의 결과와 함께 연관시킨다.
+* <mark>micro-op의 execution unit이 commited 되어질때 event code는 out-of-order scheduler가 re-order버퍼에 모든 in-flight micro-ops를 squash하도록 진행시켜준다.</mark>
+* microcode sequencer는 event code를 사용한다. microcode에 있는 이벤트와 연관된 micro ops를 읽기 위해서
+  
