@@ -29,12 +29,12 @@
   1. leak accross processes, 
   2. (privilege boundaries)
   2. accross logical CPU cores
-  3. Intel SGX enclave secrets ( loaded from a sibling logical core. )
-    * Extract sealing keys from Intel's architectural quoating enclave
-    * Breagking SGX's confidentiality
-    * Remote attestation guarantees.
+  3. Intel SGX enclave secrets ( loaded from a sibling logical core. )  
+    * Extract sealing keys from Intel's architectural quoating enclave  
+    * Breagking SGX's confidentiality  
+    * Remote attestation guarantees.  
   4. Virtualiztion bounaries
-    * hypervisor
+    * hypervisor  
     * diffent virtual machines running on a sibling logical core.
  ## Prevent
   * Disabling hyperthreading ( Flushing several microarchitectural states during context switches )
