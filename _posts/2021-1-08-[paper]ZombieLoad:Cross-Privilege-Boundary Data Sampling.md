@@ -111,4 +111,13 @@
 * 그렇기 위해서, execution unit은 event code를 faulting micro-op의 결과와 함께 연관시킨다.
 * <mark>micro-op의 execution unit이 commited 되어질때 event code는 out-of-order scheduler가 re-order버퍼에 모든 in-flight micro-ops를 squash하도록 진행시켜준다.</mark>
 * microcode sequencer는 event code를 사용한다. microcode에 있는 이벤트와 연관된 micro ops를 읽기 위해서
-  
+
+### Intel TSX
+* Intel TSX는 hardware transaction memory[Intel Haswell CPU에서 소개되어진]를 지원하기 위한 x86 instruction set extension이다. 
+* TSX와 함께 특정 코드 부분은 transactionally하게 수행되어진다.
+* 만약 전체 코드 region이 성공적으로 수행된다면 memory operations은 다른 logical process에 commit되어진다.
+* 만약 transaction동안 issue가 발생된다면 tarnsaction abort는 execution을 모든 수행된 명령들을 버리고, 이전 transaction이 실행되던 곳으로 roll back시킨다. 
+* Transaction abort는 다른 다른 문제를 야기시킨다. 
+  * Conflicting되고 있는 메모리 operation이 발생하는데, 다른 logical proessor가 transatction에서 수정되어진 adress로부터 데이터를 읽고, 그리고 사용되고 있는 transaction에 그 데이터 값을 쓴다.
+* 게다가 transaction에서 쓰이고 읽힌 데이터들은 성공적인 transaction을 위해서 LLC와 L1 cache 각각의 size를 초과할 수 없다.
+* 몇몇의 instruction과 system event들은 transaction이 abort되는 원인이 될 것이다.
