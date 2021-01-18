@@ -161,3 +161,59 @@
 * 만약 load가 L1 hit가 아니라면 이것은 추가적으로 fill-buffer entry를 요청하게 된다.
 * 요청된 데이터가 로드가 되었을 때 memory subsystem은 해당된 load와 fill buffer entry들을 free 시킨다. ( 이부분에서 사용된 load instruction은 retire 될 것이다)
 * 하지만 우리는 관측했다. 복잡한 microarchitecture condition(e.g fault)을 얻는 것 아래에서 로드는 microcode assit를 요청하고, <mark>이것은 첫번째로 re-issued eventually가 발생되기 전에stale value를 읽는다.</mark>
+* 이전의 meltdown류의 공격들과는 다르게 공격자가 특징지은 주소값에 기반하여 값을 유출시키지 못하고 <mark> 물리 cpu core에서 현재 로드된 모든 값들을 간단히 유출시킨다. </mark>
+* 이것이 많은 제약이 있는 것 처럼 보이지만 새로운 영역의 강력한 공격이고, 전통적인 부채널 공격들과 합쳐졌을 때 심지어 더 강력해진다.
+
+## Microarchitectural Root Cause
+* Meltdown, Foreshadow, Fallout 동안 유출의 원천(source)는 분명해졌다. 그리고 납득할 수 있는 원천이 있다.
+* 하지만 ZombieLoad는 완전히 분명하지 않다.
+* 유출을 관측하기 위해서 우리가 필수적으로 만들어진 block을 확인면서, 우리는 가설을 제공할 수 있었다. 왜 만들어진 블럭들의 상호작용이 관측되는 유출을 이끌 수 있는지를
+* 우리는 단지 인텔 CPU에서 데이터 유출을 관측할 수 있었기 때문에, 우리는 이것은 스펙터가 아니라 멜트다운류의 구현 이슈라 가정했다.
+* 우리의 가정을 위해서 우리는 우리의 관측과 최근에 존재하지 않는 fill buffer의 공식문서를 결합하였다.
+* 궁극적으로 우리는 우리의 가설을 증명하지도 증명않하지도 못했다. 
+
+### <mark>Stale-Entry Hypothesis</mark> 
+* 모든 LOAD는 load buffer의entry와 잠재된 fill buffer의 entry와 연관되어있다.
+* load가 복작합 상황을 만났을때 (fault)같은 이것은 micro assist를 요구한다.
+* 이 micro assist는 machine을 깔끔하게 비워주는데 도움을 준다.(pipe를 flush하면서)
+* pipeline이 flush 되는 과정에서 이미 실행중인 명령어들은 여전히 실행을 완료하려고 합니다.(실행하고 있습니다.)
+* 이것은 추가적인 delay를 발생시키지 않기 위해서 가능한 빨리 일어나야만 하는데, 우리는 fill-buffer entries와 긍정적으로 물리주소의 부분과 가능한 일치할 것으로 예측합니다. 
+* 그럼으로 load는 이전 로드에 유효했던 잘못된 fill-buffer entry로 계속됩니다.
+* 이것은 하드웨어에서 free이후 사용 취약점을 야기합니다. 
+* 인텔은 fill buffer를 hyperthreading에서 경쟁적으로 공유된 것으로써 fill buffer를 기술합니다.
+* 두개의 논리 코어들이 전체 fill buffer를 얻음으로써
+* 결과적으로 stale fill buffer entry는 또한 형재 논리코어의 이전에 로드된 것으로부터 될 수 있다.
+* 결론적으로 load instruction은 이전에 로드로 부터 타당한 값을 로드하게 된다.
+
+### Leakage Source
+* 유출되는 데이터의 가능한 원친들을 줄이기 위해서 두가지의 실험을 제안했다.
+* 우리의 첫번째 실험에서 우리는 uncachable 페이지들을 marked했다. (page-table entry)를 통해서 그리고 케시로부터 이 페이지들을 flushed 시켰다.
+* 결론적으로 모든 메모리 로드는 모든 cache 레벨을 피하고 메인메모리로부터 fill buffer로 이동이 된다.
+* 우리는 그러고 uncacheable memory page에 secret를 쓴다. 캐시에 data의 copy가 없는 것을 보장하기 위해서
+* uncacheable memory page로부터 데이터를 로딩할때, 우리는 leakage를 보게되었다. 하지만 leakage rate는 단지 byte/s 정도 밖에 되지 않았다. (5.91B/s) 
+* 우리는 이 유출을 fill buffer의 탓으로 돌릴 수 있었다.
+* 이것은 또한 동시 작업성에서 exploited되었다.
+* 우리의 가설은 <MEM_LOAD_RETIRED.FB_HIT performace counter>에 의해서 뒷받침 되었다.
+* 이것은 수천 비트의 line-fill-buffer hit를 보여주었다.
+* Intel은 주장했다. 이 유출은 단지 fill buffer로부터있다고, 하지만 우리의 두번째 실험은 보여주었다. line-fill buffer가 단지 유출의 source가 아닐 것이고
+* 우리는 Intel TSX를 언급한다. 메모리의 접근이 line-fill buffer를 도달하지 못하는 것을 보장하기 위해서 다음과 같이!!
+* Transaction안에서 우리는 첫번쨰로 secret Value를 그리고 이전에 다른 값으로 초기와 되었던 메모리 location에 쓴다. 
+* Transaction안에서 쓴 값은 보장한다. 주소값은 transaction의 write set에 있고 그리고 그럼으로 L1에 있다고!!
+* Cache로 부터 write set에서 data를 추출하는 것은 transaction abort를 만든다.
+* 그럼으로 모든 연속적인 write set으로부터 data까지의 메모리 접근은 보장한다. 이것이 L1으로부터 받아졌고 그리고 그래서 line-fill buffer로 보내져지지 않았다는 것을.
+* 이 실험에서 우리는 높은 비율의 유출을 관측했고 이리고 이것은 KB/s이었다.
+* 더 중요하ㅓ게 우리는 단지 TSX transaction에서 쓰여진 값 뿐만 아니라, transaction이전에 메모리 loaction에서 쓰여진 값을 볼 수 있었다.
+* 우리의 가설(line-fill buffer가 Performance Counter를 관측하는 것에 의해서 뒷받침되어지는 것)은 단지 leakge의 원천뿐이 아니다.
+* MEM_LOAD_RETured.FB_HIT 그리고 MEM_LOAD_RETIRED.L1MISS performance counter들은 충분하게 오르지 않았다.
+* 반면에 MEM_LOAD_RETIRED.L1_HIT performance counter는 수천의 L1 Hit를 보여주었다.
+* victim core에서 데이터 유출을 평가하는 동안, 우리는 Attacker core에서의 performace counter인 MEM_LOAD_RETIRED.FB_HIT를 관측하였다. 
+* 만약 주소값이 cached되었다면 우리는 Peason correlation(rp = 0.02)와 관계있음을 관측할 수 있었다. correct recoveries와  line-fill buffer hits들 사이에서, no association을 나타내면서
+* 하짐나 victim core에서 데이터가 flushing되고 있는 동안에, 연속적인 접근이 LFB를 통과해야만 하기에 ,우리는 강력한 연관관계(rp= 0.86)를 관측하였다.
+* 이결과는 단지 line-fill buffer가 leakage의 원천이 아니라는 것을  나타낸다 
+* 하지만 다른 설명은 performance counter가 이런 corner cases에서 reliable하지 못하다는 것이다.
+* Future work는 이것은 조사 해야만한다.!!
+
+### Classification
+* 이 섹션에서 우리는 memory-based side channel와 transient-execution attack을 classify하는 방법을 소개한다.
+* 모든 이러한 공격 동안에 우리는 가정한다. 타겟 프로그램들이 memory operation을 실행한다. 프로그램의 현재 instruction pointer에서 특정 주소에서 특정한 데이터 값들과 함께. 
+* 
