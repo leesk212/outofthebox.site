@@ -1,7 +1,7 @@
-요약
+# 요약
 네 가지 새로운 마이크로프로세서 취약점이 발견되었으며 Red Hat 제품 보안팀은 이러한 취약점을 심각한 보안 문제를 일으키는 "중요" 등급으로 분류하고 있습니다. 시스템에 대한 로컬 쉘 액세스 권한이 있는 공격자가 이러한 보안 취약점을 악용할 경우 CPU 캐시의 데이터를 승인되지 않은 프로세스에 노출할 수 있습니다. 이러한 취약점을 악용하여 시스템에 보안 공격을 구현하는 것이 어렵기는 하지만 숙련된 공격자는 이를 악용하여 가상 또는 컨테이너 인스턴스나 기본 호스트 시스템에서 메모리 데이터를 읽을 수 있습니다. Red Hat은 영향을 받은 시스템에 대응할 수 있는 완화 방법을 마련하고 사용자에게 이러한 보안 취약점을 평가하고 대처하기 위해 필요한 세부 단계를 제공합니다.
 
-문제 세부 정보 및 배경 정보
+# 문제 세부 정보 및 배경 정보
 Red Hat은 권한이 없는 로컬 공격자가 일반 메모리 보안 제한을 우회하여 권한이 필요한 메모리 데이터에 액세스할 수 있게 하는 일련의 마이크로 아키텍처 (하드웨어) 구현 문제를 인지하고 있습니다. 이러한 결함은 컨테이너에서 실행되는 악의적인 코드에 의해서도 악용될 수 있습니다. 이러한 문제는 최신 Intel 마이크로 프로세서에 영향을 미치며 사용자는 Linux 커널, 가상화 스택, CPU 마이크로코드를 업데이트해야합니다. 이러한 문제점은 CVE-2018-12130로 지정되어 있으며 중요(Important) 보안 등급으로 분류되어 있습니다. CVE-2018-12126, CVE-2018-12127, CVE-2019-11091 로 지정된 문제는 중간 (Moderate) 보안 등급으로 분류되어 있습니다.
 
 현재 이러한 취약점은 Intel 기반 프로세서에만 영향을 미치는 것으로 알려져 있지만 Red Hat 제품 보안팀에서는 SMT (Simultaneous Multi Threading) 관련 보안 취약점이 다른 공급 업체의 제품에 미치는 영향을 계속 조사하고 있습니다.
@@ -10,7 +10,7 @@ Intel 마이크로프로세서 설계가 여러 성능 미세 최적화를 구�
 
 이러한 보안 취약점은 내부 CPU 구조에 남아있는 데이터를 얻기 위해 마이크로 프로세서의 추측 실행을 활용하기 때문에 마이크로아키텍처 데이터 샘플링 (MDS: Microarchitectural Data Sampling)이라고 합니다.
 
-CVE-2018-12126 - 마이크로아키텍처 스토어 버퍼 데이터 샘플링 (MSBDS: Microarchitectural Store Buffer Data Sampling)
+# CVE-2018-12126 - 마이크로아키텍처 스토어 버퍼 데이터 샘플링 (MSBDS: Microarchitectural Store Buffer Data Sampling)
 
 최근 메모리에 저장 (쓰기)이 포함된 프로세서 스토어 버퍼 구조에 정보 유출 가능성과 관련된 많은 Intel 마이크로프로세서 설계에서 취약점이 발견되었습니다.
 
@@ -26,7 +26,7 @@ CVE-2018-12126 - 마이크로아키텍처 스토어 버퍼 데이터 샘플링 (
 이러한 문제는 Fallout이라고 합니다.
 
 
-CVE-2018-12127 - 마이크로아키텍처 로드 포트 데이터 샘플링 (MLPDS: Microarchitectural Load Port Data Sampling)
+# CVE-2018-12127 - 마이크로아키텍처 로드 포트 데이터 샘플링 (MLPDS: Microarchitectural Load Port Data Sampling)
 
 마이크로프로세서는 '로드 포트'를 사용하여 메모리 또는 IO에서 로드 연산을 수행합니다. 로드 작업 중 로드 포트는 메모리 또는 IO 서브시스템에서 데이터를 수신한 후 데이터를 CPU 파이프 라인에 있는 CPU 레지스터 및 처리 대기열 작업에 제공합니다.
 
@@ -39,7 +39,7 @@ MLPDS는 다음과 같은 경우 악의적인 사용자에게 기존 로드 포�
 위의 경우 로드 오퍼레이션은 내부 데이터 구조에서 부적절한 데이터 값을 추측하여 종속 오퍼레이션에 제공합니다. 이러한 데이터를 추측하여 전달하면 프로그램 실행이 변경되지는 않지만 이를 위젯으로 사용하면 로드 포트에 액세스하는 시점에 따라 공격자가 다른 프로세스의 데이터 값을 추측할 수 있습니다.
 
 
-CVE-2018-12130 - 마이크로아키텍처 필 버퍼 데이터 샘플링 (MFBDS: Microarchitectural Fill Buffer Data Sampling)
+# CVE-2018-12130 - 마이크로아키텍처 필 버퍼 데이터 샘플링 (MFBDS: Microarchitectural Fill Buffer Data Sampling)
 
 이는 Red Hat에서 '중요'한 보안 영향을 미치는 것으로 분류된 위험이 높은 취약점입니다. 이는 Intel 마이크로프로세서에 의해 사용되는 필 버퍼 (fill buffers) 구현에서 발견되었습니다.
 
@@ -49,25 +49,6 @@ CVE-2018-12130 - 마이크로아키텍처 필 버퍼 데이터 샘플링 (MFBDS:
 
 이러한 문제는 RIDL 또는 ZombieLoad라고 합니다.
 
-CVE-2019-11091 - 마이크로아키텍처 데이터 샘플링에서 캐시 불가능한 메모리 (MDSUM: Microarchitectural Data Sampling Uncacheable Memory)
+# CVE-2019-11091 - 마이크로아키텍처 데이터 샘플링에서 캐시 불가능한 메모리 (MDSUM: Microarchitectural Data Sampling Uncacheable Memory)
 
 L1 CPU 캐시에서 캐시-누락이 발생했을 때 최신 CPU가 사용하는 메커니즘인 '필 버퍼' 구현에서 취약점이 발견되었습니다. 공격자가 페이지 오류를 발생시키는 로드 작업을 생성할 때 상위 레벨 캐시에서 데이터를 가져오는 동안 프로세서는 잘못된 필 버퍼의 데이터를 사용하여 실행을 예측합니다. 이러한 응답 시간를 측정하여 필 버퍼에서 데이터를 추측할 수 있습니다.
-
-감사 인사
-Red Hat은 이 문제에 대해 보고하고 완화 조치에 대해 협력해 주신 Intel 및 업계 파트너에게 감사드립니다. 
-
-또한 처음으로 문제에 대해 보고해 주신 분들에게도 감사드립니다.
-Microarchitectural Store Buffer Data Sampling (MSBDS) - CVE-2018-12126
-이 취약점은 Intel 직원에 의해 발견되었습니다. Intel은 Ke Sun, Henrique Kawakami, Kekai Hu, Rodrigo Branco님에게 감사드립니다. 개별적으로 문제에 대해 보고해 주신 Lei Shi - Qihoo - 360 CERT 및 Marina Minkin, Daniel Moghimi, Moritz Lipp, Michael Schwarz, Jo Van Bulck, Daniel Genkin, Daniel Gruss, Berk Sunar, Frank Piessens님에게 감사드리며, Yuval Yarom (1University of Michigan, Worcester Polytechnic Institute, Graz University of Technology, imec-DistriNet, KU Leuven, University of Adelaide)님에게도 감사드립니다. 
-
-Microarchitectural Load Port Data Sampling (MLPDS) - CVE-2018-12127
-이 취약점은 Intel 직원 및 Microsoft에 의해 발견되었습니다. Intel은 Brandon Falk – Microsoft Windows Platform Security Team, Ke Sun, Henrique Kawakami, Kekai Hu, Rodrigo Branco - Intel 님에게 감사드립니다. 문제에 대해 개별적으로 보고해 주신 Matt Miller – Microsoft, Stephan van Schaik, Alyssa Milburn, Sebastian Österlund, Pietro Frigo, Kaveh Razavi, Herbert Bos, Cristiano Giuffrida - VUSec group at VU Amsterdam 님에게도 감사드립니다.
-
-Microarchitectural Fill Buffer Data Sampling (MFBDS) - CVE-2018-12130
-
-이 취약점은 Intel 직원에 의해 발견되었습니다. Intel은 Ke Sun, Henrique Kawakami, Kekai Hu, Rodrigo Branco님에게 감사드립니다. 개별적으로 보고해 주신 Giorgi Maisuradze – Microsoft Research, Dan Horea Lutas 및 Andrei Lutas - Bitdefender, Volodymyr Pikhur, Stephan van Schaik, Alyssa Milburn, Sebastian Österlund, Pietro Frigo, Kaveh Razavi, Herbert Bos, Cristiano Giuffrida - VUSec group at VU Amsterdam, Moritz Lipp, Michael Schwarz, Daniel Gruss - Graz University of Technology 님에게도 감사드립니다.
-
-Microarchitectural Data Sampling Uncacheable Memory (MDSUM) - CVE-2019-11091
-
-이 취약점은 Intel 직원이 내부적으로 발견했습니다. Intel은 Ke Sun, Henrique Kawakami, Kekai Hu, Rodrigo Branco님에게 감사드립니다. 문제에 대해 개별적으로 보고해 주신 Volodrmyr Pikhur, Moritz Lipp, Michael Schwarz, Daniel Gruss - Graz University of Technology, Stephan van Schaik, Alyssa Milburn, Sebastian Österlund, Pietro Frigo, Kaveh Razavi, Herbert Bos, Cristiano Giuffrida - VUSec group at VU Amsterdam님에게도 감사드립니다.
-
