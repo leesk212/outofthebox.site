@@ -3,14 +3,14 @@
 
 #1 사용법
 상위 디렉토리에서 
-> ctags -R 
-실행!!
-tags라는 database 생성
-**ctrl + ]** 로 함수 내부로 이동 가능(linking 진행)
-빠져나오기 위해서는 **ctrl+t**
+> ctags -R  
+실행!!  
+tags라는 database 생성  
+**ctrl + ]** 로 함수 내부로 이동 가능(linking 진행)  
+빠져나오기 위해서는 **ctrl+t**  
 
-#2 Reference: https://harryp.tistory.com/m/130
-리눅스 환경에서 vi (vim) 에디터를 사용하여 소스 분석을 진행할 때 유용하게 사용할 수 있는 툴인 ctags에 대해 알아보도록 하겠습니다.
+#2 Reference: https://harryp.tistory.com/m/130  
+리눅스 환경에서 vi (vim) 에디터를 사용하여 소스 분석을 진행할 때 유용하게 사용할 수 있는 툴인 ctags에 대해 알아보도록 하겠습니다.  
 
 
 
