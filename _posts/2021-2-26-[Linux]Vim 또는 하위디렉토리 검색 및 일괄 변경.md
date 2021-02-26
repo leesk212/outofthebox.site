@@ -22,4 +22,4 @@ vim
 
 
 
-# reference: https://roxxy.tistory.com/entry/Linux-하위-폴더-내의-파일내용-찾아-바꾸기 [AreYou준비]
+# reference: (https://roxxy.tistory.com/entry/Linux-하위-폴더-내의-파일내용-찾아-바꾸기) [AreYou준비]
