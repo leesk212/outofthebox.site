@@ -8,6 +8,7 @@
 ## 주석처리를 위해서는 다른 파라미터를 주어야함
 ```
 ex)  sudo find ./ -name "ZS.c" -exec perl -pi -e "s/CACHE/\/\/CACHE/g" {} \;
+sudo find ./ -name "ZS.c" -exec perl -pi -e "s/CACHE/\/\/CACHE/g" {} \;
 ```
 # vim 
 
