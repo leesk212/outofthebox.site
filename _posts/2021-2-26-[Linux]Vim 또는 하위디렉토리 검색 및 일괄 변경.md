@@ -5,6 +5,9 @@
 
 * ex)  sudo find ./ -name "MT_original.c" -exec sed -i "s/addq %1, %2/imulq %1, %2/g" {} \;
 
+## 주석처리를 위해서는 다른 파라미터를 주어야함
+* ex)  sudo find ./ -name "ZS.c" -exec perl -pi -e "s/CACHE/\/\/CACHE/g" {} \;
+
 # vim 
 
 * %s/rax/r8/g
