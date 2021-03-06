@@ -434,14 +434,4 @@
 <li><a href="https://lkml.org/lkml/2016/3/9/962">Documentation/memory-barriers.txt의 한글 번역</a> | 박성재</li>
 <li>Memory Barriers in the Linux Kernel (2016) | SUSE &#8211; <a href="http://events17.linuxfoundation.org/sites/events/files/slides/dbueso-elc2016-membarriers-final.pdf">다운로드 pdf</a></li>
 </ul>
-					</div><!-- .entry-content -->
-
-		<footer class="entry-meta">
-
-			
-		</footer><!-- .entry-meta -->
-	</div>
-
-	
-</article><!-- #post-## -->
-
+* reference: http://jake.dothome.co.kr/barriers/
