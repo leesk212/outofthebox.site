@@ -19,7 +19,7 @@ locale                   : "en-US"
 title                    : ""
 title_separator          : "_>"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "SeokMin Lee"
+name                     : "Seokmin Lee"
 description              : "My_first_hompage"
 url                      : "https://leesk212.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
