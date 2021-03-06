@@ -18,7 +18,7 @@
 <li>5개의 처리 유형(Integer, Multiply, Floating-Point/NENO, Branch, Load/Store)이 다른 명령이 인입되는 경우 각각에서 동시에 처리를 진행할 수 있다. 완료 시점은 명령마다 다르다. 파이프 라인 스텝(사이클)이 적은 항목이 더 빨리 처리된다. 결국 floating-point 연산 명령 후에 integer 연산이 따라오는 경우 integer 연산이 먼저 처리되어 완료되는 경우가 발생한다. 이렇게 처리 순서가 바뀔 수 있다.</li>
 <li>같은 처리 유형이라도 Issue 처리기가 2개 이상일 때 동시 처리할 수 있다.</li>
 </ul>
-<p><a href="http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers4.png"><img class="alignnone wp-image-8117" src="http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers4.png" alt="" width="766" height="245" srcset="http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers4.png 941w, http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers4-300x96.png 300w, http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers4-768x246.png 768w" sizes="(max-width: 766px) 100vw, 766px" /></a></p>
+<p><a href="http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers4.png">/></a></p>
 <p>&nbsp;</p>
 <h3>메모리 오더링 (Memory Ordering)</h3>
 <h5>Out-Of-Order Memory</h5>
