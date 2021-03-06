@@ -46,7 +46,6 @@
 </ul>
 </li>
 </ul>
-<p><a href="http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers5b.png"><img class="alignnone wp-image-8158 size-full" src="http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers5b.png" alt="" width="716" height="542" srcset="http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers5b.png 716w, http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers5b-300x227.png 300w" sizes="(max-width: 716px) 100vw, 716px" /></a></p>
 <p>&nbsp;</p>
 <p>예 2) 디바이스 주소 레지스터와 데이터 레지스터를 사용 시 Store와 Load 순서 바뀌면서 생기는 문제</p>
 <ul>
@@ -102,8 +101,6 @@
 <p>&nbsp;</p>
 <h4>Architecture Barrier</h4>
 <p>가장 기본 barrier인 mb(), rmb(), wmb()를 사용하면 full 배리어로 처리 성능이 가장 느려 성능이 저하된다. 따라서 성능을 더 높이고자 여러가지 barrier를 추가하였는데 그 들간의 성능 관계는 다음 그림과 같다.</p>
-<p><a href="http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers8.png"><img class="alignnone size-full wp-image-8131" src="http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers8.png" alt="" width="826" height="201" srcset="http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers8.png 826w, http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers8-300x73.png 300w, http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers8-768x187.png 768w" sizes="(max-width: 826px) 100vw, 826px" /></a></p>
-<p>&nbsp;</p>
 <h5>Mandatory barrier</h5>
 <p>아키텍처가 공유 메모리에 접근 시 생략, 축약 또는 접근 순서를 변경하지 못하도록 막는다. 다음과 같이 기본 4가지 타입의 API를 제공한다.</p>
 <ul>
@@ -173,8 +170,6 @@
 <ul>
 <li>A 값이 RELEASE 뒤로 순서가 바뀌지 않게 막으므로 안전하게 B에 A 값이 저장됨을 알 수 있다.</li>
 </ul>
-<p><a href="http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers9.png"><img class="alignnone size-full wp-image-8155" src="http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers9.png" alt="" width="751" height="405" srcset="http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers9.png 751w, http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers9-300x162.png 300w, http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers9-750x405.png 750w" sizes="(max-width: 751px) 100vw, 751px" /></a></p>
-<p>&nbsp;</p>
 <h5>device 지원 barrier</h5>
 <p>디바이스를 위해 rmb(), wmb()보다 더 가볍고 smp 지원 barrier보다는 좀 더 무거운 outer share 영역까지 공유 가능한 명령을 커널 v3.19-rc1에 추가하였다.</p>
 <ul>
@@ -235,8 +230,6 @@
 <ul>
 <li>TSO 아키텍처에서 write buffer에 있는 A값을 메모리에 기록하지 않아도 먼저 load를 할 수 있다.</li>
 </ul>
-<p><a href="http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers-11.png"><img class="alignnone size-full wp-image-8159" src="http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers-11.png" alt="" width="830" height="419" srcset="http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers-11.png 830w, http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers-11-300x151.png 300w, http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers-11-768x388.png 768w" sizes="(max-width: 830px) 100vw, 830px" /></a></p>
-<p>&nbsp;</p>
 <h5>Acquire/Store-Release 명령(ldar/stlr) 지원 아키텍처</h5>
 <p>다음 그림은 ARMv8 아키텍처에서의 양방향 barrier와 단방향 barrier의 차이를 보여준다.</p>
 <ul>
@@ -249,8 +242,6 @@
 </ul>
 </li>
 </ul>
-<p><a href="http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers6b.png"><img class="alignnone wp-image-8166 size-full" src="http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers6b.png" alt="" width="1014" height="384" srcset="http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers6b.png 1014w, http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers6b-300x114.png 300w, http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers6b-768x291.png 768w" sizes="(max-width: 1014px) 100vw, 1014px" /></a></p>
-<p>&nbsp;</p>
 <p>&nbsp;</p>
 <h2>Barriers of ARMv7 &amp; ARMv8</h2>
 <ul>
@@ -283,7 +274,7 @@
 </ul>
 </li>
 </ul>
-<p><a href="http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers2.png"><img class="alignnone size-full wp-image-423" src="http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers2.png" alt="barriers2" width="405" height="157" srcset="http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers2.png 405w, http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers2-300x116.png 300w" sizes="(max-width: 405px) 100vw, 405px" /></a></p>
+2015/10/barriers2.png 405w, http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers2-300x116.png 300w" sizes="(max-width: 405px) 100vw, 405px" /></a></p>
 <p>&nbsp;</p>
 <h3>DSB(Data Synchronization Barrier, called DWB)</h3>
 <ul>
@@ -319,7 +310,6 @@
 </ul>
 <p>&nbsp;</p>
 <h2>Barrier Options</h2>
-<p><img class="alignnone size-full wp-image-424" src="http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers3.png" alt="barriers3" width="499" height="405" srcset="http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers3.png 499w, http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers3-300x243.png 300w" sizes="(max-width: 499px) 100vw, 499px" /></p>
 <p>&nbsp;</p>
 <h2>배리어 사용처</h2>
 <ul>
@@ -416,9 +406,7 @@
 #define __smp_rmb()     dmb(ishld)
 #define __smp_wmb()     dmb(ishst)</pre>
 <p>&nbsp;</p>
-<p>다음 그림과 같이 ARM 아키텍처별 명령어를 비교하였다.</p>
-<p><a href="http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers7.png"><img class="alignnone size-full wp-image-8129" src="http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers7.png" alt="" width="844" height="398" srcset="http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers7.png 844w, http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers7-300x141.png 300w, http://jake.dothome.co.kr/wp-content/uploads/2015/10/barriers7-768x362.png 768w" sizes="(max-width: 844px) 100vw, 844px" /></a></p>
-<p>&nbsp;</p>
+
 <h2>참고</h2>
 <ul>
 <li><a href="http://jake.dothome.co.kr/volatile">Volatile </a>| 문c</li>
