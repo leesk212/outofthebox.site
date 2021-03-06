@@ -93,7 +93,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "SeokMin Lee"
+  name             : "Seokmin Lee"
   avatar           : "/assets/images/IMG_2576.jpg" # path of avatar image, e.g. "/assets/images/IMG_2576.jpg"
   bio              : ""
   location         : "Seoul, KR"
