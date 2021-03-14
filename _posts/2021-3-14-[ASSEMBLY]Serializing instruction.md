@@ -10,7 +10,7 @@ asm __volatile__ (
 " lfence \n"
 );
 ```
-* intel CPU에서는 정상적으로 사용이 가능하다.
+* intel CPU에서는 정상적으로 사용이 가능하다.  
 #2. CPUID
 ```c
  asm volatile(
