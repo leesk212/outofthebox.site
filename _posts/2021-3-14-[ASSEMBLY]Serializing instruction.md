@@ -11,7 +11,7 @@ asm __volatile__ (
 );
 ```
 * intel CPU에서는 정상적으로 사용이 가능하다.  
-#2. CPUID
+# 2. CPUID
 ```c
  asm volatile(
     "xor %%rax, %%rax\n\t"
