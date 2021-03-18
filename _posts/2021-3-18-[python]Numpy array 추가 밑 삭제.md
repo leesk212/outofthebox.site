@@ -22,6 +22,11 @@ num의 수까지 차례대로 증가하는 array를 만든다.
 ```python
 pid_label = pid_label.reshape(-1, 1)
 ```
+# csv2numpy
+```python
+test_data = genfromtxt('test_log.csv', delimiter=',')
+```
+
 
 # dic2csv
 * target dic file name = waves_peak
