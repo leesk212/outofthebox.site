@@ -43,7 +43,7 @@ with open("test_log.csv", 'w') as outfile:
 ```
 
 # list2csv
-2D라면 writer.writerows를 써주고 
+list가 2D라면 writer.writerows를 써주고 
 1D라면 writer.writerow를 써준다.
 * target list name = final list
 * label list name = x_label
