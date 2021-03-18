@@ -13,6 +13,12 @@ pid_label = np.ones(21)
 A = A.T
 
 
+# np.nan_to_num
+array에 있는 nan 값을 0 으로 모두 바꾼다.
+```python
+np.nan_to_num(var, copy=False)
+```
+
 # np.arrange(num)
 num의 수까지 차례대로 증가하는 array를 만든다.
 [1,2,3,4,5,6,...,num]
