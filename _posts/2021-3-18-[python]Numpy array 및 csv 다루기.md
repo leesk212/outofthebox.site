@@ -3,6 +3,7 @@ num의 수만큼의 가로의 행열을 생성한다( 값은 1로 )
 [1,1,1,1,1,1,...]
 --> np.zeros(num) 하면 값은 0으로 생성가능
 (num,1)
+
 ```python
 pid_label = np.ones(21)
 ```
@@ -19,18 +20,20 @@ num의 수까지 차례대로 증가하는 array를 만든다.
 # np.reshape(-1,1)
 가로로 되어있는 것을 세로로 만들 수 있다.
 (1,num)
+
 ```python
 pid_label = pid_label.reshape(-1, 1)
 ```
+
 # csv2numpy
 ```python
 test_data = genfromtxt('test_log.csv', delimiter=',')
 ```
 
-
 # dic2csv
 * target dic file name = waves_peak
 * output csv file name = test_log.csv
+
 ```python
 with open("test_log.csv", 'w') as outfile:
     csv_writer = csv.writer(outfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
@@ -45,6 +48,7 @@ with open("test_log.csv", 'w') as outfile:
 * target list name = final list
 * label list name = x_label
 * output csv file name = final_output.csv
+
 ```python
 with open('final_output.csv', 'w', newline='') as f:
     writer = csv.writer(f)
