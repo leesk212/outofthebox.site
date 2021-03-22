@@ -12,6 +12,13 @@ pid_label = np.ones(21)
 배열의 행열을 바꾼다.
 A = A.T
 
+# np.delete
+```python
+np.delete(지우고싶은 array, 지우려는 행또는 열, axis=행(0)열(1))
+```
+
+# np.hstatck
+열끼리 합친다.
 
 # np.nan_to_num
 array에 있는 nan 값을 0 으로 모두 바꾼다.
@@ -61,6 +68,8 @@ with open('final_output.csv', 'w', newline='') as f:
     writer.writerow(x_label)
     writer.writerows(final_list)
 ```
+
+
 
 # Entirety code
 ```python
