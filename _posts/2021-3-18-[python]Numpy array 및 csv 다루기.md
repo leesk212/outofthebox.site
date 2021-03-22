@@ -77,7 +77,6 @@ with open('final_output.csv', 'w', newline='') as f:
 
 # Entirety code
 ```python
-
 # Make CSV file
 with open("test_log.csv", 'w') as outfile:
     csv_writer = csv.writer(outfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
@@ -91,7 +90,7 @@ np.nan_to_num(test_data, copy=False)
 test_data = np.delete(test_data, 0, axis=0)
 
 # Set Pid
-pid_label = np.ones(21)
+pid_label = np.ones(13)
 pid_label = pid_label.reshape(-1, 1)
 
 # Set x label
@@ -106,6 +105,11 @@ rpeaks_item = rpeaks['ECG_R_Peaks']
 final_data = np.insert(test_data_to_int, 3, rpeaks_item, axis=1)
 final_x_list = final_data.tolist()
 
+with open('final_output_x.csv', 'w', newline='') as f:
+    writer = csv.writer(f)
+    writer.writerow(x_label)
+    writer.writerows(final_x_list)
+
 # Find y value from x value
 for i, each_row in enumerate(final_x_list):
     for j, each_value in enumerate(each_row):
@@ -115,10 +119,28 @@ for i, each_row in enumerate(final_x_list):
             final_x_list[i][j] = ecg_signal[each_value]
 final_list = final_x_list
 
-# final_output.csv
-with open('final_output.csv', 'w', newline='') as f:
+# final_output_y.csv
+with open('final_output_y.csv', 'w', newline='') as f:
     writer = csv.writer(f)
     writer.writerow(x_label)
     writer.writerows(final_list)
+
+# Concatenate x and y
+final_x = genfromtxt('final_output_x.csv', delimiter=',')
+final_y = genfromtxt('final_output_y.csv', delimiter=',')
+pre_pre_final = np.concatenate((final_y, final_x), axis=1)
+pre_final = np.delete(pre_pre_final, 8, axis=1)
+final = np.delete(pre_final, 0, axis=0)
+final = final.astype(np.int64)
+with open('final_output.csv', 'w', newline='') as f:
+    writer = csv.writer(f)
+    writer.writerow(['Pid','ECG_P_Peaks', 'ECG_Q_Peaks'
+                        , 'ECG_R_Peaks', 'ECG_S_Peaks', 'ECG_T_Peaks'
+                        , 'ECG_P_Onsets', 'ECG_T_Offsets', 'P_amplitude',
+                     'Q_amplitude', 'R_amplitude', 'S_amplitude', 'T_amplitude', 'P_onset_amplitude',
+                     'T_offset_amplitude'])
+    writer.writerows(final)
+
+## by meanleess
 
 ```
