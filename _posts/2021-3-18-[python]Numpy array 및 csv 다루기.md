@@ -17,6 +17,10 @@ A = A.T
 np.delete(지우고싶은 array, 지우려는 행또는 열, axis=행(0)열(1))
 ```
 
+# np.concetenate(a,b)
+a와 b array를 합친다. 옆으로 이어붙인다. 
+
+
 # np.hstatck
 열끼리 합친다.
 
