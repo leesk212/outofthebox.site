@@ -1,17 +1,3 @@
----
-jupyter:
-  jupytext:
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.3'
-      jupytext_version: 1.11.1
-  kernelspec:
-    display_name: Python 3
-    language: python
-    name: python3
----
-
 <!-- #region _cell_guid="ce53be83-4475-8d60-f4a5-b7baa884bd11" -->
 Here I m going to run **Support Vector machine** with different **kernels(linear,gaussian,polynomial)** and also tune the various parameters such as **C** ,**gamma** and **degree** to find out the best performing model .
 <!-- #endregion -->
