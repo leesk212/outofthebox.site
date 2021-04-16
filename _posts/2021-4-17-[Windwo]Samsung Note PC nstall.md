@@ -8,6 +8,6 @@ https://www.xda-developers.com/get-samsung-notes-windows-10-app/
 # Move to Microsoft Store
 * Find Samsung Notes
 * Start Samsung Notes to update
-* Launch Application
+# Launch Application
 * Login Samsung Cloud
 * Synchronization with local App
