@@ -3,5 +3,6 @@
 > $ sudo apt-get install open-sshd    
 > $ sudo service ssh start    
 > $ sudo service ssh status    
+
 # 접근 명령어
 > $ ssh hostname@ip_address -p port_number
