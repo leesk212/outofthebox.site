@@ -3,6 +3,7 @@
 > 대상 시스템의 마이크로 아키텍처를 올바르게 에뮬레이터로 수정하기 위해 리크 에뮬레이터를 사용하는 코드 재작성 엔진이다.
 * AES, ChaCha, Xoodoo등을 적은 패널티로 protected mask하였다. 
 ## Uniformed distributed --> only proven secure attack 
+* many chiper's implementations employ masking techniques that combine **intermediate values** with **randomly selected masks**.
 * To fix this leaks ``` repeatedly "Tweak the code until it stops leaking ```
 > 반복적으로 누출이 멈출 때까지 코드를 수정한다.
 * We have set out to explore if leakage emulators can be used for automatic elimination of side channel leakage from software implemenations
