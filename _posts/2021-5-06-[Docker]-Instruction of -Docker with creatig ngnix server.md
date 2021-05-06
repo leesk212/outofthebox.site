@@ -75,20 +75,22 @@ toc: true
 * https://hub.docker.com/_/nginx 접속
 * nginx검색 --> nginix라는 컨테이너가 있음
 * Exposing external port부분에서 명령어 긁기
-  * docker run -it -d -p 80:80 nginx
-    * -d : detach 모드임 : daemon으로 실행을 하라!! 
-    * -p : port mapping인데 지금 docker host 80 <---> conatiner 80과 연결을 하라!! [host:conatiner] 
-  * ![스크린샷 2021-05-06 오후 2 06 50](https://user-images.githubusercontent.com/67637935/117244606-4e6ae600-ae74-11eb-8539-80586afd20a0.png)
+#### docker run -it -d -p 80:80 nginx
+* -d : detach 모드임 : daemon으로 실행을 하라!! 
+* -p : port mapping인데 지금 docker host 80 <---> conatiner 80과 연결을 하라!! [host:conatiner] 
+* ![스크린샷 2021-05-06 오후 2 06 50](https://user-images.githubusercontent.com/67637935/117244606-4e6ae600-ae74-11eb-8539-80586afd20a0.png)
 
-* 그럼 host를 8080으로 nginx를 만들게 된다면!?
-  * ![스크린샷 2021-05-06 오후 2 10 39](https://user-images.githubusercontent.com/67637935/117244901-d7821d00-ae74-11eb-8e85-4ae58c7d05b3.png)
-  * 8080의 ip 주소를 알아야 하기에
-  * $ docker exec -it _8080-host-nginx-conatiner-id_ bash
-  * ![스크린샷 2021-05-06 오후 2 13 07](https://user-images.githubusercontent.com/67637935/117245091-2fb91f00-ae75-11eb-8ec9-7a6a9c9d5be1.png)
-  * ifconfig를 위해서 net-tools설치하기 (update upgrade)
-  * ![스크린샷 2021-05-06 오후 2 15 17](https://user-images.githubusercontent.com/67637935/117245248-7d358c00-ae75-11eb-8b4c-a13c0c3d50dd.png)
-  * Host 127.0.0.1:8080으로도 접근이 가능해
-  * ![스크린샷 2021-05-06 오후 2 15 58](https://user-images.githubusercontent.com/67637935/117245296-963e3d00-ae75-11eb-8f2c-9c6965bd73d2.png)
- 
-
+### 그럼 host를 8080으로 nginx를 만들게 된다면!?
+* ![스크린샷 2021-05-06 오후 2 10 39](https://user-images.githubusercontent.com/67637935/117244901-d7821d00-ae74-11eb-8e85-4ae58c7d05b3.png)
+* 8080의 ip 주소를 알아야 하기에
+#### $ docker exec -it _8080-host-nginx-conatiner-id_ bash
+* ![스크린샷 2021-05-06 오후 2 13 07](https://user-images.githubusercontent.com/67637935/117245091-2fb91f00-ae75-11eb-8ec9-7a6a9c9d5be1.png)
+* ifconfig를 위해서 net-tools설치하기 (update upgrade)
+* ![스크린샷 2021-05-06 오후 2 15 17](https://user-images.githubusercontent.com/67637935/117245248-7d358c00-ae75-11eb-8b4c-a13c0c3d50dd.png)
+* Host 127.0.0.1:8080으로도 접근이 가능해
+* ![스크린샷 2021-05-06 오후 2 15 58](https://user-images.githubusercontent.com/67637935/117245296-963e3d00-ae75-11eb-8f2c-9c6965bd73d2.png)
+#### $ docker inspect _container name_
+* ![스크린샷 2021-05-06 오후 2 29 58](https://user-images.githubusercontent.com/67637935/117246402-89bae400-ae77-11eb-81d8-ed3d2ba6b512.png)
+* ip address까지 모두 잘 나옴 
+* ![스크린샷 2021-05-06 오후 2 31 02](https://user-images.githubusercontent.com/67637935/117246479-afe08400-ae77-11eb-99ab-3ca21860f04b.png)
 
