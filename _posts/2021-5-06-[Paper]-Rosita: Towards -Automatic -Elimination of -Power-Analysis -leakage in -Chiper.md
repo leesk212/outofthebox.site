@@ -2,6 +2,7 @@
 # Rosita
 1. Uses an emulator to detect leakage due to unintended interatctions between values   
 2. Rewrites the code to eliminate the leakage.
+
 * A code rewrite engine that uses a leakage emulator which we amend to correctly emulate the micro-architecture of a target system.
 > 대상 시스템의 마이크로 아키텍처를 올바르게 에뮬레이터로 수정하기 위해 리크 에뮬레이터를 사용하는 코드 재작성 엔진이다.
 * AES, ChaCha, Xoodoo등을 적은 패널티로 protected mask하였다. 
@@ -29,7 +30,10 @@
     * We have added support by including the values that instructions store in various micro-architectural storage elements, which hold state that can leak information.
     * > 추가적인 micro-architectural storage elemnets에서 leakage에 대한 값을 포함함으로써 지원을 추가함  
 # Contribution
-1. 
+1. Propose a framework for generating first-order leakage resilient implementations of masked cipher.
+2. Design and implement systematic approaches for identifying leakage through microarchitectural storage elements. (ELMO ->ELMO*)
+3. Develop ROSITA that rewrites leaking instructions and eliminate leakage.
+4. USE ROSTIA --> Result: AES,ChaCha,Xoodoo
 # Result
 ![image](https://user-images.githubusercontent.com/67637935/117383032-cf7cb880-af1a-11eb-9d3f-946234503ced.png)
 
