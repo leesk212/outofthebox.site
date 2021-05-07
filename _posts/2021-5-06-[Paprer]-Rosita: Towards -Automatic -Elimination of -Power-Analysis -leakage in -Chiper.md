@@ -1,6 +1,3 @@
----
-toc
----
 
 # Rosita
 * A code rewrite engine that uses a leakage emulator which we amend to correctly emulate the micro-architecture of a target system.
