@@ -17,7 +17,8 @@
     * It had to be able to tell ROSITA the cause of the leakage
     * > ROSITA에게 leakage의 원인을 알려줄 수 있는 기능
     * We have added support by including the values that instructions store in various micro-architectural storage elements, which hold state that can leak information.
-    * > 추가적인 micro-architectural storage elemnets에서 leakage에 대한 값을 포함함으로써 지원을 추가함
+    * > 추가적인 micro-architectural storage elemnets에서 leakage에 대한 값을 포함함으로써 지원을 추가함  
+
 # Result
 ![image](https://user-images.githubusercontent.com/67637935/117383032-cf7cb880-af1a-11eb-9d3f-946234503ced.png)
 
