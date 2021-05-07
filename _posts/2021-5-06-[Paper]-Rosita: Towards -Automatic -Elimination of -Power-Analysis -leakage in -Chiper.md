@@ -29,6 +29,7 @@
     * > ROSITA에게 leakage의 원인을 알려줄 수 있는 기능
     * We have added support by including the values that instructions store in various micro-architectural storage elements, which hold state that can leak information.
     * > 추가적인 micro-architectural storage elemnets에서 leakage에 대한 값을 포함함으로써 지원을 추가함  
+
 # Contribution
 1. Propose a framework for generating first-order leakage resilient implementations of masked cipher.
 2. Design and implement systematic approaches for identifying leakage through microarchitectural storage elements. (ELMO ->ELMO*)
