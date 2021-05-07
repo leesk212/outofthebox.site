@@ -13,7 +13,9 @@
 > 반복적으로 누출이 멈출 때까지 코드를 수정한다.
 * We have set out to explore if leakage emulators can be used for automatic elimination of side channel leakage from software implemenations
 > 소프트웨어 구현에서 사이드 채널 누출을 자동으로 제거하기 위해 누출 에뮬레이터를 사용할 수 있는지 조사하기 위해 착수했습니다.
+
 * Code rewrite program: "ROSITA" + Extended leakage emulator: "ELMO"
+
   * ```ROSITA``` 
     1. rule-driven code rewrite engine.
     2. uses output from ELMO*
@@ -21,6 +23,7 @@
     4. 
     * incorporates rules to mitigate leakage arising from operand interactions, register reuse, rotation operation, and memory operations. 
     * > 피연산자 상호 작용, 레지스터 재사용, 회전 연산 및 메모리 작업에서 발생하는 누출을 완화하기 위한 규칙을 통합합니다
+ 
   * ```ELMO``` has undergone a major upgrade to ELMO* for two reasons:
     1. Only detect leakage between consecutive instructions --> Detact leakage between instructions that are further apart.
     2. Only instructions --> Identify the accurate leagkage model
