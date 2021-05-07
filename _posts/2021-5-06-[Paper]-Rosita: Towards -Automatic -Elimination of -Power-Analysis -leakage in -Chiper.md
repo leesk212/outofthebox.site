@@ -15,7 +15,9 @@
 * Code rewrite program: "ROSITA" + Extended leakage emulator: "ELMO"
   * ROSITA incorporates rules to mitigate leakage arising from operand interactions, register reuse, rotation operation, and memory operations. 
   * > 피연산자 상호 작용, 레지스터 재사용, 회전 연산 및 메모리 작업에서 발생하는 누출을 완화하기 위한 규칙을 통합합니다
-  * ELMO has undergone a major upgrade to ELMO* for two reasons: 
+  * ELMO has undergone a major upgrade to ELMO* for two reasons:
+    1. ELMO: only detect leakage between consecutive instructions --> ELMO*: detact leakage between instructions that are further apart.
+    2.   
     * It had to be able to tell ROSITA the cause of the leakage
     * > ROSITA에게 leakage의 원인을 알려줄 수 있는 기능
     * We have added support by including the values that instructions store in various micro-architectural storage elements, which hold state that can leak information.
