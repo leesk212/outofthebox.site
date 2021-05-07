@@ -4,8 +4,8 @@ toc : true
 
 # map
 * 여러 개의 데이터를 한 번에 다른 형태의 데이터로 변환하기 위해서 사용
-> map(변환 함수, 순환 가능한 데이터) 
-## Example
+> map(변환 함수, 순환 가능한 데이터)   
+## Example 
 ### 1
 ```python 
 n,m = map(int, input().split())
