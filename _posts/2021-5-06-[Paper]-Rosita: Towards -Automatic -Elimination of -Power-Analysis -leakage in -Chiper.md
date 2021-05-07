@@ -1,3 +1,6 @@
+---
+toc:true
+---
 
 # Rosita
 1. Uses an emulator to detect leakage due to unintended interatctions between values   
