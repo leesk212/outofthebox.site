@@ -38,8 +38,12 @@
 2. Design and implement systematic approaches for identifying leakage through microarchitectural storage elements. (ELMO ->ELMO*)
 3. Develop ROSITA that rewrites leaking instructions and eliminate leakage.
 4. USE ROSTIA --> Result: AES,ChaCha,Xoodoo
+
 # Result
 ![image](https://user-images.githubusercontent.com/67637935/117383032-cf7cb880-af1a-11eb-9d3f-946234503ced.png)
+
+![image](https://user-images.githubusercontent.com/67637935/117402476-6bb9b600-af41-11eb-9aac-f03d8eec1f88.png)
+
 
 # Workflow
 ![image](https://user-images.githubusercontent.com/67637935/117382988-b70c9e00-af1a-11eb-90a2-6e78e3a40d5c.png)
