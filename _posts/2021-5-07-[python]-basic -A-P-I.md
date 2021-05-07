@@ -17,6 +17,7 @@ toc : true
 ```
 ![image](https://user-images.githubusercontent.com/67637935/117431215-f3182100-af63-11eb-9282-bea1a570bb2c.png)   
   * cf) input() api의 default 반환형은 str이다.
+
 > map class를 list로 형 변환 시키면 list의 각각의 원소로 되어 저장된다.
 ```
 print(list(map(int,input)))
