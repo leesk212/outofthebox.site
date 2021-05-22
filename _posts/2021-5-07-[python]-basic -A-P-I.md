@@ -90,3 +90,5 @@ for i in range(n):
 
 
 출처: https://blockdmask.tistory.com/425 [개발자 지망생]
+
+# 양수 자릿수 확인:  len(str(number))
