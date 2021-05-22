@@ -29,9 +29,9 @@ print(list(map(int,input)))
 ```python 
 n,m = map(int, input().split())
 ```
-    * input() api로 입력 값을 받게 되면 str type으로 받아진다.
-    * 이것을 split() method를 사용하면 split안의 인자에 따라서 나눠지고 list로 반환이 된다. 
-    * 그 list로 반환된 값을 int로 mapping 시키는 과정
+   * input() api로 입력 값을 받게 되면 str type으로 받아진다.
+   * 이것을 split() method를 사용하면 split안의 인자에 따라서 나눠지고 list로 반환이 된다. 
+   * 그 list로 반환된 값을 int로 mapping 시키는 과정
 
 ```python
 2D_array = []
