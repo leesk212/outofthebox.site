@@ -1,0 +1,30 @@
+```
+\begin{lstlisting}[language=C, caption=An example requiring fuzzing and concolic execution to work together.]
+int main(void) {
+    config_t *config = read_config();
+    if (config == NULL) {
+        puts("configuration syntax error");
+        return 1;
+    }
+    if (config->magic != MAGIC_NUMBER) {
+        puts("Bad magic number");
+        return 2;
+    }
+    initialize(config);
+    
+    char *directive = config->directives[0];
+    if (!strcmp(directive, "crashstring")) {
+        program_bug();
+    }
+    else if (!strcmp(directive, "set_option")) {
+        set_option(config->directives[1]);
+    }
+    else {
+        default();
+    }
+}
+\end{lstlisting}
+
+
+출처: https://ndb796.tistory.com/342 [안경잡이개발자]
+```
