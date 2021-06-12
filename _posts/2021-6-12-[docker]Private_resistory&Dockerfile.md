@@ -51,3 +51,27 @@ RUN ["apt","-y","upgrade"]
 ENDPOINT ["ls","-a"] <--append
 CMD ["ls"] <----overwriting 개념
 ```
+
+### 5: working directory 설정 & copy or 등등
+WORKDIR /root
+ADD FILE을 이미지에 추가합니다.
+COPY 압축파일을 추가할 때 바로 추가하지 않고
+
+
+```
+RUN
+ENTRYPOINT
+CMD
+
+FROM ubuntu
+RUN ["ls" "-al"]
+COPY hello.c /root [hello.c host에 있는 이미지를 생성할 때 컨테이너에게 가져다 주는 것]
+RUN ["cp",..]
+
+ENV --> interative 제거
+EXPOSE 80 --> 포트 80를 열어 놓기
+```
+
+![스크린샷 2021-06-12 오후 3 12 59](https://user-images.githubusercontent.com/67637935/121767007-ad68fc80-cb90-11eb-84f7-efe915071887.png)
+
+
