@@ -34,4 +34,33 @@ netstat -lntp
 ![스크린샷 2021-06-12 오전 3 25 04](https://user-images.githubusercontent.com/67637935/121732929-cab8af00-cb2d-11eb-80c2-10d6b8ca8351.png)
 
 ![스크린샷 2021-06-12 오전 3 25 34](https://user-images.githubusercontent.com/67637935/121732977-db692500-cb2d-11eb-8980-956157a2d600.png)
-마지막 스크린샷 고민
+
+# 마지막 스크린샷 고민
+docker run -it[interative or terminal 붙인다--> 팔다리 붙이기]
+           -v [volume mapping: 특정 폴더와 연동시킴] 
+           -p [필요한 포트들]
+           -d [background]
+           "명령어"
+           --rm [빠져나오면 도커의 container도 제거가됨]
+![스크린샷 2021-06-12 오전 11 16 17](https://user-images.githubusercontent.com/67637935/121762233-9c5bc380-cb6f-11eb-82a4-e46ce0574ccb.png) ls
+![스크린샷 2021-06-12 오전 11 16 58](https://user-images.githubusercontent.com/67637935/121762249-b4cbde00-cb6f-11eb-8ae1-c3a646598b4d.png) bash
+
+docker run --rm it ubuntu
+
+# docker 실행중인 ps 전체 지우기
+![스크린샷 2021-06-12 오전 11 22 27](https://user-images.githubusercontent.com/67637935/121762380-78e54880-cb70-11eb-9583-911177918c56.png)
+> docker rm `docker ps -a -q`
+
+# image 다뤄보기
+## 이미지 지우기
+> docker rmi httpd
+![스크린샷 2021-06-12 오전 11 24 22](https://user-images.githubusercontent.com/67637935/121762421-bf3aa780-cb70-11eb-8aa7-d25e2a583616.png)
+## 이미지 생성 
+-> net-tools를 설치한 image를 남겨두고 싶다.
+> 이떄 쓰는 명령어가 commit
+> ![스크린샷 2021-06-12 오전 11 28 19](https://user-images.githubusercontent.com/67637935/121762502-4ab43880-cb71-11eb-9d21-fa8aa35c0a90.png)
+> ![스크린샷 2021-06-12 오전 11 28 41](https://user-images.githubusercontent.com/67637935/121762513-57d12780-cb71-11eb-8346-e48860e9c8e7.png)
+docker images를 다음과 같이 Size로 생기게됨
+
+
+
