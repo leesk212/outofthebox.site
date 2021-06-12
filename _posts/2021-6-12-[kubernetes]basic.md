@@ -57,4 +57,4 @@ https://www.katacoda.com/courses/kubernetes/playground
 ## minikube install
 > 설정 그대로 따라하면 돼 --> 가상화 환경 필요
 
-minikube start 
+minikube start , core를 더 늘려야할 경우도 있음
