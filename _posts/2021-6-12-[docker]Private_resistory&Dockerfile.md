@@ -74,4 +74,25 @@ EXPOSE 80 --> 포트 80를 열어 놓기
 
 ![스크린샷 2021-06-12 오후 3 12 59](https://user-images.githubusercontent.com/67637935/121767007-ad68fc80-cb90-11eb-84f7-efe915071887.png)
 
+### 6. docker nginx dockerfile로 구현하기
+![스크린샷 2021-06-12 오후 3 17 45](https://user-images.githubusercontent.com/67637935/121767120-59aae300-cb91-11eb-8673-566e4b25cbae.png)
+> docker build -t my-ngnix .
+> docker run -itd -p 9000:80 my-nginx 
+
+### 7. docker pull ngnix
+크기 비교
+기본 허브에서 있는 이미지와 크기가 다름
+
+
+### 8. 용량 줄여서 image만들기
+용량은 base image에 따라 결정됨
+redhat 계열: redhat, fedora, centos..
+
+
+#### busy box
+는 정말 필요한 것들만 입력 되기 때문에 1mb밖에 안함
+#### alpine
+##### alpine linux agnix설치
+docerk run -itd --rm alpine (rm:종료시 제거)
+busybox < alpine <ubuntu,redhat
 
