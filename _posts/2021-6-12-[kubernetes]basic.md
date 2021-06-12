@@ -55,6 +55,6 @@ https://www.katacoda.com/courses/kubernetes/playground
 
 
 ## minikube install
-> 설정 그대로 따라하면 돼
-> ㅡㅑ
+> 설정 그대로 따라하면 돼 --> 가상화 환경 필요
+
 minikube start 
