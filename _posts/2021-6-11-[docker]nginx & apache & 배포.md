@@ -100,6 +100,3 @@ docker images prune --> none이라고 되어있는 것을 제거함
 ![스크린샷 2021-06-12 오전 11 52 20](https://user-images.githubusercontent.com/67637935/121763150-a633f580-cb74-11eb-8a11-d0d1d0f42be1.png)
 ![스크린샷 2021-06-12 오전 11 51 45](https://user-images.githubusercontent.com/67637935/121763139-90becb80-cb74-11eb-8373-500bc9a860f4.png)
 
-
-
-
