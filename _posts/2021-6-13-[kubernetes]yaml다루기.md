@@ -89,3 +89,13 @@ spec:
 
 # 삭제 
 ## kuberctl delete deploy nginx-name
+## kuberctl delete src service-name
+![스크린샷 2021-06-13 오후 4 48 56](https://user-images.githubusercontent.com/67637935/121799465-41a59300-cc67-11eb-9f79-6eb19e85d250.png)
+
+
+# 최종 복습 yaml 실습
+## nginx label 변경
+![스크린샷 2021-06-13 오후 4 51 35](https://user-images.githubusercontent.com/67637935/121799525-9f39df80-cc67-11eb-9648-3c21d274f072.png)
+
+## nginx service.yaml 변경
+![스크린샷 2021-06-13 오후 4 50 46](https://user-images.githubusercontent.com/67637935/121799516-93e6b400-cc67-11eb-92ce-32e754b06392.png)
