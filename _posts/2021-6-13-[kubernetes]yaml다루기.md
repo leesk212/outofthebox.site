@@ -3,7 +3,7 @@
 * 기본 단위가 container가 아니라 pod임 ( 물론 container에 접근 할 수 있음)
 * container < pod < rs < deployment
 
-# 1 (지난시간)
+# 1 
 > kubectl create deployment <dpl_name> --image=
 
 > kubectl get po/rs/deploy
@@ -73,7 +73,7 @@ spec:
 ![스크린샷 2021-06-13 오후 4 12 39](https://user-images.githubusercontent.com/67637935/121798592-2f752600-cc62-11eb-8c4c-0102889d8169.png)
 
 # 이제 이 index를 바꿔보는 실습하기
-1. kubectl get po로 해당 pod 찾기 (난왜 3개지..?)
+1. kubectl get po로 해당 pod 찾기 (난왜 3개지..?) --> nginx.yaml에서 3개로 설정했기에! 1개로 바꿔서 시간단축하기!
 ![스크린샷 2021-06-13 오후 4 16 01](https://user-images.githubusercontent.com/67637935/121798677-a7435080-cc62-11eb-871f-71879fe997ff.png)
 
 2. 해당 pod를 bash로 열기
@@ -117,3 +117,10 @@ spec:
 ![스크린샷 2021-06-13 오후 4 57 01](https://user-images.githubusercontent.com/67637935/121799675-61898680-cc68-11eb-8c4c-3cedb971209c.png)
 
 ## 안되면 많은 pod들 중에 하나 선택해서 그냥 해보면 됨, 그냥 순차적으로 하는 것을 추천
+
+# deploy & service 파일을 하나로 합칠 수 있음
+> --- 쓰고 사용
+![스크린샷 2021-06-13 오후 5 07 40](https://user-images.githubusercontent.com/67637935/121799905-df01c680-cc69-11eb-808c-9bad69d5b1d7.png)
+# 성공적
+![스크린샷 2021-06-13 오후 5 09 20](https://user-images.githubusercontent.com/67637935/121799949-18d2cd00-cc6a-11eb-905a-6b4a1f6dfbfe.png)
+
