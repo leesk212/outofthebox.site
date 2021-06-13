@@ -60,12 +60,32 @@ spec:
     targetPort: 80
 ```
 * 이서비스가 deployment의 spec위의 nginx의 label의 값과 selector의 app의 nginx의 값에 대해서 동일하게 적어줘야함
-* 
+> kubectl get all (로 전체 image 확인)
+![스크린샷 2021-06-13 오후 4 11 12](https://user-images.githubusercontent.com/67637935/121798543-fb016a00-cc61-11eb-9bc5-adc8ccefb7a6.png)
 
 
 
+> minicube service list (로 ip 확인가능)
+![스크린샷 2021-06-13 오후 4 11 43](https://user-images.githubusercontent.com/67637935/121798559-0d7ba380-cc62-11eb-80ca-f8d080fd0162.png)
 
+* 8040 port로 안나오는 이유는 자체적으로 32340로 pending 되었기 떄문이다.
+![스크린샷 2021-06-13 오후 4 12 39](https://user-images.githubusercontent.com/67637935/121798592-2f752600-cc62-11eb-8c4c-0102889d8169.png)
 
-# 삭제 2가지 방법
+# 이제 이 index를 바꿔보는 실습하기
+1. kubectl get po로 해당 pod 찾기 (난왜 3개지..?)
+![스크린샷 2021-06-13 오후 4 16 01](https://user-images.githubusercontent.com/67637935/121798677-a7435080-cc62-11eb-871f-71879fe997ff.png)
+
+2. 해당 pod를 bash로 열기
+![스크린샷 2021-06-13 오후 4 17 14](https://user-images.githubusercontent.com/67637935/121798716-d35ed180-cc62-11eb-8cb2-a712b5e5b768.png)
+
+3. cd /usr/share/nginx/html/index.html 으로 이동해주고 수정하기
+![스크린샷 2021-06-13 오후 4 18 58](https://user-images.githubusercontent.com/67637935/121798757-10c35f00-cc63-11eb-88cb-a1c38175088a.png)
+
+4. cat 또는 echo로 수정해주기
+
+![스크린샷 2021-06-13 오후 4 23 16](https://user-images.githubusercontent.com/67637935/121798861-aa8b0c00-cc63-11eb-8e13-c1647f8d0b2d.png)
+
+5. 3개의 pod가 생성이 되었다면 가장 첫번째 파드가 외부와 연결되어 있는 pod이다.
+
+# 삭제 
 ## kuberctl delete deploy nginx-name
-## 
