@@ -94,8 +94,20 @@ spec:
 
 
 # 최종 복습 yaml 실습
-## nginx label 변경
+## 1. nginx label 변경
 ![스크린샷 2021-06-13 오후 4 51 35](https://user-images.githubusercontent.com/67637935/121799525-9f39df80-cc67-11eb-9648-3c21d274f072.png)
 
-## nginx service.yaml 변경
+## 2. nginx service.yaml 변경
 ![스크린샷 2021-06-13 오후 4 50 46](https://user-images.githubusercontent.com/67637935/121799516-93e6b400-cc67-11eb-92ce-32e754b06392.png)
+
+## 3. mimikube service list로 확인 및 url 접근 
+![스크린샷 2021-06-13 오후 4 52 44](https://user-images.githubusercontent.com/67637935/121799556-c8f30680-cc67-11eb-9fb8-38bc5193a73d.png)
+![스크린샷 2021-06-13 오후 4 53 17](https://user-images.githubusercontent.com/67637935/121799576-dc05d680-cc67-11eb-9a4b-df58aebe17f6.png)
+
+## 4. pod확인 및 bash로 들어가기
+![스크린샷 2021-06-13 오후 4 54 30](https://user-images.githubusercontent.com/67637935/121799605-0788c100-cc68-11eb-98bb-9a71a5560107.png)
+
+## cd /usr/share/nginx/html/index.html 수정
+![스크린샷 2021-06-13 오후 4 57 01](https://user-images.githubusercontent.com/67637935/121799675-61898680-cc68-11eb-8c4c-3cedb971209c.png)
+
+## 안되면 많은 pod들 중에 하나 선택해서 그냥 해보면 됨, 그냥 순차적으로 하는 것을 추천
