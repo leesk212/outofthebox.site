@@ -1,3 +1,4 @@
+![스크린샷 2021-06-13 오후 3 26 39](https://user-images.githubusercontent.com/67637935/121797536-c1c5fb80-cc5b-11eb-8718-77bc6f3188d2.png)
 # kubernetes
 * 관리하는 시스템이라고 적혀있습니다.
 * cluster management system에 더 가깝다는 것을 알게된다.
@@ -124,4 +125,5 @@ ip를 확인할 수 있음
 
 > bash --> /usr/share/nginx/html/index.html 을 조작하여서 내가 원하는 글을 표시하기
 
+![스크린샷 2021-06-13 오후 3 27 01](https://user-images.githubusercontent.com/67637935/121797541-d1454480-cc5b-11eb-82e7-5557624f4d61.png)
 
