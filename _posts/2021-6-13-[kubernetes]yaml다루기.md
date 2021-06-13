@@ -15,6 +15,7 @@
 
 > kubectl get deploy --watch 켜놓고 보는 것이 편함
 ![스크린샷 2021-06-13 오후 3 46 17](https://user-images.githubusercontent.com/67637935/121797970-80831b00-cc5e-11eb-8b22-1b1d81b77c45.png)
+![스크린샷 2021-06-13 오후 5 01 20](https://user-images.githubusercontent.com/67637935/121799786-fd1af700-cc68-11eb-94a2-d4a212e7c787.png)
 
 내가 생성하고 싶은 rs의 갯수들을 편하게 설정할 수 있음
 
@@ -88,6 +89,11 @@ spec:
 5. 3개의 pod가 생성이 되었다면 가장 첫번째 파드가 외부와 연결되어 있는 pod이다.
 
 # 삭제 
+## yaml파일 자체를 지워버림
+> kuberctl delete -f ___.yaml  
+
+![스크린샷 2021-06-13 오후 5 02 59](https://user-images.githubusercontent.com/67637935/121799827-394e5780-cc69-11eb-9897-74efe05312e5.png)
+
 ## kuberctl delete deploy nginx-name
 ## kuberctl delete src service-name
 ![스크린샷 2021-06-13 오후 4 48 56](https://user-images.githubusercontent.com/67637935/121799465-41a59300-cc67-11eb-9f79-6eb19e85d250.png)
