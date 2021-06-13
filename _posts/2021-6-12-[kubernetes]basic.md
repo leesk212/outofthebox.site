@@ -97,3 +97,31 @@ https://www.katacoda.com/courses/kubernetes/playground
 ### deployment를 끄고 싶으면 deployment이름을 delete해줘야함
 > kubectl delete deployment my-nginx
 --> 신기한 장점 
+> kubectl create deployment our-nginx --image=nginx
+
+## delpyment 확인--> replicaset 확인 --> po 확인
+![스크린샷 2021-06-13 오후 12 38 40](https://user-images.githubusercontent.com/67637935/121794567-4b69cf00-cc44-11eb-8273-5f69dbe12aac.png)
+> kubectl get delpoy  
+> kubectl get rs  
+> kubectl get pods  
+
+
+## expose
+deploy안에 rs안에 pod에 있는 것을 web으로 보낸다.
+> kubectl expose deployment our-nginx --type=LoadBalancer --port=80
+
+## inspect와 비슷한 명령어
+> kubectl describe pod our-nginx-aaa-aaaa
+ip를 확인할 수 있음
+
+> minikube service list 
+를 통해서 접근할 수 있는 pod의 ip를 알 수 있음
+> ip를 통해 접근하면 해당deployment의 서버의 web을 알 수 있음
+
+
+## exec를 통해서 접근하기
+> kubectl exec -it our-nginx-aaa-aaaa -- bin/bash
+
+> bash --> /usr/share/nginx/html/index.html 을 조작하여서 내가 원하는 글을 표시하기
+
+
