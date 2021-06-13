@@ -39,22 +39,61 @@ https://www.katacoda.com/courses/kubernetes/playground
 
 
 ## kubernetes architecture
-1. WHat is Pod?
-2. Master node --> Worker Node
 
 ![스크린샷 2021-06-12 오후 6 07 04](https://user-images.githubusercontent.com/67637935/121771214-ff1d8100-cba8-11eb-9b94-29dab82dc92e.png)
 
+1. WHat is Pod?
+2. Master node[1개] --> Worker Node[1개] --> Worker Node에 Master로 관리를 한다.  
 3. container가 배포될 물리 서버 또는 가상 머신 
 4. pod 주머니 안에 주머니 안에 conatiner
 5. 디플로이먼트
-6. 컨테이너의 ocastration tool이다. --> 숫한 컨테이너를 돌릴 때, 그것을 관리해주기 위해서는 반복적인 서버가 필요하다.
-7. 웹 어플리케이션을 개발한다고 하면, 판매자가 물품을 올리는 기능, 판매자 입장에서 보면 판매 입자읃ㄹ --> 등등의 기능들이 합쳐져있음
-8. Pod1개당 단위에서 실행을 할 수 있게 해줌
-9. Pod
-10. 
-
+  * 컨테이너의 ocastration tool이다. --> 숫한 컨테이너를 돌릴 때, 그것을 관리해주기 위해서는 반복적인 서버가 필요하다.
+8. 웹 어플리케이션을 개발한다고 하면, 판매자가 물품을 올리는 기능, 판매자 입장에서 보면 판매 입자읃ㄹ --> 등등의 기능들이 합쳐져있음
+9. Pod1개당 단위에서 실행을 할 수 있게 해줌
+10. Pod를 감싸는 것이 replicaset, replicatset을 감싸는 것이 deployment
 
 ## minikube install
 > 설정 그대로 따라하면 돼 --> 가상화 환경 필요
 
-minikube start , core를 더 늘려야할 경우도 있음
+> minikube start 
+* core를 더 늘려야할 경우도 있음 m1--> 가상화 지원을 안해서 돌고돌아 ubuntu virtaulmachine에 설치
+![스크린샷 2021-06-13 오전 5 12 02](https://user-images.githubusercontent.com/67637935/121788148-e4c5c080-cc05-11eb-9651-c500d1dbce48.png)
+
+
+## minikube start --> minikube status
+![스크린샷 2021-06-13 오전 5 13 27](https://user-images.githubusercontent.com/67637935/121788164-18084f80-cc06-11eb-9afa-46067316dfa6.png)
+
+
+## init
+> kubectl run hello-world --image=hello-world -it --restart=Never
+* hello-world라는 이미지를 가져와서 hello-world라는 이름으로 실행시키고, restart는 없도록해!
+> kubectl get pods
+* images가 남는 느낌, 하지만 get으로 실행시킴
+> kubectl delete pods hello-world
+* 삭제
+
+> kubectl run my-ubutnu --image=ubuntu -it -- /bin/bash
+
+![스크린샷 2021-06-13 오후 12 09 20](https://user-images.githubusercontent.com/67637935/121794061-325f1f00-cc40-11eb-8c1c-212ff25d3e22.png)
+
+> kubectl delete pods my-ubuntu
+
+> kubectl run my-nginx --image=nginx -it
+
+## deployment
+> kubectl create depolyment my-nginx --image=nginx  
+![스크린샷 2021-06-13 오후 12 15 25](https://user-images.githubusercontent.com/67637935/121794146-0b551d00-cc41-11eb-8638-bd8dc620ece7.png)
+* name 부분 
+* 사용자 설정-replicaset_value-pod_hash
+### with watch (불멸의 pods)
+> kubectl get po --watch
+
+> kubectl delete po 사용자 설정-replicaset_value-pod_hash
+
+> 다시 pods가 생성되고, 상태에 변화가 없어짐
+
+![스크린샷 2021-06-13 오후 12 21 23](https://user-images.githubusercontent.com/67637935/121794331-31c78800-cc42-11eb-8358-72b39ae1d2b0.png)
+
+### deployment를 끄고 싶으면 deployment이름을 delete해줘야함
+> kubectl delete deployment my-nginx
+--> 신기한 장점 
