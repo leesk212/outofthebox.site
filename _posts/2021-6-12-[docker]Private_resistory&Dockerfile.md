@@ -27,6 +27,7 @@ RUN apt -y update
 RUN apt -y upgrade
 ```
 > docker build . -t <name:tag> 
+
 ![스크린샷 2021-06-12 오후 12 47 37](https://user-images.githubusercontent.com/67637935/121764130-5f49fe00-cb7c-11eb-9dae-8f0470c56646.png)
 자동으로 업데이트 업그레이드 까지 하는 것을 확인할 수 있음
 
@@ -75,6 +76,7 @@ EXPOSE 80 --> 포트 80를 열어 놓기
 ![스크린샷 2021-06-12 오후 3 12 59](https://user-images.githubusercontent.com/67637935/121767007-ad68fc80-cb90-11eb-84f7-efe915071887.png)
 
 ### 6. docker nginx dockerfile로 구현하기
+
 ![스크린샷 2021-06-12 오후 3 17 45](https://user-images.githubusercontent.com/67637935/121767120-59aae300-cb91-11eb-8673-566e4b25cbae.png)
 > docker build -t my-ngnix .
 > docker run -itd -p 9000:80 my-nginx 
