@@ -1,6 +1,17 @@
 # Checksum
-체크섬은 데이터를 송신하는 중에 발생할 수 있는 오류를 검출하기 위한 값이다
-전송할 데이터를 16Bits씩 나눠서 차례대로 더해가는 방법으로 생성한다.
+* 체크섬은 데이터를 송신하는 중에 발생할 수 있는 오류를 검출하기 위한 값이다 전송할 데이터를 16Bits씩 나눠서 차례대로 더해가는 방법으로 생성한다.
+![image](https://user-images.githubusercontent.com/67637935/126106222-28d91a17-b333-418f-b304-e053dbbaf00f.png)
+* Sender side - Checksum Createion  
+  * Break the original message in to 'k' number of blocks with 'n' bits in each block.  
+![image](https://user-images.githubusercontent.com/67637935/126106391-f1dfb35e-c6bd-426a-a031-3c0736348cb1.png)
+  * Sum all the 'k' data blocks  
+![image](https://user-images.githubusercontent.com/67637935/126106492-4a11e489-877c-4cea-891c-7e7c77a05444.png)
+  * Add the carray to the sum, if any  
+![image](https://user-images.githubusercontent.com/67637935/126106552-b8b0bc8b-1d08-4f97-8001-88da4608ab15.png)
+  * Do 1's complement to the sum = Checksum  
+![image](https://user-images.githubusercontent.com/67637935/126106610-988f4a85-3fce-4892-9453-4854dbed72e6.png)
+  * CHECKSUM 11011010 
+* Recivere side - Checksum Validation
 
 ```c
 unsigned short in_cksum(unsinged short *ptr, int nbytes);
@@ -40,3 +51,4 @@ return (answer); // 만들어진 값을 리턴
 * https://limjunho.github.io/2021/06/05/UDP-cksum.html
 * https://github.com/vozlt/check-protocol/blob/master/icmp_traceroute.c
 * https://gist.github.com/david-hoze/0c7021434796997a4ca42d7731a7073a
+* https://www.youtube.com/watch?v=AtVWnyDDaDI
