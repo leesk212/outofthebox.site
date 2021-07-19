@@ -17,6 +17,7 @@
   * Calculate all data value with checksum and carray --> to be 1 
 ![image](https://user-images.githubusercontent.com/67637935/126107008-5b769afc-30ad-4794-9534-1a11e775e0ec.png)
 # Checksum code 'C'
+
 ```c
 unsigned short in_cksum(unsinged short *ptr, int nbytes);
 
