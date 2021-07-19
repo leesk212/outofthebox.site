@@ -1,3 +1,9 @@
+# Cache Randomized
+* CEASER: http://memlab.ece.gatech.edu/papers/MICRO_2018_2.pdf
+* CEASER-S: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8980326
+* ScatterCache: https://www.usenix.org/system/files/sec19-werner.pdf
+* MIRAGE: Mitigating Conflict-Based Cache Attacks with a Practical Fully-Associative Design: https://arxiv.org/pdf/2009.09090.pdf
+
 # Conflict-based Cache Attacks
 ![image](https://user-images.githubusercontent.com/67637935/125395303-fa393080-e3e5-11eb-9e13-7f016c77af17.png)
 ## Definition
