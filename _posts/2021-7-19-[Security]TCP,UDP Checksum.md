@@ -12,7 +12,11 @@
 ![image](https://user-images.githubusercontent.com/67637935/126106610-988f4a85-3fce-4892-9453-4854dbed72e6.png)
   * CHECKSUM 11011010 
 * Recivere side - Checksum Validation
-
+  * Get Data from Sender [Checksum][SectionK...]  
+![image](https://user-images.githubusercontent.com/67637935/126106895-cd219dd9-4879-4c4e-9d69-72b4075cc8e3.png)
+  * Calculate all data value with checksum and carray --> to be 1 
+![image](https://user-images.githubusercontent.com/67637935/126107008-5b769afc-30ad-4794-9534-1a11e775e0ec.png)
+# Checksum code 'C'
 ```c
 unsigned short in_cksum(unsinged short *ptr, int nbytes);
 
