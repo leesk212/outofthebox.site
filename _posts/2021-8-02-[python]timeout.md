@@ -11,3 +11,5 @@ while True:
         break
 ```
 # Linux
+* timeout -s 9 1s "program"
+--> 1초마다 해당 program 죽이기
