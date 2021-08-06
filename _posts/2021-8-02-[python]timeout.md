@@ -1,3 +1,8 @@
+```
+layout: post
+tags: [blog,jekyll]
+```
+
 # window
 ```python
 from datetime import timedelta, datetime
