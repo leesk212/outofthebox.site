@@ -1,4 +1,5 @@
 ---
+title: install brew, pyenv and jupyter in BigSur.
 tags: mac pyenv brew
 toc: True
 ---
