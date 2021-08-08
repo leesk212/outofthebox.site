@@ -92,7 +92,7 @@ analytics:
 
 # Site Author
 author:
-  name             : ""
+  name             : 
   avatar           : 
   bio              : "Security, A.I., Python"
   location         : "Seoul, KR"
