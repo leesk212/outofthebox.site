@@ -1,6 +1,6 @@
 ---
-layout: post
-tags: [blog,jekyll]
+tags: python
+toc: True
 ---
 
 # window
