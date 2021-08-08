@@ -1,3 +1,9 @@
+---
+tags: mac pyenv brew
+toc: True
+---
+
+
 # brew
 > /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
