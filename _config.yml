@@ -90,14 +90,13 @@ analytics:
     tracking_id          :
     anonymize_ip         : # true, false (default)
 
-
 # Site Author
 author:
   name             : ""
-  avatar           : "" # path of avatar image, e.g. "/assets/images/IMG_2576.jpg"
+  avatar           : 
   bio              : "Security, A.I., Python"
   location         : "Seoul, KR"
-  email            :
+  email            : 
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
