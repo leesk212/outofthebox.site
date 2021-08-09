@@ -1,3 +1,7 @@
+---
+tags: matlab data-preprocessing mat2png
+toc: True
+---
 ```
 %Title = mat2png while moving directory
 %Root_Dir = ./data_only_mat
