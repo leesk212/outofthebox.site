@@ -1,3 +1,7 @@
+---
+tags: 🌟paper-review security-defense cache-randomize
+toc: True
+---
 # Cache Randomized
 * CEASER: http://memlab.ece.gatech.edu/papers/MICRO_2018_2.pdf
 * CEASER-S: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8980326
