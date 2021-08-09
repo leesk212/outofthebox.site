@@ -1,3 +1,7 @@
+---
+tags: pyqt python gui
+toc: True
+---
 # PyQt5 정리
 
 ## Event 만들기
