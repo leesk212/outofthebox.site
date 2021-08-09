@@ -40,5 +40,6 @@ toc: True
   * forward가 진행하기 위해서는 미리 계산을 위한 J가 있어야함 (J: subset 전략)
 
 
-
+# Terminology
+* value function --> 내가 현재 하는 가치가 얼마나 차이가 있는 상황인지 (현재 상황 s에서 action을 계속적으로 진행했을 때 reward)
 
