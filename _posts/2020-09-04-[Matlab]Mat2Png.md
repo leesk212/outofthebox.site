@@ -1,5 +1,5 @@
 ---
-tags: Data-Preprocessing matlab npz stft 
+tags: data-preprocessing matlab npz stft 
 toc: True
 ---
 # 1. mat to stft to fig to png
