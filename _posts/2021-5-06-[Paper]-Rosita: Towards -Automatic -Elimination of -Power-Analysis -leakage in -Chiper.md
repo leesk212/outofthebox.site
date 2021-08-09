@@ -1,7 +1,7 @@
 ---
-toc : true
+tags: 🌟paper-review security-defense
+toc: True
 ---
-
 # Rosita
 1. Uses an emulator to detect leakage due to unintended interatctions between values   
 2. Rewrites the code to eliminate the leakage.
