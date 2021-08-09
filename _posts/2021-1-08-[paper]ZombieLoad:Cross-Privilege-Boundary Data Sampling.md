@@ -1,3 +1,7 @@
+---
+tags: 🌟paper-review security-attack cache-side-channel-attack
+toc: True
+---
 # Abstract
 * L1 Cache 이외에 FPU register file, store buffer에서의 유출이 확인되었다.
 * Zombie load는 processor의 이전에 *unexlpored한 fill-buffor logic*을 공격한다.
