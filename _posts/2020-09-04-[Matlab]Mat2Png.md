@@ -1,3 +1,7 @@
+---
+tags: Data-Preprocessing matlab npz stft 
+toc: True
+---
 # 1. mat to stft to fig to png
 ```
 f = dir('mata_data')  
