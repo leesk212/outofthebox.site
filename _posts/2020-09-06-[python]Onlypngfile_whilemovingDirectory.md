@@ -1,3 +1,7 @@
+---
+tags: python
+toc: True
+---
 ```
 import os
 
