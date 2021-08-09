@@ -1,3 +1,7 @@
+---
+tags: 🌟paper-review
+toc: True
+---
 # Abstract
 * 지금까지의 cache side channel attack은 메모리의 접근의 유무를 통해 정보를 유출시켰다.
 * 그렇기에 cache hit값이 또는 Cache miss값이 비이상적으로 올라가게 된다. 
