@@ -274,10 +274,11 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      read_time: false
       comments: # true
       share: true
       related: true
+      words_per_minute: 250
    # _pages 부분입니다.
   - scope:
       path: "_pages"
