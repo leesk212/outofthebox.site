@@ -1,3 +1,8 @@
+---
+tags: security-attack system-security ftz
+toc: True
+---
+
 # 메모리 레이아웃 기초
 
 버퍼 오버플로우 공격과 리버싱 같은 시스템 해킹기법을 위해서는 메모리 레이아웃을 반드시 이해해야 한다. 
