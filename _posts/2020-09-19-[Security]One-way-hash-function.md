@@ -1,3 +1,7 @@
+---
+tags: security-attack system-security ftz
+toc: True
+---
 # Hash-Function
 * cryptography과정에서 필수적인 요소이다.
 * One-way이여야 하며, 같은 Hash값을 갖는 경우를 제거해야만 한다.
