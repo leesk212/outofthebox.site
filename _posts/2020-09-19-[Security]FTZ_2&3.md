@@ -1,3 +1,7 @@
+---
+tags: security-attack system-security ftz
+toc: True
+---
 # FTZ_2
 ## vi(vim) 편집기의 취약점을 이용한 system 권한 공격
 
