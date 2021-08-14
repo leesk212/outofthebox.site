@@ -1,3 +1,8 @@
+---
+tags: security-defense computer-architecture
+toc: True
+---
+
 # TEE(Trusted Execution Environment)
 
 TEE(Trusted Execution Environment)는 Main Processor(CPU) 내부에 있는 안전한 영역이며, 이곳에 있는 Code 와 Data는 안전하게 보호된다는 것을 의미합니다.
