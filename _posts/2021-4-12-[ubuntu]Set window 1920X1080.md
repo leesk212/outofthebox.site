@@ -1,3 +1,7 @@
+---
+tags: linux
+toc: True
+---
 # 1. xrandr
 > $ xrandr
 #### find display name
