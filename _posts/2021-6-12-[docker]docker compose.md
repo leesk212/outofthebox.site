@@ -1,3 +1,7 @@
+---
+tags: cloud docker
+toc: True
+---
 # docker compose란?
 * compose: 구성하다 (make up)
 * applications
