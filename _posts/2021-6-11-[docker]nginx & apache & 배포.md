@@ -1,3 +1,8 @@
+---
+tags: cloud docker
+toc: True
+---
+
 # nginx docker run
 > docker run -it -d -p 8080:80 nginx   
 > 기존의 nginx 이미지를 다시 run 시키는데 이때 host의 8080과 docker의 ngnix서버의 80포트를 포트포워딩을 해주는 방식  
