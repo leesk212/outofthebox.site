@@ -1,3 +1,7 @@
+---
+tags: linux etc
+toc: True
+---
 > vim ~/.vimrc
  
 
