@@ -1,3 +1,7 @@
+---
+tags: matlab wavelet data-preprocessing
+toc: True
+---
 ```
 f = dir('1D_N1');
 name = f(3).name;
