@@ -1,4 +1,7 @@
-
+---
+tags: security-attack csca
+toc: True
+---
 ```c
 #include "libkdump.h"
 #include <stdio.h>
