@@ -1,3 +1,7 @@
+---
+tags: computer-architecture
+toc: True
+---
 # Q. What is the aim of the line fill buffer?
 
  
