@@ -1,3 +1,7 @@
+---
+tags: git
+toc: True
+---
 # git branch
 
 github 저장소의 branch를 통해 하나의 git 저장소에서 다양한 사람들의 작업을 분할해서 할 수 있다.
