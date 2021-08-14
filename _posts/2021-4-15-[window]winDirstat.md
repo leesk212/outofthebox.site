@@ -1,3 +1,7 @@
+---
+tags: window
+toc: True
+---
 # widnDirstat
 
 download: https://sourceforge.net/projects/windirstat/
