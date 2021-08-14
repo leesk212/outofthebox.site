@@ -1,3 +1,7 @@
+---
+tags: cloud kubernetes 
+toc: True
+---
 ![스크린샷 2021-06-13 오후 3 32 59](https://user-images.githubusercontent.com/67637935/121797657-a27b9e00-cc5c-11eb-9601-ecd03f0b6502.png)
 
 * 기본 단위가 container가 아니라 pod임 ( 물론 container에 접근 할 수 있음)
