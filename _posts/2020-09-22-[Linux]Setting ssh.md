@@ -1,3 +1,7 @@
+---
+tags: linux ssh remote-connec
+toc: True
+---
 # 1. 순정 Linux를 ssh에 올리기
 ```
 $sudo apt-get install openssh-server
