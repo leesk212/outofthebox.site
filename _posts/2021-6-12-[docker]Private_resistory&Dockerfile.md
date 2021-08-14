@@ -1,3 +1,8 @@
+---
+tags: cloud docker
+toc: True
+---
+
 > docker offical docker machine 접근
 ![스크린샷 2021-06-12 오후 12 00 46](https://user-images.githubusercontent.com/67637935/121763298-d29c4180-cb75-11eb-9ce0-bd956d26756f.png)
 > private resistry에 push하기 위해 이름과 방법을 바꿔주었음
