@@ -1,3 +1,7 @@
+---
+tags: assembly computer-architecture
+toc: True
+---
 ```asm
   int i=0,  j=0;
          __asm__ __volatile__(
