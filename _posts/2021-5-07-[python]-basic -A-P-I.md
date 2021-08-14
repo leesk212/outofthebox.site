@@ -1,5 +1,6 @@
 ---
-toc : true
+tags: python algorithm
+toc: True
 ---
 
 # map
