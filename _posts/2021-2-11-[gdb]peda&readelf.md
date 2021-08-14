@@ -1,3 +1,7 @@
+---
+tags: assembly linux
+toc: True
+---
 # peda
 gdb에서 가상메모리 자체를 조금 더 효율적으로 보여주는 방법 중 하나이다.
 PEDA - Python Exploit Development Assistance for GDB
