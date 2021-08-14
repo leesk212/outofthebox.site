@@ -1,3 +1,7 @@
+---
+tags: linux
+toc: True
+---
 # grub > 이 생성되며, Rom에 있는 booting loader를 자동으로 잡지 못할 경우
 
 > grub> ls    
