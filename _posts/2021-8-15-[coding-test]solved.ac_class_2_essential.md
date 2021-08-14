@@ -1,3 +1,7 @@
+---
+toc : True
+tags : coding-test python algorithm
+---
 ```python
 while True: 
   s = list(map(int,input().split(' ')))
