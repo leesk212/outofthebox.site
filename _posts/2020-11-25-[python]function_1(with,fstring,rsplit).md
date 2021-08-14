@@ -1,3 +1,7 @@
+---
+tags: python
+toc: True
+---
 # with
 
 * with는 자체적으로 __enter()__과 __exit__()가 구현 되어 있음으로 자원을 획득하고 반납하였을 때 주로 사용한다.
