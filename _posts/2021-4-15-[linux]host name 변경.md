@@ -1,3 +1,7 @@
+---
+tags: linux
+toc: True
+---
 # hostname 검색
 
 > $ hostname
