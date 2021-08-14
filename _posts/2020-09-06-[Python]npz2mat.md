@@ -1,5 +1,5 @@
 ---
-tags: python data-preprocessing numpy np2mat
+tags: python data-preprocessing numpy npz2mat
 toc: True
 ---
 ```
