@@ -1,3 +1,7 @@
+---
+tags: assembly
+toc: True
+---
 # Introduction
 In order to keep my assembly-related documents easy to read and understand, I've written some macros for the GNU-assembler (also known as GAS).
 
