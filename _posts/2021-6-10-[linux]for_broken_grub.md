@@ -1,3 +1,8 @@
+---
+tags: linux
+toc: True
+---
+
 > 1. try ubuntu without installing  
 > 
 > sudo add-apt-repository ppa:yannubuntu/boot-repair
