@@ -1,5 +1,5 @@
 ---
-tags: ML IDEC Reinforce_Learning
+tags: machine-learning idec reinforce_learning
 toc: True
 ---
 # 강화학습이 다루고 있는 문제
