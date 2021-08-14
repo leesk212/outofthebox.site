@@ -1,3 +1,7 @@
+---
+tags: python data-preprocessng
+toc: True
+---
 # np.ones(num)
 num의 수만큼의 가로의 행열을 생성한다( 값은 1로 )
 [1,1,1,1,1,1,...]
