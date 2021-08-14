@@ -1,3 +1,7 @@
+---
+tags: linux ssh remote-connect
+toc: True
+---
 # open-sshd가 설치 되어 있어야함
 # 없다면
 > $ sudo apt-get install open-sshd    
