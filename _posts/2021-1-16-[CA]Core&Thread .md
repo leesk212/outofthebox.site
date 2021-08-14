@@ -1,3 +1,7 @@
+---
+tags: computer-architecture
+toc: True
+---
 # Core
 * CPU에서의 연산을 하는 장치
 * Single core 하나의 연산 장치만 있음
