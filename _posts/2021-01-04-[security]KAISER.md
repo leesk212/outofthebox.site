@@ -1,3 +1,7 @@
+---
+tags: security-defense kernel
+toc: True
+---
 # KAISER: hiding the kernel from user space
 
 Since the beginning, Linux has mapped the kernel's memory into the address space of every running process. There are solid performance reasons for doing this, and the processor's memory-management unit can ordinarily be trusted to prevent user space from accessing that memory. More recently, though, some more subtle security issues related to this mapping have come to light, leading to the rapid development of a new patch set that ends this longstanding practice for the x86 architecture.
