@@ -1,3 +1,7 @@
+---
+tags: security-defense network
+toc: True
+---
 # Checksum
 * 체크섬은 데이터를 송신하는 중에 발생할 수 있는 오류를 검출하기 위한 값이다 전송할 데이터를 16Bits씩 나눠서 차례대로 더해가는 방법으로 생성한다.  
 ![image](https://user-images.githubusercontent.com/67637935/126106222-28d91a17-b333-418f-b304-e053dbbaf00f.png)
