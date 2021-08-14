@@ -1,3 +1,7 @@
+---
+tags: linux
+toc: True
+---
 1. /proc 디렉토리의 프로세스 파일의 상세 설명
 
  
