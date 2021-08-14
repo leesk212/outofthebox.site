@@ -1,3 +1,7 @@
+---
+tags: linux
+toc: True
+---
 # 0. 설치
 > sudo apt-get install ctags
 
