@@ -1,3 +1,7 @@
+---
+tags: linux
+toc: True
+---
 Reference: https://www.sublimetext.com/docs/3/linux_repositories.html
 
 # apt
