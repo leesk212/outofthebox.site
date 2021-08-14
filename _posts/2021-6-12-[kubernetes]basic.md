@@ -1,3 +1,7 @@
+---
+tags: cloud kubernetes 
+toc: True
+---
 ![스크린샷 2021-06-13 오후 3 26 39](https://user-images.githubusercontent.com/67637935/121797536-c1c5fb80-cc5b-11eb-8718-77bc6f3188d2.png)
 # kubernetes
 * 관리하는 시스템이라고 적혀있습니다.
