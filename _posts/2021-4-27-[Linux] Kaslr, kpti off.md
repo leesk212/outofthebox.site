@@ -1,3 +1,7 @@
+---
+tags: linux security-defense
+toc: True
+---
 # sudo vim /etc/default/grub 확인
 
 # GRUB_CMDLINE_LINUX_DEFAULT="off할 명령어들"
