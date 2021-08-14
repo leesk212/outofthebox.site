@@ -1,6 +1,10 @@
+---
+tags: assembly computer-architecture
+toc: True
+---
 barrier() 같은 경우에 다음과 같은 매크로로 define 되어 있습니다.
 
-#define barrier() __asm__ __volatile__("": : :"memory")
+# define barrier() __asm__ __volatile__("": : :"memory")
 
 보면 아무른 operation도 없는 inline assembly 코드입니다. 콜론(':')으로 구분된 "memory" 표기되어 있는 세번째 필드는 clobber 필드라고해서 해당 inline assembly가 수행된후 값이 변경되는 것들을 기입합니다.
 gcc는 clobber 필드에 기입된 내용을 토대로 다음 코드를 생성하면서 최적화를 수행하는데 일반적으로 값이 변경된 것들에 대해서는 어떤 값으로 변경된지에 대한 정보가 없기 때문에 최적화를 수행할 수 없습니다.
