@@ -1,3 +1,7 @@
+---
+tags: linux
+toc: True
+---
 linux가 설치되어 있는 디스크를 찾는다.
 
 대부분 busybox 호출 log를 보면 /dev/sd? 로 설정 되어있을 것이다.
