@@ -1,3 +1,7 @@
+---
+tags: assembly computer-architecture
+toc: True
+---
 # 1. Using mfence & lfence
 ```c
 asm __volatile__ (
