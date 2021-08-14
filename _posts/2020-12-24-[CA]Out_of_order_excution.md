@@ -1,3 +1,7 @@
+---
+tags: csca security-attack computer-architecture
+toc: True
+---
 비순차 실행은 명령어 수준에서 병렬성(Instruction Level Parallelism)을 찾아서 이를 순차적이 아닌 비순차적, 즉 병렬적으로 처리할 수 있도록 한 기술을 말합니다.
 그러면, 큰 그림에서 이러한 비순차적 명령어 처리를 하려면 어떤 기술들이 필요한지 살펴봅시다.
 이를 위해 비순차 실행에서 필요한 기술의 키워드들을 한번 나열해볼까요 ?
