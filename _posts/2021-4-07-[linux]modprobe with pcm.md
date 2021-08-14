@@ -1,3 +1,7 @@
+---
+tags: linux
+toc: True
+---
 # pcm  
 > sudo ./pcm.x  
 
