@@ -27,3 +27,6 @@ file_list = os.chdir('finalresult')
 * 전체 파일중 첫번쨰 줄만 읽어서 문자열로 
 ### f.readlines()
 * 전체 파일을 \n(개행) 별로 나눠서 한줄을 하나의 list의 값으로 받기
+## 파일쓰기
+> f.write(쓰고싶은 data) 
+> 쓰고싶은 data에는 string형태로 값이 들어가야함
