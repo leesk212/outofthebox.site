@@ -30,3 +30,8 @@ file_list = os.chdir('finalresult')
 ## 파일쓰기
 > f.write(쓰고싶은 data) 
 > 쓰고싶은 data에는 string형태로 값이 들어가야함
+
+# is?
+## 숫자니?
+> 문자열.isdigit()
+* 문자열의 모든 문자가 숫자일 때 true를 반환하고 그렇지 않으면 false를 반환합
