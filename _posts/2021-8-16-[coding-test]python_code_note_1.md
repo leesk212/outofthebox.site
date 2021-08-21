@@ -8,7 +8,7 @@ visited = [False] * 9 #[0,0,0,0,0,0,0,0,0]
 ```
 # 2차원 list 빠른 행 선언
 ```python
-graph = [[] for _ in range(3)]
+graph = [[]*n for _ in range(n)]
 graph[0].append(0)
 graph[1].append(0)
 graph[2].append(0)
