@@ -132,7 +132,7 @@ timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 # Plugins (previously gems:)
 plugins:
   - jekyll-include-cache
-  - jekyll-sitemap
+#  - jekyll-sitemap
 #   - jekyll-paginate
 
 #   - jekyll-gist
@@ -142,7 +142,7 @@ plugins:
 whitelist:
   - jekyll-include-cache
 #   - jekyll-paginate
-  - jekyll-sitemap
+#  - jekyll-sitemap
 #   - jekyll-gist
 #   - jekyll-feed
 
@@ -185,12 +185,16 @@ compress_html:
 
 # Defaults
 defaults:
+  - scope:
+      path: ""
+      type: root
+  - value:
+      sitemap: true
   # _posts
   - scope:
       path: ""
       type: posts
     values:
-      sitemap: true
       layout: single
       author_profile: true
       read_time: false
