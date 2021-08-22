@@ -265,6 +265,16 @@ compress_html:
     envs: development
 
 
+sitemap:
+  path: sitemap.xml
+  tag: false
+  category: false
+robotstxt:
+  useragent: '*'
+  allow:
+    - /
+  sitemap: https://leesk212.github.io/sitemap.xml
+
 # Defaults
 defaults:
   # _posts
