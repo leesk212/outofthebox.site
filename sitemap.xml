@@ -14,7 +14,6 @@ layout: null
         {% else %}
         <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
         {% endif %}
-
         {% if post.sitemap.changefreq == null %}
         <changefreq>weekly</changefreq>
         {% else %}
