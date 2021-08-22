@@ -264,20 +264,6 @@ compress_html:
   ignore:
     envs: development
 
-deploy:
-  type: git
-  repo: 'https://github.com/leesk212/leesk212.github.io'
-  branch: master
-sitemap:
-  path: sitemap.xml
-  tag: false
-  category: false
-robotstxt:
-  useragent: '*'
-  allow:
-    - /
-  sitemap: https://leesk212.github.io/sitemap.xml
-
 # Defaults
 defaults:
   # _posts
@@ -300,5 +286,20 @@ defaults:
       layout: single
       author_profile: true
   # >>>>>>>>>>>>>>>>>>>> 여기까지 추가 됨
+
+deploy:
+  type: git
+  repo: 'https://github.com/leesk212/leesk212.github.io'
+  branch: master
+sitemap:
+  path: sitemap.xml
+  tag: false
+  category: false
+robotstxt:
+  useragent: '*'
+  allow:
+    - /
+  sitemap: https://leesk212.github.io/sitemap.xml
+
 
 remote_theme : mmistakes/minimal-mistakes
