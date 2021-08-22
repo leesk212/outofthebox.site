@@ -1,4 +1,5 @@
 ---
+layout: post
 tags : python
 title: '[Python]datetime_method'
 date:   2021-08-18 00:19:00 +0900
