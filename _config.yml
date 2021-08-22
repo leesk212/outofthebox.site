@@ -131,22 +131,19 @@ timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # Plugins (previously gems:)
 plugins:
-#  - jekyll-sitemap
+  - jekyll-sitemap
   - jekyll-include-cache
- 
-#   - jekyll-paginate
-
-#   - jekyll-gist
-#   - jekyll-feed
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-feed
 
 # # mimic GitHub Pages with --safe
 whitelist:
-#  - jekyll-sitemap
+  - jekyll-sitemap
   - jekyll-include-cache
-#   - jekyll-paginate
-
-#   - jekyll-gist
-#   - jekyll-feed
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-feed
 
 
 # Archives
