@@ -1,4 +1,4 @@
  User-agent: *
  Allow: /
  
- Sitemap: http://leesk212.github.io/sitemap.xml
+ Sitemap: http://leesk212.github.io/site_map.xml
