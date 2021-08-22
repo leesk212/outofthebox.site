@@ -9,6 +9,7 @@ changefreq : daily
 priority : 1.0
 description: >
   python datetime api 
+toc: True
 ---
 # Print UTC & KST
 ```python
