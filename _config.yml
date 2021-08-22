@@ -90,7 +90,7 @@ exclude:
   - tmp
   - /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
-  - sitemap.xml
+  - sitemap
 keep_files:
   - .git
   - .svn
