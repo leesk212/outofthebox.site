@@ -20,7 +20,6 @@ if __name__ == "__main__":
   KST = str(KST).split()[0]
   print(KST)
   ```
-  
 # KST2UTC
 ```python
 from datetime import datetime
