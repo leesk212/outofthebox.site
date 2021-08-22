@@ -202,7 +202,7 @@ defaults:
       path: "_pages"
       type: pages
     values:
-      sitemap: false
+      sitemap: true
       layout: single
       author_profile: true
   # >>>>>>>>>>>>>>>>>>>> 여기까지 추가 됨
