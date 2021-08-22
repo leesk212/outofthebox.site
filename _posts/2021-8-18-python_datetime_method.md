@@ -1,5 +1,8 @@
 ---
 tags : python
+title: '[Python] datetime_method'
+description: >
+  python datetime api 
 ---
 # Print UTC & KST
 ```python
