@@ -27,7 +27,14 @@ toc: True
   * server: 16 ( total 23 ) is vulnerability
 * STARTTLS is error-prone!! --> should avoid!!
 
-
+# Instructiuon
+* STARTTLS is most useful in scenarios where encrpytion is hard to enforce, such as in email relaying running in the back ground without any user interation.
+* Email relaying  is often *Oppertunistic* because SMTP servers fall back to plaintexty if a TLS negotiation fails.
+* Surprisingly, our analysis showed that some popular email clients use it as default despite having the option to use the implicit TLS ports without STARTTLS.
+* Several Issue:
+  * STARTTLS stripping attacks : When a Meddler-in-the-Middle (MitM) attacker removes the STARTTLS capability from the server response, they can easily downgrade the connection to plaintext.
+  * a command injection bug in Postfix: When a client appends an extra command after the STARTTLS command, that command is buffered and evaluated after the transition to TLS. In effect, this allows an attacker to inject a plaintext prefix into an encrypted session.
+  * 
 
 
 
