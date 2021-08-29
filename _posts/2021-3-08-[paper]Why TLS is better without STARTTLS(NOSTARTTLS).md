@@ -37,7 +37,11 @@ toc: True
   * Trojitá: pre-authenticated connections
 * Present systematization of these issues: Negotiation, Buffering, Tampering, Session Fixation, and UI Spoofing
 
+![스크린샷 2021-08-30 오전 4 28 18](https://user-images.githubusercontent.com/67637935/131263002-8607d502-6944-48bd-beda-d1a746271cf4.png)
+
+
 # Background
+
 ## Submission of email
 * message submission: the process of introducing a new email to the email infrastructure.
   * MUA(Thunderbird,...)
@@ -52,12 +56,32 @@ toc: True
       5. Client finally initiates the transmission of the email's content via the DATA command ".\r\n"
     * Two characteristics of SMTP
       * Every command is answered with exactly one response (+PIPELINING extension)
-      *  
+      * <s>Responses in SMTP cannot be parsed generically but require different parsers depending on the issued command.</s>
 
+## Retrieval of Email
+* POP3(Post office Protocol)
+  * a simple line-based request and response protocol
+  * Allows users to download their email
+  * After 1984, POP3 has two siginificant additions to the protocol: 
+    1. CAPA Command(the introduction of a mechanism to signal extensions) 
+    2. STARTTLS command
+* IMAP(Internet Meassage Access Protocol)
+  * download and delete protocol
+  * Doesn't provide a way to upload messages to a server  
+  * ![스크린샷 2021-08-30 오전 5 03 02](https://user-images.githubusercontent.com/67637935/131263850-94dab289-8a06-4529-a2c8-26aa1c3ca000.png)
+  * with A tag --> tagged response can be matched regardless of the order they are recieved in
+  * unttaged responses begin with a ""*"" and can also be sent while no command is in progress
 
+## STARTTLS and Implicit TLS
+* Implicit TLS is distinguished with STARTTLS
+  * Submission TLS: 465
+  * TLS with POP3: 995
+  * TLS with IMAP: 993
+* Secure and Performance: Implicit TLS > Explicit TLS(STARTTLS)
+* But STARTTLS is default value to an email provider because of not fully supporting implicit TLS.
+* However, this is not the case when connecting from a MUA to an MSP.
 
-
-
+# Construction of Test Cases
 
 
 
