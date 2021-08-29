@@ -72,7 +72,7 @@ toc: True
   * with A tag --> tagged response can be matched regardless of the order they are recieved in
   * unttaged responses begin with a ""*"" and can also be sent while no command is in progress
 
-## STARTTLS and Implicit TLS
+## STARTTLS and <s>Implicit TLS</s>
 * Implicit TLS is distinguished with STARTTLS
   * Submission TLS: 465
   * TLS with POP3: 995
@@ -82,7 +82,8 @@ toc: True
 * However, this is not the case when connecting from a MUA to an MSP.
 
 # Construction of Test Cases
-
+* Our goal aims to find commands or responses a MitM could use against an active SMTP, POP3, IMAP session to obtain sensitive data, or to introduce meaningful changes to a client.
+* 
 
 
 
