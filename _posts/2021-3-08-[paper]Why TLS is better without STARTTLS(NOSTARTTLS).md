@@ -34,8 +34,25 @@ toc: True
 * Several Issue:
   * STARTTLS stripping attacks : When a Meddler-in-the-Middle (MitM) attacker removes the STARTTLS capability from the server response, they can easily downgrade the connection to plaintext.
   * a command injection bug in Postfix: When a client appends an extra command after the STARTTLS command, that command is buffered and evaluated after the transition to TLS. In effect, this allows an attacker to inject a plaintext prefix into an encrypted session.
-  * 
+  * Trojitá: pre-authenticated connections
+* Present systematization of these issues: Negotiation, Buffering, Tampering, Session Fixation, and UI Spoofing
 
+# Background
+## Submission of email
+* message submission: the process of introducing a new email to the email infrastructure.
+  * MUA(Thunderbird,...)
+* message relaying:  the process of forwarding a message as long as it has not arrived at its final destination.
+  * Relaying happens after submission, and MUA is not part of that process
+  * SMTP
+    * Handshake  
+      1. Client issues the EHLO command first to obtain a list of server capability.
+      2. Server signaled suport for STARTTLS via the STARTTLS capability.
+      3. Client starts the transition to TLS via the STARTTLS command.
+      4. Client then provides its login credentials to the server(AUTH),(MAIL),(RCTP)
+      5. Client finally initiates the transmission of the email's content via the DATA command ".\r\n"
+    * Two characteristics of SMTP
+      * Every command is answered with exactly one response (+PIPELINING extension)
+      *  
 
 
 
