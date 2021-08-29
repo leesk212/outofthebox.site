@@ -83,7 +83,13 @@ toc: True
 
 # Construction of Test Cases
 * Our goal aims to find commands or responses a MitM could use against an active SMTP, POP3, IMAP session to obtain sensitive data, or to introduce meaningful changes to a client.
-* 
+
+## Well-knwon issue
+* MTA to MTA communication
+  1. ![a command injection attack on SMTP](http://www.postfix.org/CVE-2011-0411.html)
+  2. STARTTLS stripping attacks in two variants
+  3. a issu with missing discard of capabiliteis
+  4. ![(Trojita)a conflict with IMAP's PREAUTH greeting](http://jkt.flaska.net/blog/Trojita_0_4_1__a_security_update_for_CVE_2014_2567.html)
 
 
 
