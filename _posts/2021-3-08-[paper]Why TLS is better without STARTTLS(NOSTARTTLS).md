@@ -111,8 +111,13 @@ toc: True
 
 ### Tampering
 #### 4. *TM*: Tampering with the Mailbox
+* An attacker can tamper with local mailbox data by sending IMAP's data responses before STARTTLS. 
+* IMAP's untagged data responses lead to changes in the mailbox, which can be used for tampering attacks, e.g., placing new messages or folders into the user's mailbox.
+* These changes can even lead to a permanently corrupted local state
+
 ### UI Spoofing
 ![image](https://user-images.githubusercontent.com/67637935/131287458-37754e9b-8eb3-46ab-9546-61c9e36ee9ec.png)
+
 #### 5. *UA*: IMAP Alerts
 * IMAP alerts are a prime opportunity for UI spoofing.
 * Since they can be sent at any point in an IMAP connection, any client is vulnerable to UI spoofing
@@ -120,6 +125,7 @@ toc: True
 #### 6. *UE*: Error Messages
 * Additionally, all protocols can show error messages that can be sent in response to any command
 * If these are displayed in the plaintext phase, UI spoofing is also possible
+
 ### Buffering
 #### 7. *BR*: Response Injection
 ![image](https://user-images.githubusercontent.com/67637935/131287939-3e21c2a2-d1e9-4b36-b741-15e88cb43b2f.png)
@@ -136,8 +142,8 @@ toc: True
 #### 10. Hosting HPPS via STARTTLS
 ![image](https://user-images.githubusercontent.com/67637935/131288639-30e923ec-e6d5-46db-880e-2adf9f3463f8.png)
 
-
-### 11. *S*: Sesssion Fixation
+### Tampering
+#### 11. *S*: Sesssion Fixation
 ![image](https://user-images.githubusercontent.com/67637935/131288671-f6e1db31-7e6a-4b50-8645-fa60694504fb.png)
 
 
