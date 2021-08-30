@@ -103,7 +103,9 @@ toc: True
 
 #### 2. *NP*: PREAUTH STARTTLS Blocking
 ![image](https://user-images.githubusercontent.com/67637935/131288178-2ee80e1f-91c4-40d3-ac4e-30d460e91818.png)
-
+* When a server can preauthenticate a client, it can respond with a PREAUTH greeting.
+* In this case, both the client and server must skip authentication and proceed as if the client already logged in.
+* 
 
 #### 3. *NR*: Malicious Redirects 
 ![image](https://user-images.githubusercontent.com/67637935/131288196-8a5d5432-a0fc-40d7-8e7a-3caaa6efb616.png)
