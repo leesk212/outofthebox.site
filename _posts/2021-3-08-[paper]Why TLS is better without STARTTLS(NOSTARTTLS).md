@@ -143,7 +143,12 @@ toc: True
 
 
 
+# Evaluation 
+## Client Issues
+![image](https://user-images.githubusercontent.com/67637935/131288834-26ffaefb-b65c-4d17-a17b-8f0848cf2abf.png)
 
+## Server Issues
+![image](https://user-images.githubusercontent.com/67637935/131288859-d4a0c277-7beb-4a70-bf8b-d07cafbb50d8.png)
 
 
 
