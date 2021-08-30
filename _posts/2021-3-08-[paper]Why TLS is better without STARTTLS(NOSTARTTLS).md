@@ -103,8 +103,13 @@ toc: True
 ### Tampering
 #### *TM*: Tampering with the Mailbox
 ### UI Spoofing
+![image](https://user-images.githubusercontent.com/67637935/131287458-37754e9b-8eb3-46ab-9546-61c9e36ee9ec.png)
 #### *UA*: IMAP Alerts
+* IMAP alerts are a prime opportunity for UI spoofing.
+* Since they can be sent at any point in an IMAP connection, any client is vulnerable to UI spoofing
 #### *UE*: Error Messages
+* Additionally, all protocols can show error messages that can be sent in response to any command
+* If these are displayed in the plaintext phase, UI spoofing is also possible
 ### Buffering
 #### *BR*: Response Injection
 ## Server-Attacks
