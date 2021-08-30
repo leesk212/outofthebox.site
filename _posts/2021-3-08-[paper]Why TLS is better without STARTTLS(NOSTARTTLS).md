@@ -94,7 +94,26 @@ toc: True
 ## Extension of Well-kwon issues
 * extension of 1: cross-protocol attack, which allows hosting HTTPS websites under the certificate of an affected email server.
 * extension of 2,3: several more variants exits.
-* 
+
+# Attacks
+##  Client-Attacks
+### Negotiation
+#### *NS*: STARTTLS Stripping
+#### *NR*: Malicious Redirects 
+### Tampering
+#### *TM*: Tampering with the Mailbox
+### UI Spoofing
+#### *UA*: IMAP Alerts
+#### *UE*: Error Messages
+### Buffering
+#### *BR*: Response Injection
+## Server-Attacks
+### Bufferinng
+#### *BC*: Command Injection
+#### Disclosing Credentials via Command Injection
+#### Breaking Implicit TLS via STARTTLS
+#### Hosting HPPS via STARTTLS
+### *S*: Sesssion Fixation
 
 
 
