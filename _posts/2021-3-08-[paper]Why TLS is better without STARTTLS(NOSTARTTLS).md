@@ -98,46 +98,46 @@ toc: True
 # Attacks
 ##  Client-Attacks
 ### Negotiation
-#### *NS*: STARTTLS Stripping
+#### 1. *NS*: STARTTLS Stripping
 ![image](https://user-images.githubusercontent.com/67637935/131288122-7cfdb3d9-dfb5-40ab-aaa5-4f5775dcee44.png)
 
-#### *NP*: PREAUTH STARTTLS Blocking
+#### 2. *NP*: PREAUTH STARTTLS Blocking
 ![image](https://user-images.githubusercontent.com/67637935/131288178-2ee80e1f-91c4-40d3-ac4e-30d460e91818.png)
 
 
-#### *NR*: Malicious Redirects 
+#### 3. *NR*: Malicious Redirects 
 ![image](https://user-images.githubusercontent.com/67637935/131288196-8a5d5432-a0fc-40d7-8e7a-3caaa6efb616.png)
 
 
 ### Tampering
-#### *TM*: Tampering with the Mailbox
+#### 4. *TM*: Tampering with the Mailbox
 ### UI Spoofing
 ![image](https://user-images.githubusercontent.com/67637935/131287458-37754e9b-8eb3-46ab-9546-61c9e36ee9ec.png)
-#### *UA*: IMAP Alerts
+#### 5. *UA*: IMAP Alerts
 * IMAP alerts are a prime opportunity for UI spoofing.
 * Since they can be sent at any point in an IMAP connection, any client is vulnerable to UI spoofing
 
-#### *UE*: Error Messages
+#### 6. *UE*: Error Messages
 * Additionally, all protocols can show error messages that can be sent in response to any command
 * If these are displayed in the plaintext phase, UI spoofing is also possible
 ### Buffering
-#### *BR*: Response Injection
+#### 7. *BR*: Response Injection
 ![image](https://user-images.githubusercontent.com/67637935/131287939-3e21c2a2-d1e9-4b36-b741-15e88cb43b2f.png)
 
 ## Server-Attacks
 ### Bufferinng
-#### *BC*: Command Injection
+#### 8. *BC*: Command Injection
 ![image](https://user-images.githubusercontent.com/67637935/131287910-7f0ae0f0-13fa-4594-bce6-68657cee4bab.png)
 
-#### Disclosing Credentials via Command Injection , Breaking Implicit TLS via STARTTLS
+#### 9. Disclosing Credentials via Command Injection , Breaking Implicit TLS via STARTTLS
 ![image](https://user-images.githubusercontent.com/67637935/131288498-b65e9f15-b7e1-476b-ae6f-9ce3ae0b330c.png)
 ![image](https://user-images.githubusercontent.com/67637935/131288598-6e48363d-7976-4a86-8a67-8919f96e7694.png)
 
-#### Hosting HPPS via STARTTLS
+#### 10. Hosting HPPS via STARTTLS
 ![image](https://user-images.githubusercontent.com/67637935/131288639-30e923ec-e6d5-46db-880e-2adf9f3463f8.png)
 
 
-### *S*: Sesssion Fixation
+### 11. *S*: Sesssion Fixation
 ![image](https://user-images.githubusercontent.com/67637935/131288671-f6e1db31-7e6a-4b50-8645-fa60694504fb.png)
 
 
