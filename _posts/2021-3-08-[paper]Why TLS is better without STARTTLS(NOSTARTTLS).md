@@ -112,9 +112,13 @@ toc: True
 * If these are displayed in the plaintext phase, UI spoofing is also possible
 ### Buffering
 #### *BR*: Response Injection
+![image](https://user-images.githubusercontent.com/67637935/131287939-3e21c2a2-d1e9-4b36-b741-15e88cb43b2f.png)
+
 ## Server-Attacks
 ### Bufferinng
 #### *BC*: Command Injection
+![image](https://user-images.githubusercontent.com/67637935/131287910-7f0ae0f0-13fa-4594-bce6-68657cee4bab.png)
+
 #### Disclosing Credentials via Command Injection
 #### Breaking Implicit TLS via STARTTLS
 #### Hosting HPPS via STARTTLS
