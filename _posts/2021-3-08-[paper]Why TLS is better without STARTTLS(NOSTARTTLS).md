@@ -145,7 +145,12 @@ toc: True
 ### Tampering
 #### 11. *S*: Sesssion Fixation
 ![image](https://user-images.githubusercontent.com/67637935/131288671-f6e1db31-7e6a-4b50-8645-fa60694504fb.png)
-
+* If any session data set in the plaintext phase is retained after the transition to TLS, it may allow tampering or information disclosure attacks
+* the server allows encrpyted login, and the attacker can authenticate using their account and fixate this seesion for the client (line2, line3)
+* The server retains this session through the STARTTLS transition, and the client remains logged into the attacker's account.
+* Therefore, thje attacker can now present any mailbox to the client by manipulating their own account
+* Additionally, if the client synchronizes any sent or drafted emails to the mailbox, the attacker can retrieve these from their mailbox
+ 
 
 
 
