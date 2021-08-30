@@ -86,12 +86,15 @@ toc: True
 
 ## Well-knwon issue
 * MTA to MTA communication
-  1. ![a command injection attack on SMTP](http://www.postfix.org/CVE-2011-0411.html)
+  1. [a command injection attack on SMTP](http://www.postfix.org/CVE-2011-0411.html)
   2. STARTTLS stripping attacks in two variants
   3. a issu with missing discard of capabiliteis
-  4. ![(Trojita)a conflict with IMAP's PREAUTH greeting](http://jkt.flaska.net/blog/Trojita_0_4_1__a_security_update_for_CVE_2014_2567.html)
+  4. [(Trojita)a conflict with IMAP's PREAUTH greeting](http://jkt.flaska.net/blog/Trojita_0_4_1__a_security_update_for_CVE_2014_2567.html)
 
-
+## Extension of Well-kwon issues
+* extension of 1: cross-protocol attack, which allows hosting HTTPS websites under the certificate of an affected email server.
+* extension of 2,3: several more variants exits.
+* 
 
 
 
