@@ -4,10 +4,56 @@ excerpt: "Minimal Mistakes is a flexible two-column Jekyll theme."
 last_modified_at: 2020-09-03T10:15:22-04:00
 toc: true
 ---
+
+
+
+<h4> Sysmon-EL-Python-PyQt</h4>
+<span class='data'>2020.07 - 2020.08</span>
+<h5> Program: Kwangwoon University Summer Short-Term Internship </h5>
+<h5> Tech Stack: Python PyQt Elasticsearch Logstash Kibana bash xml window </h5>
+<h5> Overview </h5>
+Sysmon logs in the window environment are received from a computer in another environment through winlogbeat through Logstash, and then repositioned in Elasticsearch and displayed in PyQt.
+<h5> Architecture </h5>
+
+<h5> Layout </h5>
+
+<div class="attach"><span>프로젝트 링크 </span><div><a href=" https://github.com/leesk212/Sysmon-EL-Python_PyQt/" target="_blank"> https://github.com/leesk212/Sysmon-EL-Python_PyQt/</a></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!--classes: wide!-- 메뉴바가 상단 고정됌> 
 
 <!--![ex_screenshot](../assets/images/teaser.png) -->
-
+<!-- 
 ## **ABOUT ME**
 > <img src="../assets/images/b-removebg-preview.png" alt="drawing" width="200"/>
 >  
@@ -25,8 +71,9 @@ Educational History
  >>> - Linked Major: BigData  
  >>> - Status: Junior  
  >>> - Term: 2016/03 ~ 
+ -->
 
-Work Experience
+<!-- Work Experience
 
 > InTheForest(Cyber Security Company) 
 >> - Program: Kwangwoon University Summer Short-Term Internship      
@@ -86,3 +133,4 @@ Military service status
 
 ## **EXTRACURRICULAR EXPERIENCE**
 
+ -->
