@@ -9,7 +9,7 @@
 ![image](https://user-images.githubusercontent.com/67637935/131980009-e3406c38-eb7a-42a7-8bc9-6966b06526ee.png)
 
 
-
+ML 논문 2,Abnormal State Detection 프로그램 1,영화 추천 시스템 or FTP or 공설입, RTOS Mail
 
 ## aa
 
