@@ -1,3 +1,4 @@
+![스크린샷 2021-09-05 오후 4 12 04](https://user-images.githubusercontent.com/67637935/132118684-43170c39-2342-4598-a6dc-a6ae9e6d8ee2.png)
 
 ![스크린샷 2021-09-05 오전 1 45 24](https://user-images.githubusercontent.com/67637935/132102103-edacd68f-dfdc-4b3e-a29d-4b305a3157d6.png)
 
