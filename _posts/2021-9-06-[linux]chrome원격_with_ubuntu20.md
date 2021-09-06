@@ -4,6 +4,8 @@ toc: True
 ---
 > 삽질을 너무 많이 했다..
 
+> ref: <https://velog.io/@hayaseleu/%EB%A6%AC%EB%88%85%EC%8A%A4%EC%97%90%EC%84%9C-%ED%81%AC%EB%A1%AC-%EC%9B%90%EA%B2%A9-%EB%8D%B0%EC%8A%A4%ED%81%AC%ED%86%B1-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0>
+
 # ubuntu chrome 설치
 * 예전과 달리(key page추가 없이) firefox에서 <www.google.com/chrome/> 접속 후 gui로 설치하면 된다. 
 # chrome remote-computer
