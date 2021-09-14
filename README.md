@@ -1,3 +1,4 @@
+<img width="600" alt="그림1" src="https://user-images.githubusercontent.com/67637935/133348089-9cdebeaf-ebed-40f5-bde8-c11546de28ed.png">
 ![스크린샷 2021-09-07 오전 6 09 55](https://user-images.githubusercontent.com/67637935/132260681-8d8792a9-d348-4585-aa05-dda36d38a44f.png)
 ![스크린샷 2021-09-05 오후 4 12 04](https://user-images.githubusercontent.com/67637935/132118684-43170c39-2342-4598-a6dc-a6ae9e6d8ee2.png)
 
