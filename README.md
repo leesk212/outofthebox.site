@@ -1,6 +1,3 @@
-<div>
-<iframe allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/kr/album/hong-kong/1140706507?i=1140706734"></iframe>
-</div>
 
 ![스크린샷 2021-09-15 오전 8 44 37](https://user-images.githubusercontent.com/67637935/133348151-4ac3c056-364f-4ac5-a857-16b97a4a810f.png)
 
