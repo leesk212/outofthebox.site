@@ -17,3 +17,8 @@ tags: git
 > git checkout -b minseo origin/seokmin
 
 > git add & commit 진행!
+
+* 어느 stream을 헤더로 진행해줄지를 정해줘야함
+> git push origin HEAD
+
+> 이를 통해 seokmin branch가 아닌 main stream의 복제된 위치임을 확인가능
