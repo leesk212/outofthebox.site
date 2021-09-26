@@ -1,0 +1,19 @@
+---
+toc: true
+tags: git
+---
+
+# git branch 만들기
+> git branch seokmin
+
+# git branch 접근하기(전환하기)
+> git checkout seokmin
+
+# git add & commit으로 branch를 stream에 인식시켜주기 
+
+# remote branch를 local branch로 따주기 
+> (default는 master stream이기에 특정 branch를 복제하여  branch로 사용하고 싶을때)
+
+> git checkout -b minseo origin/seokmin
+
+> git add & commit 진행!
