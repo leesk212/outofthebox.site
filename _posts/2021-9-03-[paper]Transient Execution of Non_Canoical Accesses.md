@@ -2,6 +2,8 @@
 toc: True
 tags: 🌟paper-review security-attack 
 ---
+> ref: https://saidganim.github.io/amdncte.html
+
 # Abstract
 * Intel CPU에만 연구가 집중되어 있다. 그럼으로 비교적 적은 취약점이 다른 CPU에서 발견되었다.
 * AMD CPU의 결점을 찾는다, transient execution hijacking 공격을 통해서
