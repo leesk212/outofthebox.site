@@ -1,6 +1,6 @@
 ---
 toc: True
-tag: window
+tags: window
 ---
 
 # wget 같은 명령어 cmd에 넣는 방법
