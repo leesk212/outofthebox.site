@@ -3,6 +3,7 @@ toc: True
 tags: window tensorflow cuda
 ---
 
+
 # 1. cuda를 설치한다. (nvidia-driver를 설치하는 것이 아니다.)
 * Nvidia GTX,RTX 별 지원가능한 cuda 버전 확인: <https://developer.nvidia.com/cuda-gpus#compute>
 
@@ -15,7 +16,10 @@ tags: window tensorflow cuda
 * 경로 확인하기 (IDE재부팅 해야 경로 정상 수정될 수도 있음)
 
 
+## 경로 설정 안될때!!
+> https://hansonminlearning.tistory.com/7
 
+또 신기한 오류가 잘못 복사 붙여 넣어서 내부 bin폴더가 다 날라갔었다.
 
 # 3. anaconda navigator에서 tensorflow 설치하고 싶은 버전 설치하기
 * pip install tensorflow==2.3.0
