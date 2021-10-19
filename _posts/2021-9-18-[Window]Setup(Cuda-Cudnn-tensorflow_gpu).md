@@ -14,7 +14,7 @@ tags: window tensorflow cuda
   * 로그인해야지 됨
 * cudnn 설치 후 해당 cuda의 10.1v 내부의 디렉토리 위치에 덮어씌어주기
 * 경로 확인하기 (IDE재부팅 해야 경로 정상 수정될 수도 있음)
-
+* 7.6 쿠디엔엔 1.15랑 호환가능하다
 
 ## 경로 설정 안될때!!
 > https://hansonminlearning.tistory.com/7
