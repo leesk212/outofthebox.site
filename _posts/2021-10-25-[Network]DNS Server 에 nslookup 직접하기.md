@@ -3,8 +3,9 @@ tags: network
 toc: True
 ---
 
-> ref: https://zzsza.github.io/development/2018/04/16/domain-name-system/
+> ref1: https://zzsza.github.io/development/2018/04/16/domain-name-system/
 
+> ref2: https://youtu.be/LAnXZy3z2WA
 * 권한 없는 응답이면 Cache에서 반응한 것이다.
 
 ##
