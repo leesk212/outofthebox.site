@@ -23,3 +23,26 @@ RanStop: A Hardware-assisted Runtime Crypto-Ransomware Detection Technique
 * RanStop은 정확하고 빠르게 ransomware를 2ms내에 잡아낼 수 있다. 각각 100us apart로 20timestamps씩 HPC 정보들을 분석함으로써 Program Execution 시작으로 부터  
 
 * Ranstop은 충분히 damage를 탐지하기에 빠르며 50회이상의 무작위 시도 중에서 약 97%의 정확도가 나왔다. 
+
+# Introduction
+* Ransomware는 금전적인 피해를 많이 야기하고, 그중에 가장 대표되는 것인 crpyto-ransomware는 현대 세계에서 가장 주가 되는 위협으로 대표된다.
+* 현재 있는 Ransomware를 막고 탐지하기위해서 다양한 연구가 있었으며 대부분은 static software-centric set-up에 기반된 기술이다.
+  * static software-centric set-up 
+    1. signiture matching in the program control flow
+    2. signiture searching for dominent features of malicious ransomware-like activites
+    3. signiture monitoring high-level(software) execution, API/system calls, data to detect potentially anomalious behavior
+* 해당 되는 방어기법을 피하는 큰 두가지 software-only mechanisms이 있다. (적절한 보호 기법을 갖고 있음에도 불구하고)
+  * the latest ransoware attacks on the city of Atlanta's online shutting down the activites for more than six days
+  * the WannaCry malware infecting many business organizations in over 150 different contries.
+* 그리고 이런 software 전용 (보안) 체계는 다음과 같은 본질적인 제한에 고통을 겪고 있다.
+  * There are numerous different ransomware with distinct and obscure control flow signatures that can evade static signature-matching anti-malware schemes.
+  * Software-based techniques often require binary signature for each variant of the ransomware (or, in general, malware). It imposess huge overhead on the database, i.e., the size of anti-malware updates, with ever-growing polymorphic and metamorphic variants of a class of malware.
+  * Even in the case of a successful detection, several existing schemes are too late (in time) at detecting a ransomware such that the victim system and important files (or directories) may already be maliciously corrupted(encrypted) and locked, where the possibility of the recovery is extremely rare.
+  * The static signature mapping can produce a high rate of false decisions (false positive/negative) which pose critical impact on the smooth operation of the system.
+  
+* 그럼으로 software-only technique은 crypto-ransomware attack을 방해하기에는 적절하지 않다.
+* 이런 문제를 해결하기위해서 우리는 hardware-assisted runtime crypto-ransomeware scheme, called Ranstop을 제안한다. 
+* 주요 동기는 "HPC는 multi-dimentional hardware event-traces를 수집할 수 있고 micro-architecutral iinformation을 프로그램이 실행되는 동안 hardware 수정없이 수집할 수 있다.
+  * 장점:
+    1. Being 
+
