@@ -102,8 +102,6 @@ RanStop: A Hardware-assisted Runtime Crypto-Ransomware Detection Technique
 # RANSTOP: A Hardware-Assited RUNTIME CRYPTO-RANSOMWARE DETECTOR
 * We built our framework utilizing the key observations presented in Demm et al.
 
-![image](https://user-images.githubusercontent.com/67637935/140311838-1fe4c232-7d71-4e58-b7f0-67d11c0e1248.png)
-
   * The semantics of a program (goodware or ransomware) do not change significantly over different variants of similar functionality and class. (프로그램의 의미(굿웨어 또는 랜섬웨어)는 유사한 기능 및 클래스의 다른 변종에 대해 크게 변경되지 않습니다.)
   * While accomplishing a particular task (benign or malicious), there exist subtasks that cannot be radically modified and should exhibit similar micro-architectural footprints. (특정 작업(양성 또는 악의적)을 수행하는 동안 근본적으로 수정할 수 없고 유사한 마이크로 아키텍처 발자국을 나타내야 하는 하위 작업이 있습니다.)
 * 이러한 관측은, 적절한 최적화 작업을 진행해주면 malware와 benign-ware를 구분할 수 있다.  왜냐하면 여러 crypto-ransomware 변종들 사이에 공격행위의 유사성으로 인해 유사한 의미론적 특성이 상당 부분 존재하기 때문이다.
@@ -117,4 +115,46 @@ RanStop: A Hardware-assisted Runtime Crypto-Ransomware Detection Technique
   3. LSTM-based predictive model generation(training) 
   4. Testing Validation Run-time Detection
 ### 1. Program database creation
-* 
+
+#### One key
+* The good-ware database should contain different familes of benign programs with various workload.(굿웨어 데이터베이스는 다양한 작업 부하를 가진 다양한 종류의 양성 프로그램을 포함해야 합니다.)
+* Especially, one should also consider computationally intensive programs (e.g., disk encyption programs such as VeraCrypt) that perform legit but similar operations with respect to that of a crypto-ransomware.(특히, 크립토 랜섬웨어와 관련하여 합법적이지만 유사한 작업을 수행하는 계산 집약적 프로그램(예: VeraCrypt와 같은 디스크 암호화 프로그램)도 고려해야 합니다.)
+* The motivation behind is to offer similar semantic characteristics to different sub-routines of the crypto-ransomware as well as generic user specific benign programs.(이면의 동기는 일반 사용자별 양성 프로그램뿐만 아니라 크립토 랜섬웨어의 다양한 하위 루틴에 유사한 의미론적 특성을 제공하는 것입니다.)
+* (심지어)Additionally, the non-encrypion benign binaries provide resemblance to silent crypto-ransomware which does not start execution at the very first moment of infection but resort to stealthy operation in the background to other legit programs. (또한 암호화되지 않은 양성 바이너리는 감염의 맨 처음 순간에 실행을 시작하지 않고 백그라운드에서 다른 합법적인 프로그램에 대한 은밀한 작업에 의존하는 자동 크립토 랜섬웨어와 유사합니다.)
+
+#### SOLVE
+* TO make sure that the proposed framework is capable of identifying even the smallest differences and is not over/under-fitted due to noise. (제안된 프레임워크는 가장 작은 차이도 식별할 수 있으며 노이즈로 인해 과대/과소 적합하지 않습니다.)
+* For example, as experimented in Alam et al.(RATAFIA,RAPPER), a one-class classifier trained with random benign programs may tend to separate crypto-ransomware more accurately from a text editor program, but may not distinguish from a disc encryption or file zipping program. (예를 들어 Alam et al.(RATAFIA,RAPPER)에서 실험한 바와 같이 임의의 양성 프로그램으로 훈련된 1등급 분류기는 크립토 랜섬웨어를 텍스트 편집기 프로그램과 더 정확하게 분리하는 경향이 있지만 디스크 암호화 또는 파일 압축 프로그램은 구분하지 못한다.)
+* Therefore we adopt a well-balanced database with significant number and variants of ransomware and goodware. (따라서 상당한 수와 변종 랜섬웨어 및 굿웨어가 포함된 균형 잡힌 데이터베이스를 채택합니다.)
+* This well-balacned training scheme allows to reduce false postive and false negative by the classifier. (이 잘 균형 잡힌 훈련 계획은 분류기에 의해 거짓 긍정 및 거짓 부정을 줄일 수 있습니다.)
+* Note that the Ranstop framework is readily scalable to a larger dataset, as we discuss in Section 4 and it allows the user to re-train(update) the initial model for finer detection with emerging threats. (Ranstop 프레임워크는 섹션 4에서 논의한 것처럼 더 큰 데이터 세트로 쉽게 확장할 수 있으며 사용자가 새로운 위협에 대한 더 정밀한 탐지를 위해 초기 모델을 다시 훈련(업데이트)할 수 있습니다)
+
+### 2. Micro-architectural Event Monitoring and Data Collection
+* Linux-OS에서 VM (Window OS)
+  * It averts the risk of crpyto-ransomware encrypting the collected HPC data which is stored in a seperate administrative-privileged directory; (별도의 관리 권한이 있는 디렉토리에 저장된 수집된 HPC 데이터를 암호화하는 crpyto-ransomware의 위험을 방지합니다.)
+  * The Linux system provided inhospitable environmnet in case any ransomware binary manages to escape the Windows VM, so that the rest of the networked system (if any) in the experimental setup is unaffected. (Linux 시스템은 랜섬웨어 바이너리가 Windows VM을 탈출하는 경우에 대비하여 열악한 환경을 제공하여 실험 설정의 나머지 네트워크 시스템(있는 경우)은 영향을 받지 않습니다.)
+* The crypto-ransomware and benign programs from the database are executed in a random fashion to monitor and collect micro-architectural information from the processor using HPCs.(데이터베이스의 크립토 랜섬웨어 및 무해한 프로그램이 무작위로 실행되어 HPC를 사용하여 프로세서에서 마이크로 아키텍처 정보를 모니터링하고 수집합니다.) using likwid
+* To make sure that the virtual machine offers the same workload signature with or without infection, we collected the HPC data in the following fashion. (가상 머신이 감염 여부에 관계없이 동일한 워크로드 서명을 제공하는지 확인하기 위해 다음과 같은 방식으로 HPC 데이터를 수집했습니다.)
+
+![image](https://user-images.githubusercontent.com/67637935/140311838-1fe4c232-7d71-4e58-b7f0-67d11c0e1248.png)
+  * The Window VM is hosted and run with a complete library of programs to replicate a real-life workload. (Window VM은 실제 워크로드를 복제하기 위해 완전한 프로그램 라이브러리와 함께 호스팅 및 실행됩니다.)
+  * The program under test (ransomware or goodware) is pinned to run inside the VM with no thread/resource limitations (테스트 중인 프로그램(랜섬웨어 또는 굿웨어)은 스레드/리소스 제한 없이 VM 내부에서 실행되도록 고정됩니다.)
+  * Likwid is used to collect and store timestamp data from all the CPU cores in the Linux host machine. (Likwid는 Linux 호스트 시스템의 모든 CPU 코어에서 타임스탬프 데이터를 수집하고 저장하는 데 사용됩니다.)
+  * Once the targeted timeseries data is collected (e.g., by completion of the program or timeout); The VM is destroyed along with its virtual storage completely wiped to reduce any residual noise. (대상 시계열 데이터가 수집되면(예: 프로그램 완료 또는 타임아웃) 가상 저장소와 함께 VM이 완전히 삭제되어 잔류 소음이 줄어듭니다.)
+  * A new VM replaces the old one (e.g., corrupted one, if infected by ransomware while collecting ransomware data) with a backup storage image hjaving the same state as prior to running the program. (새 VM은 기존 VM(랜섬웨어 데이터 수집 중 랜섬웨어 감염 시 손상된 VM)을 프로그램 실행 전과 동일한 상태의 백업 스토리지 이미지로 교체합니다.)
+  * Multiple iterations are performed to collect all possible micro-architectural events with randomized execution order, so that there exists no systematic data and memory collection, irrespective to ransomware or goodware execution. (랜섬웨어나 굿웨어 실행에 관계없이 체계적인 데이터 및 메모리 수집이 존재하지 않도록 임의의 실행 순서로 가능한 모든 마이크로 아키텍처 이벤트를 수집하기 위해 여러 번 반복 수행됩니다.)
+#### Collected HPC data Table
+![image](https://user-images.githubusercontent.com/67637935/140323263-0ba7427c-5976-4c4f-a8a3-4a62231236e6.png)
+* This associated events are given inputs to the next stage LSTM network for ML-based predictive model building. (이 관련 이벤트는 ML 기반 예측 모델 구축을 위한 다음 단계 LSTM 네트워크에 대한 입력이 제공됩니다)
+
+### 3. LSTM-based Predictive Model Generation (training and validation)
+![image](https://user-images.githubusercontent.com/67637935/140324167-21f7cebe-b88f-440d-9ff5-3bd9643febe6.png)
+1. LSTM Layer
+2. GPA Layer is used to reduce intrinsic training features created by the LSTM Layer. (Down Overfitting)(GPA 계층은 LSTM 계층에서 생성된 고유한 훈련 기능을 줄이는 데 사용됩니다.)
+
+### 4. Model Generation, Validation and Detection
+* It should be noted that the impacts of different optimizers and the micro-architectural performance groups collected in previous steps are not all same for detecting potential crypto-ransomware with high accuracy. (다양한 옵티마이저와 이전 단계에서 수집한 마이크로 아키텍처 성능 그룹의 영향이 잠재적인 크립토 랜섬웨어를 높은 정확도로 탐지하는 데 모두 동일한 것은 아니라는 점에 유의해야 합니다.)
+* Also since the number of HPC are limited on any system, the real time detection program (watchdog) can only be trained to work for certain performance groups and may not swap between monitors to monitor different set of data too often.(또한 모든 시스템에서 HPC의 수가 제한되어 있기 때문에 실시간 감지 프로그램(워치독)은 특정 성능 그룹에 대해서만 작동하도록 훈련될 수 있으며 다른 데이터 세트를 너무 자주 모니터링하기 위해 모니터 간에 교환하지 않을 수 있습니다.)
+
+
+ 
