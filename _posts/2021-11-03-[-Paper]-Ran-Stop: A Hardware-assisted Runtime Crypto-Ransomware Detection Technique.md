@@ -53,10 +53,6 @@ RanStop: A Hardware-assisted Runtime Crypto-Ransomware Detection Technique
 * 하지만 RanStop 기술은 hardware activity signatures 를 확인하여 begnin과 Ransomware를 잘 구분할 수 있다.
 * 다음의 그림과 같이 구성하며 ransomware와 goodware 둘다의 HPC Signitual를 수집하고 ML을 통해 학습시켜 두개를 구분할 수 있게 한다. <- Contribution
 
-
-![image](https://user-images.githubusercontent.com/67637935/140282203-0af70867-9107-457c-a9a7-2a2f2a40c42e.png)
-
-
 ## Contribution
 * RanStop offers an accurate and noise-free collection of hardware-domain micro-architectural activites (e.g., branch prediction success/miss, L2 cache miss )(etc, for ongoing program(command) executions for detecting malicious program(command) executions for detecting malicious event traces.) This dytnamic approach is applicable for both known an unknown Ransomware with minimal rutime an zero hardware overhead.
 
@@ -70,7 +66,7 @@ RanStop: A Hardware-assisted Runtime Crypto-Ransomware Detection Technique
 
 > RanStop은 실행 시작(총 2ms)부터 100us 간격으로 20개의 타임스탬프에 대해 수집된 마이크로 아키텍처 데이터를 분석하여 랜섬웨어를 상당히 조기에 탐지합니다. 이를 통해 매우 초기 단계에서 악의적인 실행을 중지하고 심각한 손상 및 데이터 손실이 발생하기 훨씬 전에 시스템 파일을 보호할 수 있습니다.
 
-## Preliminaries
+# Preliminaries
 
 ### Ransomeware Detection: Prior work
 * Prior work:
@@ -102,3 +98,23 @@ RanStop: A Hardware-assisted Runtime Crypto-Ransomware Detection Technique
   * Choosing efficient machine learning techniques for classification.
 * Micro-architectural event traces from selected HPCs in a timeseries fashion.
 * RNN using LSTM(timeseries specify) with GAP(Global Average Pooling) to reduce overfitting
+
+# RANSTOP: A Hardware-Assited RUNTIME CRYPTO-RANSOMWARE DETECTOR
+* We built our framework utilizing the key observations presented in Demm et al.
+
+![image](https://user-images.githubusercontent.com/67637935/140311838-1fe4c232-7d71-4e58-b7f0-67d11c0e1248.png)
+
+  * The semantics of a program (goodware or ransomware) do not change significantly over different variants of similar functionality and class. (프로그램의 의미(굿웨어 또는 랜섬웨어)는 유사한 기능 및 클래스의 다른 변종에 대해 크게 변경되지 않습니다.)
+  * While accomplishing a particular task (benign or malicious), there exist subtasks that cannot be radically modified and should exhibit similar micro-architectural footprints. (특정 작업(양성 또는 악의적)을 수행하는 동안 근본적으로 수정할 수 없고 유사한 마이크로 아키텍처 발자국을 나타내야 하는 하위 작업이 있습니다.)
+* 이러한 관측은, 적절한 최적화 작업을 진행해주면 malware와 benign-ware를 구분할 수 있다.  왜냐하면 여러 crypto-ransomware 변종들 사이에 공격행위의 유사성으로 인해 유사한 의미론적 특성이 상당 부분 존재하기 때문이다.
+* 또한 랜섬웨어와 굿웨어에 대한 머신러닝을 통해 추가 조사받을 수 있는 다차원 서명을 수집할 수 있다.
+
+## Overview
+![image](https://user-images.githubusercontent.com/67637935/140282203-0af70867-9107-457c-a9a7-2a2f2a40c42e.png)
+* Major steps:
+  1. Program database creation
+  2. micro-architecutral event monitoring and data collection in timeseries fashion
+  3. LSTM-based predictive model generation(training) 
+  4. Testing Validation Run-time Detection
+### 1. Program database creation
+* 
