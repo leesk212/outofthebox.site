@@ -57,3 +57,16 @@ RanStop: A Hardware-assisted Runtime Crypto-Ransomware Detection Technique
 ![image](https://user-images.githubusercontent.com/67637935/140282203-0af70867-9107-457c-a9a7-2a2f2a40c42e.png)
 
 
+## Contribution
+* RanStop offers an accurate and noise-free collection of hardware-domain micro-architectural activites (e.g., branch prediction success/miss, L2 cache miss )(etc, for ongoing program(command) executions for detecting malicious program(command) executions for detecting malicious event traces.) This dytnamic approach is applicable for both known an unknown Ransomware with minimal rutime an zero hardware overhead.
+
+> RanStop은 탐지를 위한 악성 프로그램(명령) 실행을 탐지하기 위한 진행 중인 프로그램(명령) 실행을 위해 하드웨어 영역 마이크로 아키텍처 활동(예: 분기 예측 성공/실패, L2 캐시 미스)의 정확하고 노이즈 없는 컬렉션을 제공합니다. 악의적인 이벤트 추적을 위해서.) 이 동적 접근 방식은 최소한의 런타임과 zero 하드웨어 오버헤드로 알려진 알려지지 않은 랜섬웨어 모두에 적용할 수 있습니다.
+
+* RanStop utilizes the state-of-the art ML techniques with intelligent feature selection scheme to accurately detect ransomware. We carray out extensive analysis for 80 crypto-ransomware using RNN architecture using LSTM and global average pooling methods. Our technique provides 97% prediction accuracy on average for selected hardware performance groups.
+
+> RanStop은 랜섬웨어를 정확하게 탐지하기 위해 지능형 기능 선택 체계와 함께 최첨단 ML 기술을 활용합니다. 우리는 LSTM과 글로벌 평균 풀링 방법을 사용하는 RNN 아키텍처를 사용하여 80개의 크립토 랜섬웨어에 대한 광범위한 분석을 수행합니다. 우리의 기술은 선택된 하드웨어 성능 그룹에 대해 평균 97%의 예측 정확도를 제공합니다.
+
+* RanStop offeres significantly early-detection for ransomware by analytzing the micro-architectual data collected for 20 timestamps each 100us apart from the start of the execution (2ms in total). This allows to stop the malicious execution at a very early stage and protects the system an files long before undergoing significant, if not none, damage and data loss.
+
+> RanStop은 실행 시작(총 2ms)부터 100us 간격으로 20개의 타임스탬프에 대해 수집된 마이크로 아키텍처 데이터를 분석하여 랜섬웨어를 상당히 조기에 탐지합니다. 이를 통해 매우 초기 단계에서 악의적인 실행을 중지하고 심각한 손상 및 데이터 손실이 발생하기 훨씬 전에 시스템 파일을 보호할 수 있습니다.
+
