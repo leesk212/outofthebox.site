@@ -42,7 +42,16 @@ RanStop: A Hardware-assisted Runtime Crypto-Ransomware Detection Technique
   
 * 그럼으로 software-only technique은 crypto-ransomware attack을 방해하기에는 적절하지 않다.
 * 이런 문제를 해결하기위해서 우리는 hardware-assisted runtime crypto-ransomeware scheme, called Ranstop을 제안한다. 
-* 주요 동기는 "HPC는 multi-dimentional hardware event-traces를 수집할 수 있고 micro-architecutral iinformation을 프로그램이 실행되는 동안 hardware 수정없이 수집할 수 있다.
+* 주요 동기는 "HPC는 multi-dimentional hardware event-traces를 수집할 수 있고 micro-architecutral information을 프로그램이 실행되는 동안 hardware 수정없이 수집할 수 있다.
   * 장점:
-    1. Being 
+    1. Being an integrated part of the hardware, HPCs operate transparently to any software running on the processor and collect targeted micro-architectural data irrespective to the program execution mode. Therefore, software-obfuscated or stealthy ransomware cannot evade them. (하드웨어의 통합된 부분인 HPC는 프로세서에서 실행되는 모든 소프트웨어에 투명하게 작동하고 프로그램 실행 모드에 관계없이 대상 마이크로 아키텍처 데이터를 수집합니다. 따라서 소프트웨어 난독화 또는 은밀한 랜섬웨어는 이를 회피할 수 없습니다.)
+    2. It offers multi-dimensional information from a large set of micro-architectural sources. Therefore, acquired information can be utilized for multi-modal analysis techniques such as statistical analysis and machine learning techniques. (그것은 마이크로 아키텍처 소스의 큰 세트에서 다차원 정보를 제공합니다. 따라서 획득한 정보는 통계 분석 및 머신 러닝 기법과 같은 다중 모드 분석 기법에 활용할 수 있습니다.)
+    3. Being an integrated part of the hardware, it is able to collect information significantly faster (often in us ranges) than any software-centric trace acquisition approach. (하드웨어의 통합된 부분이기 때문에 소프트웨어 중심 추적 수집 접근 방식보다 훨씬 더 빠르게(종종 우리 범위 내에서) 정보를 수집할 수 있습니다.)
+    4. Developed ML model can be retained with additional dataset for emeraging ransomwares with little to no modification in the ML framework. Also the developed ML model size is significantly samller compared to the static signature-based database. (개발된 ML 모델은 ML 프레임워크에서 수정이 거의 또는 전혀 없이 새로운 랜섬웨어를 위한 추가 데이터 세트와 함께 유지될 수 있습니다. 또한 개발된 ML 모델 크기는 정적 서명 기반 데이터베이스에 비해 훨씬 작습니다.)
+
+* crpyto-ransomware family는 disk encrypion goodware들의 encryption과 data movement같은 다양한 서부루틴과 특정 종속성을 보여준다. 그리고 정확하게 구분하기 어렵다.
+* 하지만 RanStop 기술은 hardware activity signatures 를 확인하여 begnin과 Ransomware를 잘 구분할 수 있다.
+* 다음의 그림과 같이 구성하며 ransomware와 goodware 둘다의 HPC Signitual를 수집하고 ML을 통해 학습시켜 두개를 구분할 수 있게 한다. <- Contribution
+![image](https://user-images.githubusercontent.com/67637935/140282203-0af70867-9107-457c-a9a7-2a2f2a40c42e.png)
+
 
