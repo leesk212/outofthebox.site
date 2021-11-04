@@ -52,6 +52,8 @@ RanStop: A Hardware-assisted Runtime Crypto-Ransomware Detection Technique
 * crpyto-ransomware family는 disk encrypion goodware들의 encryption과 data movement같은 다양한 서부루틴과 특정 종속성을 보여준다. 그리고 정확하게 구분하기 어렵다.
 * 하지만 RanStop 기술은 hardware activity signatures 를 확인하여 begnin과 Ransomware를 잘 구분할 수 있다.
 * 다음의 그림과 같이 구성하며 ransomware와 goodware 둘다의 HPC Signitual를 수집하고 ML을 통해 학습시켜 두개를 구분할 수 있게 한다. <- Contribution
+
+
 ![image](https://user-images.githubusercontent.com/67637935/140282203-0af70867-9107-457c-a9a7-2a2f2a40c42e.png)
 
 
