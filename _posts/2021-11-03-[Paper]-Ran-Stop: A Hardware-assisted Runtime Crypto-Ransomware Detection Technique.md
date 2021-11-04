@@ -70,3 +70,35 @@ RanStop: A Hardware-assisted Runtime Crypto-Ransomware Detection Technique
 
 > RanStop은 실행 시작(총 2ms)부터 100us 간격으로 20개의 타임스탬프에 대해 수집된 마이크로 아키텍처 데이터를 분석하여 랜섬웨어를 상당히 조기에 탐지합니다. 이를 통해 매우 초기 단계에서 악의적인 실행을 중지하고 심각한 손상 및 데이터 손실이 발생하기 훨씬 전에 시스템 파일을 보호할 수 있습니다.
 
+## Preliminaries
+
+### Ransomeware Detection: Prior work
+* Prior work:
+  * Kharrazet al.
+  * Andronio et al.
+  * Scaife et al.
+  * Sgandurra et al.
+  * Moussaileb et al.
+  * Limitation: These approaches also suffer from different challenges, e.g., program and memory overhead for creating virtual users and enviorment, latency and computational overhead for user storage data analysis,etc
+ * Our work: Our proposed technique soley relies on hardware-level micro-architectural information that remains unaffected in case of program obfuscation, stealthy execution and infection strength, and is readily available in modern processors requiring zero hardware overhead. (우리가 제안한 기술은 프로그램 난독화, 은밀한 실행 및 감염 강도의 경우 영향을 받지 않고 유지되는 하드웨어 수준 마이크로 아키텍처 정보에만 의존하며 하드웨어 오버헤드가 없는 최신 프로세서에서 쉽게 사용할 수 있습니다.)
+
+### Micro-architectural Event Monitoring for Malware Detection
+* likwid & perf
+* Micro-architectural characteristics of both goodware and malware programs can be noisy due to the diffusion of multiple program executions within a given time window. (굿웨어 및 맬웨어 프로그램 모두의 마이크로 아키텍처 특성은 주어진 시간 창 내에서 여러 프로그램 실행의 확산으로 인해 잡음이 있을 수 있습니다.) --> 그렇기에 실행 추적의 간단한 관찰에 의해서는 maclicious program을 구분하고 특징 짓기 어렵다.
+ * 이것을 막기 위해서 다양한 논문들이 있다 1~3
+  1.
+  2.
+  3.
+* Most of these approaches considered various classes of malware and rootkits into one class of malicious program and therefore, combined generic signature traces without emphasizing the intrinsic nature (and subsequent micro-architectural activites) of the malware itself. (이러한 접근 방식의 대부분은 다양한 클래스의 악성 코드와 루트킷을 하나의 악성 프로그램 클래스로 간주하므로 악성 프로그램 자체의 본질적인 특성(및 후속 마이크로 아키텍처 활동)을 강조하지 않고 일반 서명 추적을 결합했습니다.)
+
+* 결과적으로 이러한 기술들은 많은 데이터의 수집을 필요하고, 많은 틀린 관계성들을 제공해야한다. 그래서 이것은 "crypto-ransomware"같은 schemes focusing specific families of malware detection에 적합하지 않는다.
+* Alam et al.이 만든 것도 소수의 ransomware에서만 타당하고 확장성 정보를 제공하지 않는다.
+* 반면에 (최종적으로) 우리가 제안하는 논문은, 2ms내에 탐지가 가능하다.
+
+### Security Enhancement via Advanced Machine Learning Techniques.
+* 가장 chanlleging한 것은 malware detection이 benign operation과 구분할 수 없고, false detection으로 이끌 수 있다는 점이다.
+* 그러나 신중하게 구성된 기계 학습 기술은 이러한 이벤트를 학습하고 구별하여 더 높은 신뢰도로 이상을 식별할 수 있습니다.
+  * Selecting high-fidelity micro-architectural features and events
+  * Choosing efficient machine learning techniques for classification.
+* Micro-architectural event traces from selected HPCs in a timeseries fashion.
+* RNN using LSTM(timeseries specify) with GAP(Global Average Pooling) to reduce overfitting
