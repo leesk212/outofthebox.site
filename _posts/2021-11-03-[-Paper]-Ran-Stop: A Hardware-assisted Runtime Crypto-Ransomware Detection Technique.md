@@ -156,5 +156,68 @@ RanStop: A Hardware-assisted Runtime Crypto-Ransomware Detection Technique
 * It should be noted that the impacts of different optimizers and the micro-architectural performance groups collected in previous steps are not all same for detecting potential crypto-ransomware with high accuracy. (다양한 옵티마이저와 이전 단계에서 수집한 마이크로 아키텍처 성능 그룹의 영향이 잠재적인 크립토 랜섬웨어를 높은 정확도로 탐지하는 데 모두 동일한 것은 아니라는 점에 유의해야 합니다.)
 * Also since the number of HPC are limited on any system, the real time detection program (watchdog) can only be trained to work for certain performance groups and may not swap between monitors to monitor different set of data too often.(또한 모든 시스템에서 HPC의 수가 제한되어 있기 때문에 실시간 감지 프로그램(워치독)은 특정 성능 그룹에 대해서만 작동하도록 훈련될 수 있으며 다른 데이터 세트를 너무 자주 모니터링하기 위해 모니터 간에 교환하지 않을 수 있습니다.)
 
+## Experimental Results
 
- 
+### Platform
+* Xeon CPU , Coffeelake
+* Ubuntu 16.04, Likwid
+
+### Program Database Creation
+* 80 crypto-ransomware (from VirusShare, .exe files) & 76 benign (goodware) program (from OpenSSL and collection of random C programs from Github, govdocsl)
+* Execution time of at least 2ms or more (only 2ms because our primary objective is an ealry detection)
+
+### Micro-architectural Event Capture
+* HPC information was collected for 20 timestamps, each being 100us apart --> 20X100us --> 2ms --> 충분히 공격을 탐지하기에 일찍이다. 
+* We also saw that the timeseries data differences between the two classes were not necessarily significantly large to readily distinguish between ransomware versus goodware. (또한 랜섬웨어와 굿웨어를 쉽게 구별할 수 있을 정도로 두 클래스 간의 시계열 데이터 차이가 크게 크지는 않다는 것도 확인했습니다.)
+* Additionally, the differences (or similarities) at some timestamps might have occurred due to system noise and additional runtime overhead. Therefore, it was necessary that the developed detection scheme ccould reduce any noise and optimize the intrinsic features to accurately identify ransomware threats. (또한 시스템 노이즈 및 추가 런타임 오버헤드로 인해 일부 타임스탬프에서 차이점(또는 유사점)이 발생할 수 있습니다. 따라서 개발된 탐지 체계는 랜섬웨어 위협을 정확하게 식별하기 위해 노이즈를 줄이고 고유 기능을 최적화할 수 있어야 했습니다.)
+* It should be noted that each performance group can collect 4 or fewer micro-architectural events due to hardware limitations. Because, for our experimental system, only four general-purpose HPCs are available in each core when hyperthreading is enabled [14]. (각 성능 그룹은 하드웨어 제한으로 인해 4개 이하의 마이크로 아키텍처 이벤트를 수집할 수 있습니다. 실험 시스템의 경우 하이퍼스레딩이 활성화된 경우 각 코어에서 4개의 범용 HPC만 사용할 수 있기 때문입니다[14].)
+* In addition to micro-architectural event count, likwid readily provides scalar information based on different performance metrics as shown in Table 1. (마이크로 아키텍처 이벤트 수 외에도 likwid는 표 1과 같이 다양한 성능 메트릭을 기반으로 스칼라 정보를 쉽게 제공합니다.)
+* 분석을 쉽하게 하기 위해서 우리는 사용가능한 pre-processed metric 정보를 생각했다. (연속되는 단계에서 feature를 선택하고 훈련시키고 테스팅하기 위해서). (noisy가 있거나 scaling과 alignment 같은 data-preprocessing을 요구하는 원시 hardware event counts보다는..)
+
+### Performance Analysis of the ML Classifier
+* Selecting such groups and features depend on multiple factor
+ 1. inherent properties of the ML technique that utilizes such features to prerfrom binary classification (이러한 기능을 활용하여 이진 분류를 수행하는 ML 기술의 고유한 속성)
+ 2. the program behavior that is running on the system (performing extensive encryption versus simple output prinitng) (시스템에서 실행 중인 프로그램 동작(단순한 출력 인쇄에 비해 광범위한 암호화 수행))
+* Equal distribution of benign and ransomware was maintained in the training dataset to prevent inclination of ML towards a specific dataset. (특정 데이터 세트에 대한 머신러닝의 성향을 방지하기 위해 훈련 데이터 세트에서 양성 및 랜섬웨어의 균등한 분포를 유지했습니다.)
+* The training was done on four different optimizers belonging to different classes, i.e., SGD, Adamax, Adadelta, and RMSprop, to calibrate network weights based on error for reducing the validation loss (검증 손실을 줄이기 위해 오차를 기반으로 네트워크 가중치를 보정하기 위해 SGD, Adamax, Adadelta 및 RMSprop와 같은 서로 다른 클래스에 속하는 4개의 서로 다른 옵티마이저에 대해 교육을 수행했습니다.)
+* We used 25% of the training dataset for validation after each epoch to efficiently calibrate the loss function of the model (모델의 손실 함수를 효율적으로 보정하기 위해 각 에포크 후 검증을 위해 훈련 데이터 세트의 25%를 사용했습니다.)
+* Also to reduce any bias in the model due to misfitting, the accuracy analysis was performed over 50 iterations, where each run contained randomly shuffled executables and trained for 1000 epoch. (또한 부적합으로 인한 모델의 편향을 줄이기 위해 정확도 분석이 50회 반복 수행되었으며 각 실행에는 무작위로 섞인 실행 파일이 포함되어 있고 1000 에포크 동안 훈련되었습니다.)
+* For an in-depth analysis of the RanStop technique, we analyzed the accuracy of the predictive model where it was developed using different sizes of training dataset, namely 70% (Table 2), 80% (Table 3), and 90% (Table 4) with previously mentioned optimizers. Here, each value represents the fraction of the total dataset that was used for training. (RanStop 기술의 심층 분석을 위해서 우리는 예측있는 모델의 정확도를 분석했다. (training dataset의 다른 크기로 사용하면서: 70%, Table2... 다양한 Optimizer들과 함께). 여기에는, 각각 값들은 훈련을 위해 사용된 전체 데이터 셋의 일부를 대표한다. 즉, 70%/30%(Train,Test) ... 이런 방식으로!
+#### Table 2 (70/30)
+![image](https://user-images.githubusercontent.com/67637935/140471252-87af37f2-a18f-43a0-a6b8-1243ebc723bb.png)
+
+#### Table 3 (80/20)
+![image](https://user-images.githubusercontent.com/67637935/140471221-85ac8521-89db-4854-96ba-52cb73decc33.png)
+
+#### Table 4 (90/10)
+![image](https://user-images.githubusercontent.com/67637935/140471193-156dbc8c-1909-45da-98cb-72c68945f920.png)
+
+* For each table, the detection accuracy (averaged over 50 iterations) is listed with the HPC groups (row) and optimizers (column). (각 표에 대해 탐지 정확도(50회 반복에 대한 평균)가 HPC 그룹(행) 및 최적화 프로그램(열)과 함께 나열됩니다.)
+
+#### Table 분석 결과
+* Optimizer 
+  * Best: Adaelta / Worst: SGD 
+  * Scrutiny: the SGD overfitted the model due to the lack of data endpoint (SGD는 데이터 끝점의 부족으로 인해 모델을 과적합했습니다.)
+* HPC Feature
+  * Best: TLB_DATA
+  * Worst: TLB_INSTR
+  * 70/30 --> 96% Accuracy
+  * 90/10 --> 97% Accuracy
+* We also note that the programs (ransomware/benign) used for testing the model were not any part of the training dataset, as mentioned previously. Therefore, this supervised classifier is fully compatible for detecting unknown ransomware, i.e., emerging variants with no (or, very limited, if needed at all) retraining. (또한 모델 테스트에 사용된 프로그램(랜섬웨어/양성)은 이전에 언급한 것처럼 훈련 데이터 세트의 일부가 아닙니다. 따라서 이 감독 분류기는 알려지지 않은 랜섬웨어, 즉 재교육이 없는(또는 필요한 경우 매우 제한적인) 새로운 변종을 탐지하는 데 완벽하게 호환됩니다.)
+
+#### FP,FN 분석
+* We consider both false negatives and false
+positives as major drawbacks for any ransomware (or malware, in general) detection technique, since false positives, i.e., true benign programs deemed as ransomware, cause inconvenience and probable denial of service, whereas false negatives, i.e. true ransomware detected as benign program, can cause catastrophic damage to the system. (우리는 거짓 부정과 거짓을 모두 고려합니다. 모든 랜섬웨어(또는 일반적으로 맬웨어) 탐지 기술의 주요 단점으로 긍정적인 점은 거짓 긍정, 즉 랜섬웨어로 간주되는 진정한 양성 프로그램은 불편을 초래하고 서비스 거부 가능성이 있는 반면, 거짓 부정, 즉 양성 프로그램으로 탐지된 진정한 랜섬웨어는 시스템에 치명적인 손상을 줄 수 있습니다.)
+* 결과는 50번을 평균낸 것이다.
+* 결과는 보여준다. 만약 우리가 TLB_INSTR을 제거한다면 FR 비율(Crypto-ransomware를 begnign으로 판단하는 비율)은 1% 적어진다. 
+* The result also shows the false positive (identifying benign as ransomware) is little high that can be concluded to the fact that many micro-architectural activities of benign programs may resemble that of a crypto-ransomware. We expect that the false positive will significantly reduce with the increase in the dataset size and diversity as a future work. (356 / 5000
+번역 결과
+결과는 또한 양성 프로그램의 많은 마이크로 아키텍처 활동이 크립토 랜섬웨어의 활동과 유사할 수 있다는 사실로 결론지을 수 있는 오탐(양성을 랜섬웨어로 식별)이 거의 높지 않음을 보여줍니다. 향후 작업으로 데이터 세트의 크기와 다양성이 증가함에 따라 가양성(false positive)이 크게 줄어들 것으로 기대합니다.)
+![image](https://user-images.githubusercontent.com/67637935/140474104-3d977ae8-f7a1-4097-9388-adaa48a9fb4e.png)
+![image](https://user-images.githubusercontent.com/67637935/140474119-2d7e857e-30aa-49ed-bc68-03c8688bec77.png)
+
+### Benchmarking
+![image](https://user-images.githubusercontent.com/67637935/140474180-d5b3db60-11ad-4b40-bc29-73e9d33d83f5.png)
+* In Table 7, we provide a comparative analysis between our proposed RanStop scheme and existing state-of-the-art techniques for ransomware detection. The table lists different detection techniques, dataset sizes, and performance metric. As it is shown, RanStop has provided significiantly better result over a comprehensive database of ransomware and goodware; and can provide an early detection with very high accuracy. (표 7에서는 제안된 RanStop 방식과 기존의 랜섬웨어 탐지 기술을 비교 분석했습니다. 표에는 다양한 탐지 기술, 데이터 세트 크기 및 성능 메트릭이 나열되어 있습니다. 표시된 대로 RanStop은 랜섬웨어 및 굿웨어의 포괄적인 데이터베이스보다 훨씬 더 나은 결과를 제공했습니다. 매우 높은 정확도로 조기 발견을 제공할 수 있습니다.)
+
+
