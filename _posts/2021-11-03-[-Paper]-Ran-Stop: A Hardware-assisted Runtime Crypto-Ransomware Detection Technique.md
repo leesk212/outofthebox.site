@@ -185,11 +185,7 @@ RanStop: A Hardware-assisted Runtime Crypto-Ransomware Detection Technique
 * For an in-depth analysis of the RanStop technique, we analyzed the accuracy of the predictive model where it was developed using different sizes of training dataset, namely 70% (Table 2), 80% (Table 3), and 90% (Table 4) with previously mentioned optimizers. Here, each value represents the fraction of the total dataset that was used for training. (RanStop 기술의 심층 분석을 위해서 우리는 예측있는 모델의 정확도를 분석했다. (training dataset의 다른 크기로 사용하면서: 70%, Table2... 다양한 Optimizer들과 함께). 여기에는, 각각 값들은 훈련을 위해 사용된 전체 데이터 셋의 일부를 대표한다. 즉, 70%/30%(Train,Test) ... 이런 방식으로!
 #### Table 2 (70/30)
 ![image](https://user-images.githubusercontent.com/67637935/140471252-87af37f2-a18f-43a0-a6b8-1243ebc723bb.png)
-
-#### Table 3 (80/20)
 ![image](https://user-images.githubusercontent.com/67637935/140471221-85ac8521-89db-4854-96ba-52cb73decc33.png)
-
-#### Table 4 (90/10)
 ![image](https://user-images.githubusercontent.com/67637935/140471193-156dbc8c-1909-45da-98cb-72c68945f920.png)
 
 * For each table, the detection accuracy (averaged over 50 iterations) is listed with the HPC groups (row) and optimizers (column). (각 표에 대해 탐지 정확도(50회 반복에 대한 평균)가 HPC 그룹(행) 및 최적화 프로그램(열)과 함께 나열됩니다.)
