@@ -7,7 +7,7 @@ toc: True
 > grub> ls    
 > "list hardisk partition"   
 > "Find Linux partion" (tip: hardisk size)  
-> grub> set prefix=(hd0,msdos5)  
-> grub> set root=(hd0,msdos5)/boot/grub  
+> grub> set root=(hd0,msdos5)  
+> grub> set prefix=(hd0,msdos5)/boot/grub  
 > grub> insmod normal  
 > grub> normal   
