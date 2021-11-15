@@ -3,7 +3,10 @@ toc : True
 tags : GPU CUDA
 ---
 
-``` ref: https://karl6885.github.io/cuda/2018/11/08/NVIDIA-CUDA-tutorial-1/ ```
+``` 
+ref.1: https://karl6885.github.io/cuda/2018/11/08/NVIDIA-CUDA-tutorial-1/
+ref.2: https://www.sysnet.pe.kr/2/0/11481
+```
 
 # CUDA coding
 
@@ -13,7 +16,13 @@ tags : GPU CUDA
 * block: thread의 모음
 * grid: 주어진 kernel의 execution configuration에서 block들의 모임, 즉 전체를 grid라 부른다.
 * wrap: 32개의 thread의 다른말
-
+##  wrap schedulaer
+* 32개의 thread를 wrap 0, wrap 1,등을 다른 wrap를 수행함으로써 scheduling하면서 막는 것
+* 모든 thread는 모두 동일한 kernel코드를 수행하게 된다.
+* 한 block에 최대 1024개의 thread가 실행되는 것 처럼 보이지만, 사실 하나의 wrap 단위로 scheduling되면서 프로그램이 실행되고 있는 것이다. 
+* Time Sharing을 하면서 Wrap가 움지이게 된다.
+* 하나의 Wrap에서는 동일한 커널 코드가 실행된다. 즉, wrap는 실행단위
+* 
 
 ## __global__ void GPUFunction()
 * GPUFunction이라는 GPU에서 수행되는 코드가 실행된다.
