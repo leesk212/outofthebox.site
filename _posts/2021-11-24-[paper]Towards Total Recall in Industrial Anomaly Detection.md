@@ -55,4 +55,16 @@ tags: detection anomaly-detection 🌟paper-review
 # Related Work
 
 * 대부분의 이상 탐지 모델은 명목 데이터(nominal data, 즉, 일반적인 정상의 경우의 data인듯)에 내재된 표현을 학습하는 능력에 의존합니다.
-* 
+* 이것은 대부분 autoencoding model의 사용을 통해 달성됩니다.
+* nominal featur 분류의 더 좋은 추정치를 증가시키기 위해서 다음의 것들이 제안되었습니다.
+  * extensions based on Gaussian mixture models
+  * generative adversarial training objectives
+  * invariance towards predefined physical augmentations
+  * robustness of hidden features to reintroduction of reconstructions 
+  * prototypical memory banks
+  * attention-guidance
+  * structural objectives 
+  * constrained representation spaces 
+* GAN[13], 사전 정의된 기하학적 변환 예측 학습[20] 또는 흐름 정규화[42]와 같은 다른 감독되지 않은 표현 학습 방법을 유사하게 사용할 수 있습니다.
+* 주어진 
+* 이러한 접근 방식의 대부분에서 이상 위치 파악은 픽셀 단위 재구성 오류를 기반으로 자연스럽게 이루어지며 GradCAM[47] 또는 XRAI[28]와 같은 돌출 기반 접근 방식은 이상 세분화[52, 42, 45]에도 사용할 수 있습니다.
