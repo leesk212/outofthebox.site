@@ -16,7 +16,7 @@ tags: detection anomaly-detection 🌟paper-review
 * 표준 데이터 세트에서 MVTec AD PatchCore는 99.1%의 이미지 수준 이상 감지 AUROC 점수를 달성하여 차상위 경쟁자에 비해 오류가 절반 이상입니다.
 * 우리는 두 개의 추가 데이터 세트에 대한 경쟁력 있는 결과를 추가로 보고하고 소수의 샘플 체제에서 경쟁력 있는 결과를 찾습니다.
 
-# Introduction 
+# 1. Introduction 
 * 이미지에서 비정상적인 패턴을 감지하는 능력은 인간의 인지에 깊숙이 자리 잡은 기능입니다.
 * 인간은 적은 수의 정상 사례만 본 후에 데이터의 예상 분산과 이상값을 구별할 수 있습니다.
 * 이 작업에서 우리는 이 문제의 계산 버전인 산업 이미지 데이터의 시각적 검사를 위한 콜드 스타트(Commonly also dubbed one-class classification (OCC)) 이상 감지를 다룹니다.
@@ -52,7 +52,7 @@ tags: detection anomaly-detection 🌟paper-review
 * Patch-Core는 데이터 세트에 대한 교육 없이도 빠른 추론 시간을 유지하면서 이를 달성합니다. 따라서 PatchCore는 산업적 이상 탐지에 실용적으로 사용하기에 매우 매력적입니다.
 * 또한 추가 실험은 명목 교육 데이터의 일부만 사용하면서 성능면에서 기존 이상 감지 방법과 일치하는 PatchCore의 높은 샘플 효율성을 보여줍니다.
 
-# Related Work
+# 2. Related Work
 
 * 대부분의 이상 탐지 모델은 명목 데이터(nominal data, 즉, 일반적인 정상의 경우의 data인듯)에 내재된 표현을 학습하는 능력에 의존합니다.
 * 이것은 대부분 autoencoding model의 사용을 통해 달성됩니다.
@@ -87,3 +87,11 @@ tags: detection anomaly-detection 🌟paper-review
     * 또한 PaDiM과 달리 입력 이미지는 훈련 및 테스트 중에 동일한 모양이 필요하지 않습니다.
     * 마지막으로 PatchCore는 로컬 공간 분산을 설명하고 ImageNet 클래스에 대한 편향을 줄이기 위해 로컬 인식 패치 기능 점수를 사용합니다.
 
+# 3. Method
+PatchCore 방법은 여러 부분으로 구성되어 있습니다. 
+- 메모리 뱅크에 집계된 로컬 패치 기능(§3.1), 
+- 효율성을 높이기 위한 coreset-reduction 방법(§3.2), 
+- 마지막으로 탐지 및 지역화에 도달하는 전체 알고리즘입니다. 결정(§3.3). 
+
+## 3.1 Local aware patch features (in memory bank)
+* All nominal images: 
