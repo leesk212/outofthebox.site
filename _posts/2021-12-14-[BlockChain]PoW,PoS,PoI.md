@@ -2,6 +2,12 @@
 tags: crpyto-currency Blockchain
 toc : True
 ---
+# Blockchain
+ref: <https://www.youtube.com/watch?v=3mr0NYTDRjY>
+* 블록체인은 누구자 체굴할 수 있는지 없는지에 따라서 Public, Private으로 나뉜다.
+
+
+ref: <https://steemit.com/kr/@maa/pow-pos-poi>
 
 # PoW (Proof-of-Work)
 * 작업 증명 방식
@@ -25,6 +31,4 @@ toc : True
 * PoS는 지분만 증명해서 위임해주면, 일부만 코인을 돌리기 때문에 전기 사용량이 필요가 없어진다. (Quantom, EOS 등등)
 * Staking한다 --> 대부분 PoS 코인이다. 
 
-# Blockchain
-ref: <https://www.youtube.com/watch?v=3mr0NYTDRjY>
-* 블록체인은 누구자 체굴할 수 있는지 없는지에 따라서 Public, Private으로 나뉜다.
+
