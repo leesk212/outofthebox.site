@@ -4,6 +4,7 @@ toc: True
 ---
 
 ref 1: <https://m.blog.naver.com/cinsky/221723960849>
+
 ref 2: <https://github.com/xmrig/xmrig/issues/1413>
 
 # Hardware Prefetcher
