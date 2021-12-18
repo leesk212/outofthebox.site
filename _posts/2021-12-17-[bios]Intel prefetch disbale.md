@@ -1,5 +1,5 @@
 ---
-tags: CPU bios
+tags: CPU
 toc: True
 ---
 
