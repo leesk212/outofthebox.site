@@ -18,9 +18,6 @@ CPU가 일을 하려는데 L2에 원하는 데이터가 없을 때 DRAM에서 �
 # Adjacent Cache Line Prefetch
 
 의미만 보면 인접한 캐쉬 정보까지 가져오겠단 얘기
-
 Disable 하면 64bytes의 Cache Line을 통해 데이터를 가져오고 Enable하면 128bytes의 Cache Line을 통해 데이터를 가져온다는 뜻
-
 굳이 Cache Line을 줄일 필요는 없으니 Enable로 설정한다.
-
 PC급이 아닌 서버에서는 Disabled로 설정해야 성능 저하를 막을 수 있다고 하는데 서버 쓰는건 아니니까 왜 저하되는지 파고 들지 않았다
