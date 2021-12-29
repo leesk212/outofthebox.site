@@ -119,7 +119,7 @@ toc : True
 * AMD SEV는 클라우드 환경의 신뢰 문제를 직접적으로 기본적으로 해결하는 4가지 연구 및 비교 기술 중 고유한 기술입니다.
 * SEV(Secure Encrypted Virtualization) 기능은 각 게스트 VM에 대한 고유 키로 VM의 메모리 내용을 투명하게 암호화합니다.
 
-![image](https://user-images.githubusercontent.com/67637935/147618181-39075efb-0664-4762-9aef-00e15c0e26be.png)
+![image](https://user-images.githubusercontent.com/67637935/147619901-abec4ea0-2f9f-4306-8ab8-53eae6336d86.png)
 
 * 그림 4에서 볼 수 있듯이 메모리 컨트롤러에는 시스템의 여러 VM에서 사용하기 위해 여러 키로 프로그래밍할 수 있는 고성능 암호화 엔진(AES-128 하드웨어 암호화 엔진)이 포함되어 있습니다.
 * 이러한 키의 관리 및 호스트 하이퍼바이저와 게스트 VM 메모리 간의 보안 데이터 전송은 AMD 보안 프로세서에서 실행되는 SEV 펌웨어에 의해 처리됩니다(Advanced Micro Devices, 2018b).
