@@ -21,16 +21,10 @@ toc: True
 
 # 그럼 어떤 명렁어를 사용하면 구성에 필요한 것들을 추적할 수 있을까?
 * last -d : 최근에 해당 서버에 접속하려는 계정을 보여준다. 
-
-( 첨부파일 )
-
 * last -f /var/log/btmp: 로그인 실패 기록을 보여준다.
-
-( 첨부파일 )
-
 * netstat -nap | grep :22 | grep ESTABLISH : 접속한 계정 중 22번 포트를 사용해서 들어온 pts를 출력한다.
 
-( 첨부파일 ) 
+![image](https://user-images.githubusercontent.com/67637935/148712722-c27d9edb-cded-46ee-86e0-bf8eb2e42217.png)
 
 * 트래픽 확인
 두가지 어플리케이션을 사용하고 있지만, 뭔가 마음에 들지 않는다.
