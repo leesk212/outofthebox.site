@@ -41,3 +41,4 @@ toc: True
 ![image](https://user-images.githubusercontent.com/67637935/148712220-09a3262e-b0f9-42e0-b592-af8483b7fa52.png)
 
 ```watch -n1 'wc -l my.log | tee -a statistics.log'``` 명령어를 통해서 화면의 출력과 log파일을 drop 시켜주는 과정을 동시에 진행할 수 있다.
+* 반복시키고 있는 명령어에 __파이프라인 + tee -a__ 명령어를 사용하면 해당 쉘이 실행시키고 있는 프로그램을 로그파일로 드롭 시킬 수 있다. 
