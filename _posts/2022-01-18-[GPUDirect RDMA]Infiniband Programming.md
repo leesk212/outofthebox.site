@@ -14,8 +14,8 @@ This post explains the basic of RDMA programming. There are many examples and po
 
 Channel adapter refers **an end node** in the infiniband network. It is equivalent of Ethernet network interface card (NIC), but with more features regarding Infiniband and RDMA <sup id="fnref:1">[1](#fn:1)</sup>.
 
-
 <img width="463" alt="hca" src="https://user-images.githubusercontent.com/67637935/150066666-ad749333-7f01-4672-8f7e-2a52b7c76d90.png">
+
 
 These Infiniband network interface cards are called **a (host) channel adapters (HCAs)** <sup id="fnref:2">[2](#fn:2)</sup>.
 
@@ -25,7 +25,6 @@ HCAs communicate with each other using **work queues**. Three types of the queue
 
 ![queue_pair](https://user-images.githubusercontent.com/67637935/150066694-89204e40-4429-46d2-bf43-848bcf1038cc.png)
 
-<sup id="fnref:3">[3](#fn:3)</sup>
 
 We can **post a work request (WR) by generating a work queue entry (WRE) into the work queue**, e.g. (1) posting a send work request into the SQ to send some data to a remote node, (2) posting a receive work request into the RQ to receive data from a remote node, etc. Posted work requests are directly handled by hardware (HCA) <sup id="fnref:3">[3](#fn:3)</sup> <sup id="fnref:4">[4](#fn:4)</sup>. Once a request is completed, the hardware posts a Work Completion (WC) into a completion queue (CQ). Programming Interface provides flexibility that we can specify distinct completion queues to the SQ and the RQ, or use one CQ for the entire QP.
 
