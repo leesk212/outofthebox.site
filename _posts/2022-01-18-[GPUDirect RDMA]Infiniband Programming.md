@@ -14,13 +14,18 @@ This post explains the basic of RDMA programming. There are many examples and po
 
 Channel adapter refers **an end node** in the infiniband network. It is equivalent of Ethernet network interface card (NIC), but with more features regarding Infiniband and RDMA <sup id="fnref:1">[1](#fn:1)</sup>.
 
-![hca](/assets/images/200209/hca.png) These Infiniband network interface cards are called **a (host) channel adapters (HCAs)** <sup id="fnref:2">[2](#fn:2)</sup>.
+
+<img width="463" alt="hca" src="https://user-images.githubusercontent.com/67637935/150066666-ad749333-7f01-4672-8f7e-2a52b7c76d90.png">
+
+These Infiniband network interface cards are called **a (host) channel adapters (HCAs)** <sup id="fnref:2">[2](#fn:2)</sup>.
 
 #### Queue Pair (QP), a set of a Send Queue (SQ), a Receive Queue (RQ), and a Completion Queue (CQ)
 
 HCAs communicate with each other using **work queues**. Three types of the queues are: (1) send queue (SQ), (2) receive queue (RQ), and (3) a completion queue. SQ and RQ are always grouped and managed as a queue pair (QP).
 
-![qp](/assets/images/200209/queue_pair.png) <sup id="fnref:3">[3](#fn:3)</sup>
+![queue_pair](https://user-images.githubusercontent.com/67637935/150066694-89204e40-4429-46d2-bf43-848bcf1038cc.png)
+
+<sup id="fnref:3">[3](#fn:3)</sup>
 
 We can **post a work request (WR) by generating a work queue entry (WRE) into the work queue**, e.g. (1) posting a send work request into the SQ to send some data to a remote node, (2) posting a receive work request into the RQ to receive data from a remote node, etc. Posted work requests are directly handled by hardware (HCA) <sup id="fnref:3">[3](#fn:3)</sup> <sup id="fnref:4">[4](#fn:4)</sup>. Once a request is completed, the hardware posts a Work Completion (WC) into a completion queue (CQ). Programming Interface provides flexibility that we can specify distinct completion queues to the SQ and the RQ, or use one CQ for the entire QP.
 
@@ -132,7 +137,9 @@ Now we are ready to create a queue pair.
 
 Right after created, the queue pair has a state `RESET`. With this state the queue pair does not work. We have to establish queue pair connection with another queue pair to make it work. The queue pair state machine diagram is as follows.
 
-![qp state machine](/assets/images/200209/qp_state_machine.png) <sup id="fnref:6">[6](#fn:6)</sup>
+<img width="432" alt="qp_state_machine" src="https://user-images.githubusercontent.com/67637935/150066765-233db441-e203-4567-99ef-a3354adabe94.png">
+
+<sup id="fnref:6">[6](#fn:6)</sup>
 
 In order to have a working queue pair, we need to modify the queue pair’s state to either **RTR (Ready to Receive) or RTS(Ready to Send)**, by using `ibv_modfiy_qp()`.
 
@@ -256,11 +263,11 @@ Before discussing it further, let us dig into types of operations that Infiniban
 *   RDMA Write/RDMA Write with Immediate: [RTS state required] write data to the remote memory. The remote side **is not aware of** this operation being done.
 *   Atomic Fetch and Swap / Atomic Compare and Swap: Refer to *Section 2.1.4 in <sup id="fnref:1">[1](#fn:1)</sup>
 
-![operation diagram: send](/assets/images/200209/operation_diagram_send.png)
+![operation_diagram_send](https://user-images.githubusercontent.com/67637935/150066818-a3d8e4de-688b-4923-956f-bb25cadd894a.png)
 
-![operation diagram: rdma read](/assets/images/200209/operation_diagram_rdma_read.png)
+![operation_diagram_rdma_read](https://user-images.githubusercontent.com/67637935/150066838-d0045e42-5971-428b-b3aa-4f7114060a2e.png)
 
-![operation diagram: rdma write](/assets/images/200209/operation_diagram_rdma_write.png)
+![operation_diagram_rdma_write](https://user-images.githubusercontent.com/67637935/150066844-95e16461-e637-435e-a71a-cc8047051ce2.png)
 
 *   Those sequence diagrams are refined images illustrated in <sup id="fnref:4">[4](#fn:4)</sup>.
 
