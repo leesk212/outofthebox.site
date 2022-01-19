@@ -6,10 +6,6 @@ ref: <https://insujang.github.io/2020-02-09/introduction-to-programming-infiniba
 
 # Introduction to Programming Infiniband RDMA
 
-<div class="mr-6 my-2"><span>Feb 9, 2020</span></div>
-
-<div class="content">
-
 This post explains the basic of RDMA programming. There are many examples and posts regarding this, however, I personally could not find enough explanations for the examples. It was hard to understand how it works, and here I summarize what I got.
 
 ## Backgrounds
@@ -433,7 +429,6 @@ We use `ibv_poll_cq` to poll a completion queue. It is a busy poll, so it consum
 
 `ibv_poll_cq` returns the number of WCs. As we specify it has to wait at most one WC, the result must be either 0, 1, or negative if error occured.
 
-<section class="footnotes" role="doc-endnotes">
 
 * * *
 
@@ -451,4 +446,3 @@ We use `ibv_poll_cq` to poll a completion queue. It is a busy poll, so it consum
 
 7.  [ibv_req_notify_cq()](https://www.rdmamojo.com/2013/02/22/ibv_req_notify_cq/) [↩︎](#fnref:7)
 
-</section>
