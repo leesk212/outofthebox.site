@@ -5,7 +5,7 @@ toc: True
 
 # gdb command
 > ref: <https://gist.github.com/rkubik/b96c23bd8ed58333de37f2b8cd052c30>
-```text
+```
 GDB commands by function - simple guide
 ---------------------------------------
 More important commands have a (*) by them.
